@@ -1,0 +1,47 @@
+\select@language {italian}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1.1}{\ignorespaces Architettura del sistema operativo Android\relax }}{7}{figure.caption.4}
+\contentsline {figure}{\numberline {3.1.2}{\ignorespaces Architettura del sistema operativo iOS\relax }}{9}{figure.caption.6}
+\contentsline {figure}{\numberline {3.1.3}{\ignorespaces Architettura del sistema operativo iOS\relax }}{11}{figure.caption.8}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1.1}{\ignorespaces Esempio di documento XML\relax }}{14}{figure.caption.10}
+\contentsline {figure}{\numberline {4.1.2}{\ignorespaces Esempio di file DTD\relax }}{16}{figure.caption.16}
+\contentsline {figure}{\numberline {4.1.3}{\ignorespaces Esempio di oggetto JSON\relax }}{18}{figure.caption.19}
+\contentsline {figure}{\numberline {4.1.4}{\ignorespaces Esempio di oggetto JSON\relax }}{18}{figure.caption.21}
+\contentsline {figure}{\numberline {4.1.5}{\ignorespaces Esempio di oggetto JSON\relax }}{19}{figure.caption.23}
+\contentsline {figure}{\numberline {4.1.6}{\ignorespaces Lista nel formato indentato YAML\relax }}{20}{figure.caption.25}
+\contentsline {figure}{\numberline {4.1.7}{\ignorespaces Lista nel formato convenzionale YAML\relax }}{20}{figure.caption.26}
+\contentsline {figure}{\numberline {4.1.8}{\ignorespaces Array in YAML\relax }}{20}{figure.caption.27}
+\contentsline {figure}{\numberline {4.1.9}{\ignorespaces Stringa nel formato indentato YAML\relax }}{20}{figure.caption.28}
+\contentsline {figure}{\numberline {4.1.10}{\ignorespaces Stringa nel formato convenzionale YAML\relax }}{20}{figure.caption.29}
+\contentsline {figure}{\numberline {4.2.1}{\ignorespaces Scambio messaggi in un Web Service\relax }}{22}{figure.caption.34}
+\contentsline {figure}{\numberline {4.2.2}{\ignorespaces Esempio di documento WSDL\relax }}{25}{figure.caption.38}
+\contentsline {figure}{\numberline {4.2.3}{\ignorespaces Modello di architettura REST\relax }}{27}{figure.caption.40}
+\contentsline {figure}{\numberline {4.3.1}{\ignorespaces Rappresentazione dei satelliti GPS in orbita intorno alla terra\relax }}{30}{figure.caption.42}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1.1}{\ignorespaces Processo di sviluppo agile\relax }}{37}{figure.caption.49}
+\contentsline {figure}{\numberline {5.2.1}{\ignorespaces Esempio di documento GeoRSS\relax }}{40}{figure.caption.50}
+\contentsline {figure}{\numberline {5.2.2}{\ignorespaces Schermata di Visual Studio 2012 Ultimate\relax }}{41}{figure.caption.53}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1.1}{\ignorespaces Requisiti non funzionali dell'applicazione client\relax }}{46}{figure.caption.57}
+\contentsline {figure}{\numberline {6.1.2}{\ignorespaces Requisiti non funzionali del server\relax }}{47}{figure.caption.58}
+\contentsline {figure}{\numberline {6.1.3}{\ignorespaces Modello CRC dell'applicazione\relax }}{48}{figure.caption.59}
+\contentsline {figure}{\numberline {6.1.4}{\ignorespaces Sketch dell'applicazione, 1\relax }}{49}{figure.caption.60}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Home}}}{49}{subfigure.4.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Visualizzazione posizione}}}{49}{subfigure.4.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Visualizzazione punti di interesse}}}{49}{subfigure.4.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Visualizzazione menu}}}{49}{subfigure.4.4}
+\contentsline {figure}{\numberline {6.1.3}{\ignorespaces Sketch dell'applicazione, 2\relax }}{50}{figure.caption.61}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Visualizzazione dettaglio}}}{50}{subfigure.4.5}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Invio feedback}}}{50}{subfigure.4.6}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {Itinerario}}}{50}{subfigure.4.7}
+\contentsline {figure}{\numberline {6.1.4}{\ignorespaces Tabella di stima delle user stories\relax }}{51}{figure.caption.62}
+\contentsline {figure}{\numberline {6.1.5}{\ignorespaces Pianificazione delle iterazioni\relax }}{52}{figure.caption.63}
+\contentsline {figure}{\numberline {6.2.1}{\ignorespaces Tabella di stima delle user stories della prima iterazione\relax }}{53}{figure.caption.65}
+\contentsline {figure}{\numberline {6.2.2}{\ignorespaces Modello dei dati prima iterazione\relax }}{58}{figure.caption.70}
+\contentsline {figure}{\numberline {6.3.1}{\ignorespaces Tabella di stima delle user stories della seconda iterazione\relax }}{60}{figure.caption.75}
+\contentsline {figure}{\numberline {6.3.2}{\ignorespaces Modello dei dati prima iterazione\relax }}{63}{figure.caption.80}
+\contentsline {figure}{\numberline {6.4.1}{\ignorespaces Tabella di stima delle user stories della terza iterazione\relax }}{64}{figure.caption.85}
+\contentsline {figure}{\numberline {6.4.2}{\ignorespaces Modello dei dati prima iterazione\relax }}{65}{figure.caption.90}
