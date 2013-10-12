@@ -1,119 +1,122 @@
 \select@language {italian}
 \contentsline {chapter}{Introduzione}{1}{chapter*.3}
-\contentsline {chapter}{\numberline {1}Contesto}{2}{chapter.1}
+\contentsline {chapter}{\numberline {1}Contesto ed obiettivi}{2}{chapter.1}
 \contentsline {section}{\numberline {1.1}DATABENC}{2}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Le linee di intervento}{2}{subsection.1.1.1}
 \contentsline {section}{\numberline {1.2}Ancitel}{3}{section.1.2}
 \contentsline {section}{\numberline {1.3}Fruizione informazioni culturali e turistiche in mobilit\`a}{4}{section.1.3}
-\contentsline {chapter}{\numberline {2}Obiettivi}{5}{chapter.2}
-\contentsline {chapter}{\numberline {3}Ecosistemi mobili}{6}{chapter.3}
-\contentsline {section}{\numberline {3.1}Sistemi operativi per dispositivi mobili}{7}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Android}{7}{subsection.3.1.1}
-\contentsline {subsubsection}{Sviluppo Applicazioni}{8}{section*.5}
-\contentsline {subsection}{\numberline {3.1.2}iOS}{9}{subsection.3.1.2}
-\contentsline {subsubsection}{Sviluppo Applicazioni}{10}{section*.7}
-\contentsline {subsection}{\numberline {3.1.3}Windows Phone OS}{11}{subsection.3.1.3}
-\contentsline {subsubsection}{Sviluppo Applicazioni}{12}{section*.9}
-\contentsline {chapter}{\numberline {4}Tecnologie}{13}{chapter.4}
-\contentsline {section}{\numberline {4.1}Serializzazione}{13}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}XML}{14}{subsection.4.1.1}
-\contentsline {subsubsection}{Sintassi}{14}{section*.11}
-\contentsline {paragraph}{Dichiarazione}{15}{section*.12}
-\contentsline {paragraph}{Tag}{15}{section*.13}
-\contentsline {paragraph}{Attributi}{16}{section*.14}
-\contentsline {paragraph}{Commenti}{16}{section*.15}
-\contentsline {paragraph}{Correttezza sintattica e validit\`a}{16}{section*.17}
-\contentsline {subsection}{\numberline {4.1.2}JSON}{17}{subsection.4.1.2}
-\contentsline {subsubsection}{Sintassi}{17}{section*.18}
-\contentsline {paragraph}{Oggetto}{18}{section*.20}
-\contentsline {paragraph}{Array}{18}{section*.22}
-\contentsline {subsection}{\numberline {4.1.3}YAML}{19}{subsection.4.1.3}
-\contentsline {subsubsection}{Sintassi}{19}{section*.24}
-\contentsline {paragraph}{Liste}{21}{section*.30}
-\contentsline {paragraph}{Array associativi}{21}{section*.31}
-\contentsline {paragraph}{Stringhe}{21}{section*.32}
-\contentsline {subsubsection}{Confronto tra XML, JSON e YAML}{21}{section*.33}
-\contentsline {section}{\numberline {4.2}Web Service}{21}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}RPC oriented}{23}{subsection.4.2.1}
-\contentsline {subsubsection}{XML-RPC}{23}{section*.35}
-\contentsline {subsubsection}{SOAP}{24}{section*.36}
-\contentsline {subsubsection}{WSDL}{24}{section*.37}
-\contentsline {subsubsection}{UDDI}{25}{section*.39}
-\contentsline {subsection}{\numberline {4.2.2}Message oriented}{26}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}REST}{26}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Geolocalizzazione}{28}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Localizzazione satellitare}{29}{subsection.4.3.1}
-\contentsline {subsubsection}{GPS}{29}{section*.41}
-\contentsline {paragraph}{Principi di funzionamento}{29}{section*.43}
-\contentsline {paragraph}{Satelliti}{30}{section*.44}
-\contentsline {paragraph}{Ricevitore}{30}{section*.45}
-\contentsline {paragraph}{Precisione}{31}{section*.46}
-\contentsline {subsection}{\numberline {4.3.2}Localizzazione cellulare}{31}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Localizzazione indoor}{32}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Web Mapping}{32}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Google Maps}{33}{subsection.4.4.1}
-\contentsline {subsubsection}{Google Maps API}{33}{section*.47}
-\contentsline {subsection}{\numberline {4.4.2}Bing Maps}{33}{subsection.4.4.2}
-\contentsline {subsubsection}{Bing Maps API}{34}{section*.48}
-\contentsline {chapter}{\numberline {5}Tecnologie ed applicativi utilizzati}{35}{chapter.5}
-\contentsline {section}{\numberline {5.1}Metodologie di sviluppo agili}{35}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Processi di sviluppo agile}{36}{subsection.5.1.1}
-\contentsline {section}{\numberline {5.2}Scelte progettuali}{38}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Piattaforma client}{38}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Piattaforma server}{39}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Ambiente di sviluppo}{40}{subsection.5.2.3}
-\contentsline {subsubsection}{Sistema operativo}{40}{section*.51}
-\contentsline {subsubsection}{IDE}{41}{section*.52}
-\contentsline {subsubsection}{Hosting e controllo di versione}{42}{section*.54}
-\contentsline {chapter}{\numberline {6}Realizzazione del progetto}{43}{chapter.6}
-\contentsline {section}{\numberline {6.1}Iterazione 0}{43}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Analisi dei requisiti}{43}{subsection.6.1.1}
-\contentsline {subsubsection}{Requisiti funzionali}{44}{section*.55}
-\contentsline {subsubsection}{Requisiti non funzionali}{45}{section*.56}
-\contentsline {subsection}{\numberline {6.1.2}Modello di dominio}{47}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Modello dell'interfaccia utente}{48}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Pianificazione degli incrementi}{51}{subsection.6.1.4}
-\contentsline {section}{\numberline {6.2}Iterazione 1}{53}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Analisi dei Requisiti}{53}{subsection.6.2.1}
-\contentsline {subsubsection}{Requisiti funzionali}{53}{section*.64}
-\contentsline {subsubsection}{Requisiti non funzionali}{54}{section*.66}
-\contentsline {subsection}{\numberline {6.2.2}Casi di Test}{55}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Modellazione}{57}{subsection.6.2.3}
-\contentsline {subsubsection}{Modelli strutturali}{57}{section*.67}
-\contentsline {paragraph}{Modello dei dati}{57}{section*.68}
-\contentsline {subparagraph}{Client}{57}{section*.69}
-\contentsline {paragraph}{Diagramma delle classi}{58}{section*.71}
-\contentsline {subsubsection}{Modelli comportamentali}{58}{section*.72}
-\contentsline {paragraph}{Diagramma di sequenza}{58}{section*.73}
-\contentsline {subsection}{\numberline {6.2.4}Implementazione}{58}{subsection.6.2.4}
-\contentsline {subsection}{\numberline {6.2.5}Screenshot}{58}{subsection.6.2.5}
-\contentsline {section}{\numberline {6.3}Iterazione 2}{59}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Analisi dei requisiti}{59}{subsection.6.3.1}
-\contentsline {subsubsection}{Requisiti funzionali}{59}{section*.74}
-\contentsline {subsubsection}{Requisiti non funzionali}{59}{section*.76}
-\contentsline {subsection}{\numberline {6.3.2}Casi di Test}{60}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Modellazione}{62}{subsection.6.3.3}
-\contentsline {subsubsection}{Modelli strutturali}{62}{section*.77}
-\contentsline {paragraph}{Modello dei dati}{62}{section*.78}
-\contentsline {subparagraph}{Client}{62}{section*.79}
-\contentsline {paragraph}{Diagramma delle classi}{62}{section*.81}
-\contentsline {subsubsection}{Modelli comportamentali}{62}{section*.82}
-\contentsline {paragraph}{Diagramma di sequenza}{62}{section*.83}
-\contentsline {subsection}{\numberline {6.3.4}Implementazione}{63}{subsection.6.3.4}
-\contentsline {subsection}{\numberline {6.3.5}Screenshot}{63}{subsection.6.3.5}
-\contentsline {section}{\numberline {6.4}Iterazione 3}{64}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Analisi dei requisiti}{64}{subsection.6.4.1}
-\contentsline {subsubsection}{Requisiti funzionali}{64}{section*.84}
-\contentsline {subsubsection}{Requisiti non funzionali}{64}{section*.86}
-\contentsline {subsection}{\numberline {6.4.2}Casi di Test}{65}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}Modellazione}{65}{subsection.6.4.3}
-\contentsline {subsubsection}{Modelli strutturali}{65}{section*.87}
-\contentsline {paragraph}{Modello dei dati}{65}{section*.88}
-\contentsline {subparagraph}{Client}{65}{section*.89}
-\contentsline {paragraph}{Diagramma delle classi}{65}{section*.91}
-\contentsline {subsubsection}{Modelli comportamentali}{65}{section*.92}
-\contentsline {paragraph}{Diagramma di sequenza}{65}{section*.93}
-\contentsline {subsection}{\numberline {6.4.4}Implementazione}{66}{subsection.6.4.4}
-\contentsline {subsection}{\numberline {6.4.5}Screenshot}{66}{subsection.6.4.5}
-\contentsline {chapter}{Conclusioni}{68}{chapter*.94}
-\contentsline {chapter}{Bibliografia}{69}{chapter*.95}
+\contentsline {section}{\numberline {1.4}Obiettivi}{4}{section.1.4}
+\contentsline {chapter}{\numberline {2}Architettura e tecnologie}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Architettura Client/Server}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Piattaforma Client}{5}{subsection.2.1.1}
+\contentsline {subsubsection}{Android}{6}{section*.4}
+\contentsline {paragraph}{Sviluppo Applicazioni}{7}{section*.6}
+\contentsline {subsubsection}{iOS}{8}{section*.7}
+\contentsline {paragraph}{Sviluppo Applicazioni}{9}{section*.9}
+\contentsline {subsubsection}{Windows Phone OS}{10}{section*.10}
+\contentsline {paragraph}{Sviluppo Applicazioni}{11}{section*.12}
+\contentsline {subsubsection}{Scelte}{11}{section*.13}
+\contentsline {subsection}{\numberline {2.1.2}Codifica e serializzazione dei dati attributo}{11}{subsection.2.1.2}
+\contentsline {subsubsection}{XML}{12}{section*.14}
+\contentsline {paragraph}{Sintassi}{12}{section*.16}
+\contentsline {subparagraph}{Dichiarazione}{13}{section*.17}
+\contentsline {subparagraph}{Tag}{13}{section*.18}
+\contentsline {subparagraph}{Attributi}{14}{section*.19}
+\contentsline {subparagraph}{Commenti}{14}{section*.20}
+\contentsline {subparagraph}{Correttezza sintattica e validit\`a}{14}{section*.22}
+\contentsline {subsubsection}{JSON}{15}{section*.23}
+\contentsline {paragraph}{Sintassi}{15}{section*.24}
+\contentsline {subparagraph}{Oggetto}{16}{section*.26}
+\contentsline {subparagraph}{Array}{16}{section*.28}
+\contentsline {subsubsection}{YAML}{17}{section*.30}
+\contentsline {paragraph}{Sintassi}{17}{section*.31}
+\contentsline {subparagraph}{Liste}{17}{section*.37}
+\contentsline {subparagraph}{Array associativi}{19}{section*.38}
+\contentsline {subparagraph}{Stringhe}{19}{section*.39}
+\contentsline {subsubsection}{Scelte}{19}{section*.40}
+\contentsline {subsection}{\numberline {2.1.3}Tecniche di geolocalizzazione}{19}{subsection.2.1.3}
+\contentsline {subsubsection}{Localizzazione satellitare}{20}{section*.41}
+\contentsline {paragraph}{GPS}{20}{section*.42}
+\contentsline {subparagraph}{Principi di funzionamento}{21}{section*.44}
+\contentsline {subparagraph}{Satelliti}{22}{section*.45}
+\contentsline {subparagraph}{Ricevitore}{22}{section*.46}
+\contentsline {subparagraph}{Precisione}{22}{section*.47}
+\contentsline {subsubsection}{Localizzazione cellulare}{22}{section*.48}
+\contentsline {subsubsection}{Localizzazione indoor}{23}{section*.49}
+\contentsline {subsection}{\numberline {2.1.4}Codifica e serializzazione dei dati georeferenziati}{24}{subsection.2.1.4}
+\contentsline {subsubsection}{GeoRSS}{24}{section*.50}
+\contentsline {subsection}{\numberline {2.1.5}Rappresentazione dei dati georeferenziati}{24}{subsection.2.1.5}
+\contentsline {subsubsection}{Google Maps}{24}{section*.51}
+\contentsline {paragraph}{Google Maps API}{25}{section*.52}
+\contentsline {subsubsection}{Bing Maps}{25}{section*.53}
+\contentsline {paragraph}{Bing Maps API}{25}{section*.54}
+\contentsline {subsubsection}{Scelte}{25}{section*.55}
+\contentsline {subsection}{\numberline {2.1.6}Piattaforma Server}{25}{subsection.2.1.6}
+\contentsline {subsubsection}{saposajs}{25}{section*.56}
+\contentsline {subsection}{\numberline {2.1.7}Web Service e protocolli di scambio delle informazioni}{25}{subsection.2.1.7}
+\contentsline {subsubsection}{RPC oriented}{27}{section*.58}
+\contentsline {paragraph}{XML-RPC}{27}{section*.59}
+\contentsline {paragraph}{SOAP}{27}{section*.60}
+\contentsline {paragraph}{WSDL}{28}{section*.61}
+\contentsline {paragraph}{UDDI}{29}{section*.63}
+\contentsline {subsubsection}{Message oriented}{30}{section*.64}
+\contentsline {subsubsection}{REST}{30}{section*.65}
+\contentsline {subsubsection}{Scelte}{32}{section*.67}
+\contentsline {section}{\numberline {2.2}Tecnologie di Sviluppo}{32}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}.NET}{32}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Visual studio}{32}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}TFS}{32}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Metodologia agile}{32}{subsection.2.2.4}
+\contentsline {subsubsection}{Processi di sviluppo agile}{33}{section*.68}
+\contentsline {chapter}{\numberline {3}Realizzazione}{36}{chapter.3}
+\contentsline {section}{\numberline {3.1}Iterazione 0}{36}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Analisi dei requisiti}{36}{subsection.3.1.1}
+\contentsline {subsubsection}{Requisiti funzionali}{37}{section*.70}
+\contentsline {subsubsection}{Requisiti non funzionali}{38}{section*.71}
+\contentsline {subsection}{\numberline {3.1.2}Modello di dominio}{40}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Modello dell'interfaccia utente}{41}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Pianificazione degli incrementi}{44}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Iterazione 1}{46}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Analisi dei Requisiti}{46}{subsection.3.2.1}
+\contentsline {subsubsection}{Requisiti funzionali}{46}{section*.79}
+\contentsline {subsubsection}{Requisiti non funzionali}{47}{section*.81}
+\contentsline {subsection}{\numberline {3.2.2}Casi di Test}{48}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Modellazione}{50}{subsection.3.2.3}
+\contentsline {subsubsection}{Modelli strutturali}{50}{section*.82}
+\contentsline {paragraph}{Modello dei dati}{50}{section*.83}
+\contentsline {subparagraph}{Client}{50}{section*.84}
+\contentsline {paragraph}{Diagramma delle classi}{51}{section*.86}
+\contentsline {subsubsection}{Modelli comportamentali}{51}{section*.87}
+\contentsline {paragraph}{Diagramma di sequenza}{51}{section*.88}
+\contentsline {subsection}{\numberline {3.2.4}Implementazione}{51}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Screenshot}{51}{subsection.3.2.5}
+\contentsline {section}{\numberline {3.3}Iterazione 2}{52}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Analisi dei requisiti}{52}{subsection.3.3.1}
+\contentsline {subsubsection}{Requisiti funzionali}{52}{section*.89}
+\contentsline {subsubsection}{Requisiti non funzionali}{52}{section*.91}
+\contentsline {subsection}{\numberline {3.3.2}Casi di Test}{53}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Modellazione}{55}{subsection.3.3.3}
+\contentsline {subsubsection}{Modelli strutturali}{55}{section*.92}
+\contentsline {paragraph}{Modello dei dati}{55}{section*.93}
+\contentsline {subparagraph}{Client}{55}{section*.94}
+\contentsline {paragraph}{Diagramma delle classi}{55}{section*.96}
+\contentsline {subsubsection}{Modelli comportamentali}{55}{section*.97}
+\contentsline {paragraph}{Diagramma di sequenza}{55}{section*.98}
+\contentsline {subsection}{\numberline {3.3.4}Implementazione}{56}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Screenshot}{56}{subsection.3.3.5}
+\contentsline {section}{\numberline {3.4}Iterazione 3}{57}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Analisi dei requisiti}{57}{subsection.3.4.1}
+\contentsline {subsubsection}{Requisiti funzionali}{57}{section*.99}
+\contentsline {subsubsection}{Requisiti non funzionali}{57}{section*.101}
+\contentsline {subsection}{\numberline {3.4.2}Casi di Test}{58}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Modellazione}{58}{subsection.3.4.3}
+\contentsline {subsubsection}{Modelli strutturali}{58}{section*.102}
+\contentsline {paragraph}{Modello dei dati}{58}{section*.103}
+\contentsline {subparagraph}{Client}{58}{section*.104}
+\contentsline {paragraph}{Diagramma delle classi}{58}{section*.106}
+\contentsline {subsubsection}{Modelli comportamentali}{58}{section*.107}
+\contentsline {paragraph}{Diagramma di sequenza}{58}{section*.108}
+\contentsline {subsection}{\numberline {3.4.4}Implementazione}{59}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Screenshot}{59}{subsection.3.4.5}
+\contentsline {chapter}{\numberline {4}Test sul campo}{60}{chapter.4}
+\contentsline {chapter}{Bibliografia}{63}{chapter*.110}
