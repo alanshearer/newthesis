@@ -702,9 +702,84 @@ L'applicazione deve conoscere il formato dell'informazione (rappresentazione) re
 \subsubsection{Scelte}
 
 \section{Tecnologie di Sviluppo}
-\subsection{.NET}
-\subsubsection{Visual studio}
-\subsubsection{TFS}
+\subsection{.NET Framework}
+Il \textbf{.NET Framework} è un software framework sviluppato da Microsoft che gira principalmente su sistema operativo Microsoft Windows.
+Include una vasta libreria e fornisce interoperabilità di linguaggio attraverso diversi linguaggi di programmazione.
+I programmi scritti per il il .NET Framework sono eseguiti in un ambiente software, conosciuto come \emph{Common Language Runtime}, una macchina virtuale che fornisce servizi come sicurezza, gestione della memoria e delle eccezioni.
+La libreria delle classi e il Common Language Runtime costituiscono insieme il .NET Framework.
+La Base Class Library del .NET Framework fornisce interfacce utente, accesso ai dati, connettività al database, crittografia, sviluppo di applicazioni web, algoritmi numerici e comunicazioni di rete.
+I programmatori producono software combinando codice sorgente con .NET Framework e altre librerie.
+Microsoft fornisce, inoltre, un ambiente di sviluppo integrato per il software .NET chiamato \emph{Visual Studio}.
+
+Nell'agosto 2012, è stato rilasciato il \emph{.NET Framework 4.5}.
+
+\subsubsection{Design}
+Le caratteristiche di design del .NET Framework sono:
+\begin{itemize}
+\item \emph{Interoperabilità}: .Net Framework fornisce strumenti per accedere a funzionalità implementate in programmi più o meno recenti che sono eseguiti al di fuori dell'ambiente .NET, al fine di favorire l'interazione tra applicazioni;
+\item \emph{Common Language Runtime}: serve come motore per eseguire il framework .NET. Tutti i programmi .NET sono eseguiti sotto la supervisione del CLR, garantendo proprietà e comportamenti definiti riguardo sicurezza, memoria e gestione delle eccezioni;
+\item \emph{Indipendenza dal linguaggio}: E' introdotto il \emph{Common Type System} o CTS, che specifica tutti i possibili tipi di dati e costrutti di programmmazione supportati dal CLR e come essi possano o meno interagire con gli altri attraverso le specifiche del \item \emph{Common Language Infrastructure};
+\item \emph{Base Class Library}: fornisce classi che incapsulano un gran numero di funzioni comuni, come creazione di interfacce utente, accesso ai file, rendering grafico, manipolazione documenti XML, connettività al database, crittografia, sviluppo di applicazioni web, algoritmi numerici e comunicazioni di rete. E' disponibile per tutti i linguaggi che utilizzano il .NET Framework;
+\item \emph{Rilascio semplificato}: sono presenti tool che facilitano l'installazione del software sviluppato e assicurano che quest'ultimo non interferisca con software preinstallato e che sia conforme ai requisiti di sicurezza;
+\item \emph{Sicurezza}: è fornito un modello di sicurezza comune per tutte le applicazioni, oltre a meccanismi di protezione da vari tipi di vulnerabilità;
+\item \emph{Portabilità}: il framework .NET è \emph{platform-agnostic} e sono disponibili implementazioni multipiattaforma per altri sistemi operativi. Il Common Language Infrastructure, ilinguaggi C\# e C++ sono tutti standard ECMA e ISO. Questo rende possibile la creazione di implementazioni compatibili col framework da terze parti.
+\end{itemize}
+
+
+\subsubsection{Architettura}
+Il .NET Framework è costituito da:
+\begin{itemize}
+\item \emph{Common Language Infrastructure};
+\item \emph{Sicurezza};
+\item \emph{Librerie di classi};
+\item \emph{Gestione della memoria}.
+\end{itemize}
+di seguito brevemente introdotti.
+\paragraph{Common Language Infrastructure}
+\paragraph{Sicurezza}
+\paragraph{Librerie di classi}
+\paragraph{Gestione della memoria}
+
+
+
+
+\subsubsection{Microsoft Visual Studio}
+\textbf{Microsoft Visual Studio} (\emph{\url{http://www.microsoft.com/visualstudio/ita}}), rappresentata con uno screenshot in figura \ref{vsimage}, permette lo sviluppo di applicazioni console, siti internet, applicazioni grafiche, applicazioni e servizi web, librerie di classi, servizi Windows in tutti i linguaggi di programmazione supportati dal framework .NET, oltre che in tutti i linguaggi di markup, JavaScript e CSS.
+
+\begin{figure}
+\begin{center}
+
+\includegraphics[scale=0.3]{imgs/visualstudio.jpg} 
+\caption{Schermata di Visual Studio 2012 Ultimate\label{vsimage}}
+\end{center}
+
+\end{figure}
+Visual Studio fornisce all’utilizzatore un potente strumento, \textbf{IntelliSense}, che permette
+l'autocompletamento del token che il programmatore intende scrivere, oltre che
+alla visualizzazione della documentazione e alla gestione delle disambiguità a
+video direttamente durante la scrittura del codice.
+
+La versione utilizzata è \textbf{Visual Studio 2012 Ultimate}, lanciata nel settembre 2012.
+Essa fornisce numerose nuove features, brevemente elencate:
+\begin{itemize}
+\item \textbf{Colorazione semantica}: è stata migliorata la colorazione della sintassi, compresi i tipi definiti dall'utente, le macro, i tipi enumerativi e le funzioni;
+\item \textbf{Evidenziazione dei riferimenti}: selezione di tutti i riferimenti di un simbolo, una volta selezionato quest'ultimo;
+\item \textbf{Nuovo Solution Explorer}: il nuovo Solution Explorer consente agli utenti una visualizzazione per classi o gerarchie di file all'interno del progetto.
+E' supportata inoltre la ricerca di chiamate ad una funzione ed utilizzo delle classi;
+\item \textbf{Visualizzazione automatica della lista IntelliSense}: IntelliSense è automaticamente visualizzato mentre viene scritto il codice;
+\item \textbf{Filtraggio della lista degli elementi}: IntelliSense usa una \textit{fuzzy logic} per determinare quali funzioni/variabili/tipi visualizzare nella lista;
+\item \textbf{Code snippets}: è incluso in Intellisense per generare automaticamente frammenti di codice basati sui parametri dell'utente.
+\end{itemize}
+
+\subsubsection{TFS - Team Foundation Service}
+Visual Studio offre, tra i vari servizi, \textbf{Team Foundation Service}, uno strumento di gestione collaborativa del codice che consente di:
+\begin{itemize}
+\item controllare il proprio codice direttamente in \textit{cloud}, rendendolo accessibile ovunque;
+\item gestire il versioning del progetto;
+\item gestire la collaborazione nel team;
+\item pianificare lo sviluppo agile;
+\item gestire il testing e la distribuzione del prodotto.
+\end{itemize}
 
 \subsection{Metodologia agile}
 Con il termine \textit{metodologia agile} si intende un insieme di metodi di sviluppo software basati sullo sviluppo iterativo ed incrementale, in cui i requisiti e le soluzioni evolvono attraverso una collaborazione tra team capaci di organizzarsi autonomamente e con esperienze e conoscenze diverse.
