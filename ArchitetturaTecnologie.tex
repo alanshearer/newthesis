@@ -1,5 +1,4 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Capitolo 1
 
 \chapter{Architettura e tecnologie}
 \label{ref:architettura}
@@ -7,7 +6,54 @@
 Verranno introdotte le architetture e ele tecnologie di utilizzo
 
 \section{Architettura Client/Server}
-descrizione architettura client server
+L'\emph{architettura client/server} indica un'architettura software che è costituita da due moduli integrati ma distinti, residenti generalmente su calcolatori diversi.\\
+In una rete informatica ci si riferisce ai computer ad essa collegati come host o terminali, perché ospitano programmi di livello applicativo. 
+Gli host, o nodi, sono ulteriormente suddivisi in due categorie, client e server. La condivisione delle risorse, che generalmente avviene attraverso la rete, tra i client e i server definisce l'architettura client/server (fig. \ref{clientserver}).
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.75]{imgs/clientserver.png} 
+\caption{Architettura Client/Server\label{clientserver}}
+\end{center}
+\end{figure}
+
+Il server svolge le operazioni necessarie per realizzare un servizio, mentre il client può effettuare alcune operazioni e quindi richiede un terminale con capacità elaborative. Tipicamente il client gestisce la porzione d'interfaccia utente dell'applicazione, verifica i dati inseriti e provvede ad inviare al server le richieste formulate dall'utente. Inoltre gestisce le risorse locali, come la tastiera, il monitor, la CPU, e le periferiche.
+L'affermazione di questo modello è legata alla disponibilità di reti locali a basso costo ed alla diffusione della rete Internet, in cui i servizi seguono tale struttura.
+In un ambiente client/server, sul computer client è in esecuzione un software applicativo detto programma client, il quale richiede e riceve un servizio da un programma server che viene eseguito sul computer server. 
+Il programma client e il programma server interagiscono tra loro attraverso comunicazioni, ovvero scambiandosi messaggi attraverso la rete informatica. Quando un client si connette ad un server, gli invia una richiesta; il server, essendo in ascolto, la intercetta e l'interpreta effettuando le elaborazioni necessarie al suo soddisfacimento e restituisce un risultato sotto forma di risposta al client il quale lo visualizza all'utente.
+Le applicazioni operanti in rete hanno protocolli di livello di applicazione che definiscono il formato e l'ordine dei messaggi scambiati tra i processi, così come definiscono le azioni da intraprendere alla trasmissione o alla ricezione dei messaggi.
+A livello di applicazione, un protocollo definisce come i processi delle applicazioni, che funzionano su differenti terminali, si scambiano i messaggi, in particolare il protocollo specifica:
+\begin{itemize}
+\item i tipi di messaggi scambiati, per esempio, messaggi di richiesta e messaggi di risposta;
+\item la sintassi dei vari tipi di messaggio, per esempio i campi del messaggio e come questi ultimi
+vengono caratterizzati;
+\item la semantica dei campi, cioè il significato dell'informazione nei campi;
+\item le regole per determinare quando e come un processo invia messaggi o risponde a messaggi.
+\end{itemize}
+
+
+Prima di parlare dell'evoluzione del client/server è necessario fare una breve introduzione sulle componenti fondamentali di un'architettura di questo tipo.
+
+
+
+Si distinguono tre parti principali di tale architettura: i dati sono la parte legata alla gestione delle informazioni persistenti, cioè quelle informazioni che si vuole mantenere nel tempo; la logica applicativa è rappresentata dai programmi veri e propri, ovvero quella parte del software che viene utilizzato per effettuare le operazioni per cui sono stati scritti; la presentazione, è quella parte del software che permette la comunicazione con l'utente.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.55]{imgs/clientserverorganization.png} 
+\caption{Organizzazioni Client/Server\label{clientserverorganization}}
+\end{center}
+\end{figure}
+L'architettura client/server ha avuto una evoluzione nel tempo (fig. \ref{clientserverorganization}) che l'ha portata attraverso vari stadi analizzati di seguito:
+\begin{itemize}
+\item \emph{Timesharing}: con questa soluzione, sul server sono presenti tutte e tre le parti fondamentali dell'architettura: dati, logica e presentazione. Il client è rappresentato da un terminale cosiddetto “stupido” il quale permette l'interazione con il server, senza avere una sua capacità elaborativa;
+\item \emph{Client presentation}: dai tre livelli iniziali, viene staccata la presentazione che viene portata sul client, mentre la parte logica e quella dati, continuano a rimanere sul server;
+\item \emph{Application distribution}: aumentando la potenza elaborativa dei client, si è pensato di spostare oltre che alla presentazione anche una parte della logica su quest'ultimo; questo tipo di operazione ha, da un lato, reso meno gravose le elaborazioni sui server, ma dall'altro ha aumentato i costi a causa dell'introduzione di nuovo software, in quanto necessita l'aggiornamento su ogni client su cui è installato. La caratteristica principale di questo stadio è che la parte di logica è distribuita in parte sul client e in parte sul server;
+\item \emph{Central database}: il passo successivo è stato quello di spostare tutta la logica sul client insieme alla presentazione, lasciando sul server solo la parte dati. Questo tipo di soluzione ha il vantaggio di avere una banca dati centralizzata, ma lo svantaggio, per aziende molto grandi, è quello di avere un grande numero di accessi localizzati in un singolo punto;
+\item \emph{Distribuited database}: per ovviare agli svantaggi della soluzione precedente si è pensato di portare sui client anche la parte dati. In questo modo si pone una soluzione al sovraccarico generato dal gran numero di utenti che si connettono ai dati, ma si crea un
+altro problema legato alla sincronizzazione delle banche dati.
+\end{itemize}
+
+
 
 \subsection{Piattaforma Client}
 
@@ -16,7 +62,7 @@ Diversamente dai sistemi operativi per desktop e laptop, essi devono affrontare 
 Nell'accezione moderna, il sistema operativo mobile non è solo un prodotto software, ma una vera e propria piattaforma, che mette a disposizione degli sviluppatori delle API su cui sviluppare applicazioni.
 
 Un \emph{ecosistema mobile} è costituito dal sistema operativo, inteso come piattaforma, dagli sviluppatori, che incrementano il numero e migliorano la qualità delle applicazioni disponibili, e dagli utilizzatori, che acquistano sia la piattaforma che le applicazioni nello store.
-In questo capitolo verranno trattate i principali sistemi operativi mobile e i relativi frameworks per lo sviluppo delle applicazioni.
+In questo sezione verranno trattati i principali sistemi operativi mobile e i relativi framework per lo sviluppo delle applicazioni.
 
 
 \subsubsection{Android}
@@ -105,7 +151,7 @@ Microsoft mette inoltre a disposizione altri significativi tools come Express Bl
 \subsubsection{Scelte}
 
 
-\subsection{Codifica e serializzazione dei dati attributo}
+\subsection{Codifica e serializzazione dei dati}
 La serializzazione è un processo  per salvare un oggetto in un supporto di memorizzazione lineare o per trasmetterlo su una connessione di rete.
 Essa può essere realizzata in modalità binaria o testuale.
 La modalità binaria, seppur molto efficiente, presenta scarsa interoperabilità e flessibilità.
