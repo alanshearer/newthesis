@@ -525,7 +525,42 @@ Esistono diverse soluzioni commerciali per la localizzazione indoor, come \textb
 
 \subsection{Codifica e serializzazione dei dati georeferenziati}
 \subsubsection{GeoRSS}
+GeoRSS è uno standard emergente per la codifica delle informazioni come parte di un feed Web, infatti il nome \emph{GeoRSS} deriva proprio da \emph{RSS}, il più conosciuto feed Web.
+Il GeoRSS, il contenuto riguardante la posizione consiste di punti geografici, linee e poligoni e delle relative descrizioni, come mostrato in fig. \ref{georssimage}. Tali feed sono progettati per essere utilizzati da software geografici come i generatori di mappe.
 
+\begin{figure}
+\begin{center}
+\lstset{language=MYXML}
+\begin{lstlisting}
+ <?xml version="1.0"?>
+ <?xml-stylesheet href="/eqcenter/catalogs/rssxsl.php?feed=eqs7day-M5.xml" type="text/xsl" 
+                  media="screen"?>
+ <rss version="2.0" 
+      xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+     <title>USGS M5+ Earthquakes</title>
+     <description>Real-time, worldwide earthquake list for the past 7 days</description>
+     <link>http://earthquake.usgs.gov/eqcenter/</link>
+     <dc:publisher>U.S. Geological Survey</dc:publisher>
+     <pubDate>Thu, 27 Dec 2007 23:56:15 PST</pubDate>
+     <item>
+       <pubDate>Fri, 28 Dec 2007 05:24:17 GMT</pubDate>
+       <title>M 5.3, northern Sumatra, Indonesia</title>
+       <description>December 28, 2007 05:24:17 GMT</description>
+       <link>http://earthquake.usgs.gov/eqcenter/recenteqsww/Quakes/us2007llai.php</link>
+       <geo:lat>5.5319</geo:lat>
+       <geo:long>95.8972</geo:long>
+     </item>
+   </channel>
+ </rss>
+\end{lstlisting}
+\caption{Esempio di documento GeoRSS\label{georssimage}}
+\end{center}
+\end{figure}
+
+By building these encodings on a common information model, the GeoRSS collaboration is promoting interoperability and "upwards-compatibility" across encodings.
+At this point, the GeoRSS collaboration has completed work on two primary encodings that are called GeoRSS Geography Markup Language (GML) and GeoRSS Simple. GeoRSS-Simple is a very lightweight format that supports basic geometries (point, line, box, polygon) and covers the typical use cases when encoding locations. GeoRSS GML is a formal Open Geospatial Consortium (OGC) GML Application Profile, and supports a greater range of features than GeoRSS Simple, notably coordinate reference systems other than WGS84 latitude/longitude. There is also a W3C GeoRSS serialization, which is older and partly deprecated but still the most widely used.
 
 \subsection{Rappresentazione dei dati georeferenziati}
 Il Web Mapping è un processo di progettazione, implementazione, generazione e produzione di mappe sul web.
@@ -734,12 +769,32 @@ Il .NET Framework è costituito da:
 \item \emph{Librerie di classi};
 \item \emph{Gestione della memoria}.
 \end{itemize}
-di seguito brevemente introdotti.
+che di seguito sono brevemente introdotti.
 \paragraph{Common Language Infrastructure}
-\paragraph{Sicurezza}
-\paragraph{Librerie di classi}
-\paragraph{Gestione della memoria}
+CLI fornisce una piattaforma neutra per lo sviluppo e l'esecuzione delle applicazioni. Tale piattaforma include funzioni per la gestione delle eccezioni, la \emph{garbage collection}, la sicurezza e l'interoperabilità.
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.4]{imgs/commonlanguageinfrastructure.png} 
+\caption{Panoramica della Common Language Infrastructure\label{commonlanguageinfrastructure}}
+\end{center}
+\end{figure}
 
+By implementing the core aspects of the .NET Framework within the scope of the CLI, this functionality will not be tied to a single language but will be available across the many languages supported by the framework. Microsoft's implementation of the CLI is called the Common Language Runtime, or CLR.
+Main article: Assembly (CLI)
+The CIL code is housed in CLI assemblies. As mandated by the specification, assemblies are stored in the Portable Executable (PE) format, common on the Windows platform for all DLL and EXE files. The assembly consists of one or more files, one of which must contain the manifest, which has the metadata for the assembly. The complete name of an assembly (not to be confused with the filename on disk) contains its simple text name, version number, culture, and public key token. Assemblies are considered equivalent if they share the same complete name, excluding the revision of the version number. A private key can also be used by the creator of the assembly for strong naming. The public key token identifies which public key an assembly is signed with. Only the creator of the keypair (typically the .NET developer signing the assembly) can sign assemblies that have the same strong name as a previous version assembly, since he is in possession of the private key. Strong naming is required to add assemblies to the Global Assembly Cache
+
+\paragraph{Sicurezza}
+.NET ha meccanismi propri di security con due caratteristiche fondamentali: Code Access Security (CAS) e validazione e verifica.
+Code Access Security è basato sy
+.NET has its own security mechanism with two general features: Code Access Security (CAS), and validation and verification. Code Access Security is based on evidence that is associated with a specific assembly. Typically the evidence is the source of the assembly (whether it is installed on the local machine or has been downloaded from the intranet or Internet). Code Access Security uses evidence to determine the permissions granted to the code. Other code can demand that calling code is granted a specified permission. The demand causes the CLR to perform a call stack walk: every assembly of each method in the call stack is checked for the required permission; if any assembly is not granted the permission a security exception is thrown.
+\paragraph{Librerie di classi}
+The .NET Framework includes a set of standard class libraries. The class library is organized in a hierarchy of namespaces. Most of the built-in APIs are part of either System.* or Microsoft.* namespaces. These class libraries implement a large number of common functions, such as file reading and writing, graphic rendering, database interaction, and XML document manipulation, among others. The .NET class libraries are available to all CLI compliant languages. The .NET Framework class library is divided into two parts: the Base Class Library and the Framework Class Library
+The Base Class Library (BCL) includes a small subset of the entire class library and is the core set of classes that serve as the basic API of the Common Language Runtime.[9] The classes in mscorlib.dll and some of the classes in System.dll and System.core.dll are considered to be a part of the BCL. The BCL classes are available in both .NET Framework as well as its alternative implementations including .NET Compact Framework, Microsoft Silverlight and Mono.
+The Framework Class Library (FCL) is a superset of the BCL classes and refers to the entire class library that ships with .NET Framework. It includes an expanded set of libraries, including Windows Forms, ADO.NET, ASP.NET, Language Integrated Query, Windows Presentation Foundation, Windows Communication Foundation among others. The FCL is much larger in scope than standard libraries for languages like C++, and comparable in scope to the standard libraries of Java.
+\paragraph{Gestione della memoria}
+The .NET Framework CLR frees the developer from the burden of managing memory (allocating and freeing up when done); it handles memory management itself by detecting when memory can be safely freed. Instantiations of .NET types (objects) are allocated from the managed heap; a pool of memory managed by the CLR. As long as there exists a reference to an object, which might be either a direct reference to an object or via a graph of objects, the object is considered to be in use. When there is no reference to an object, and it cannot be reached or used, it becomes garbage, eligible for collection. NET Framework includes a garbage collector which runs periodically, on a separate thread from the application's thread, that enumerates all the unusable objects and reclaims the memory allocated to them.
+The .NET Garbage Collector (GC) is a non-deterministic, compacting, mark-and-sweep garbage collector. The GC runs only when a certain amount of memory has been used or there is enough pressure for memory on the system. Since it is not guaranteed when the conditions to reclaim memory are reached, the GC runs are non-deterministic. Each .NET application has a set of roots, which are pointers to objects on the managed heap (managed objects). These include references to static objects and objects defined as local variables or method parameters currently in scope, as well as objects referred to by CPU registers.[10] When the GC runs, it pauses the application, and for each object referred to in the root, it recursively enumerates all the objects reachable from the root objects and marks them as reachable. It uses CLI metadata and reflection to discover the objects encapsulated by an object, and then recursively walk them. It then enumerates all the objects on the heap (which were initially allocated contiguously) using reflection. All objects not marked as reachable are garbage.[10] This is the mark phase.[11] Since the memory held by garbage is not of any consequence, it is considered free space. However, this leaves chunks of free space between objects which were initially contiguous. The objects are then compacted together to make used memory contiguous again.[10][11] Any reference to an object invalidated by moving the object is updated by the GC to reflect the new location.[11] The application is resumed after the garbage collection is over.
+The GC used by .NET Framework is also generational.[12] Objects are assigned a generation; newly created objects belong to Generation 0. The objects that survive a garbage collection are tagged as Generation 1, and the Generation 1 objects that survive another collection are Generation 2 objects. The .NET Framework uses up to Generation 2 objects.[12] Higher generation objects are garbage collected less frequently than lower generation objects. This helps increase the efficiency of garbage collection, as older objects tend to have a longer lifetime than newer objects.[12] Thus, by eliminating older (and thus more likely to survive a collection) objects from the scope of a collection run, fewer objects need to be checked and compacted.[12]
 
 
 
