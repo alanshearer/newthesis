@@ -356,6 +356,44 @@ Per cui abbiamo un modello dei dati che può essere sintetizzato come in fig. \r
 \subsubsection{Modelli comportamentali}
 \paragraph{Diagramma di sequenza}
 \subsection{Implementazione}
+Di seguito sono riportate le porzioni di codice importanti ai fini dell'implementazione del software.
+\subsubsection{Connessione al GPS}
+\begin{figure}
+\begin{center}
+\lstset{language=CSharp}
+\begin{lstlisting}
+async Task<GeoCoordinate> GetPosition()
+        {
+            if ((bool)IsolatedStorageSettings.ApplicationSettings["LocationConsent"] != true)
+            {
+                MessageBox.Show("Attivare i servizi di posizionamento");
+            }
+
+            Geolocator geolocator = new Geolocator();
+            geolocator.DesiredAccuracyInMeters = 50;
+
+            try
+            {
+                Geoposition geoposition = await geolocator.GetGeopositionAsync(
+                    maximumAge: TimeSpan.FromMinutes(5),
+                    timeout: TimeSpan.FromSeconds(10)
+                    );
+
+                GeoCoordinate coordinateToBack = new GeoCoordinate();
+                coordinateToBack.Latitude = geoposition.Coordinate.Latitude;
+                coordinateToBack.Longitude = geoposition.Coordinate.Longitude;
+                return coordinateToBack;
+            }
+            catch (ArgumentException AE)
+            {
+                MessageBox.Show(AE.StackTrace);
+            }
+        }
+\end{lstlisting}
+\caption{Prova c\#\label{c}}
+\end{center}
+\end{figure}
+
 
 \subsection{Screenshot}
 

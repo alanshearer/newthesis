@@ -96,34 +96,35 @@
 \contentsline {subsubsection}{Modelli comportamentali}{64}{section*.100}
 \contentsline {paragraph}{Diagramma di sequenza}{64}{section*.101}
 \contentsline {subsection}{\numberline {3.2.4}Implementazione}{64}{subsection.3.2.4}
+\contentsline {subsubsection}{Connessione al GPS}{64}{section*.102}
 \contentsline {subsection}{\numberline {3.2.5}Screenshot}{64}{subsection.3.2.5}
-\contentsline {section}{\numberline {3.3}Iterazione 2}{65}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Analisi dei requisiti}{65}{subsection.3.3.1}
-\contentsline {subsubsection}{Requisiti funzionali}{65}{section*.102}
-\contentsline {subsubsection}{Requisiti non funzionali}{65}{section*.104}
-\contentsline {subsection}{\numberline {3.3.2}Casi di Test}{66}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Modellazione}{68}{subsection.3.3.3}
-\contentsline {subsubsection}{Modelli strutturali}{68}{section*.105}
-\contentsline {paragraph}{Modello dei dati}{68}{section*.106}
-\contentsline {subparagraph}{Client}{68}{section*.107}
-\contentsline {paragraph}{Diagramma delle classi}{68}{section*.109}
-\contentsline {subsubsection}{Modelli comportamentali}{68}{section*.110}
-\contentsline {paragraph}{Diagramma di sequenza}{68}{section*.111}
-\contentsline {subsection}{\numberline {3.3.4}Implementazione}{69}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Screenshot}{69}{subsection.3.3.5}
-\contentsline {section}{\numberline {3.4}Iterazione 3}{70}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Analisi dei requisiti}{70}{subsection.3.4.1}
-\contentsline {subsubsection}{Requisiti funzionali}{70}{section*.112}
-\contentsline {subsubsection}{Requisiti non funzionali}{70}{section*.114}
-\contentsline {subsection}{\numberline {3.4.2}Casi di Test}{71}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Modellazione}{71}{subsection.3.4.3}
-\contentsline {subsubsection}{Modelli strutturali}{71}{section*.115}
-\contentsline {paragraph}{Modello dei dati}{71}{section*.116}
-\contentsline {subparagraph}{Client}{71}{section*.117}
-\contentsline {paragraph}{Diagramma delle classi}{71}{section*.119}
-\contentsline {subsubsection}{Modelli comportamentali}{71}{section*.120}
-\contentsline {paragraph}{Diagramma di sequenza}{71}{section*.121}
-\contentsline {subsection}{\numberline {3.4.4}Implementazione}{72}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Screenshot}{72}{subsection.3.4.5}
-\contentsline {chapter}{\numberline {4}Test sul campo}{73}{chapter.4}
-\contentsline {chapter}{Bibliografia}{76}{chapter*.123}
+\contentsline {section}{\numberline {3.3}Iterazione 2}{66}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Analisi dei requisiti}{66}{subsection.3.3.1}
+\contentsline {subsubsection}{Requisiti funzionali}{66}{section*.104}
+\contentsline {subsubsection}{Requisiti non funzionali}{66}{section*.106}
+\contentsline {subsection}{\numberline {3.3.2}Casi di Test}{67}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Modellazione}{69}{subsection.3.3.3}
+\contentsline {subsubsection}{Modelli strutturali}{69}{section*.107}
+\contentsline {paragraph}{Modello dei dati}{69}{section*.108}
+\contentsline {subparagraph}{Client}{69}{section*.109}
+\contentsline {paragraph}{Diagramma delle classi}{69}{section*.111}
+\contentsline {subsubsection}{Modelli comportamentali}{69}{section*.112}
+\contentsline {paragraph}{Diagramma di sequenza}{69}{section*.113}
+\contentsline {subsection}{\numberline {3.3.4}Implementazione}{70}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Screenshot}{70}{subsection.3.3.5}
+\contentsline {section}{\numberline {3.4}Iterazione 3}{71}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Analisi dei requisiti}{71}{subsection.3.4.1}
+\contentsline {subsubsection}{Requisiti funzionali}{71}{section*.114}
+\contentsline {subsubsection}{Requisiti non funzionali}{71}{section*.116}
+\contentsline {subsection}{\numberline {3.4.2}Casi di Test}{72}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Modellazione}{72}{subsection.3.4.3}
+\contentsline {subsubsection}{Modelli strutturali}{72}{section*.117}
+\contentsline {paragraph}{Modello dei dati}{72}{section*.118}
+\contentsline {subparagraph}{Client}{72}{section*.119}
+\contentsline {paragraph}{Diagramma delle classi}{72}{section*.121}
+\contentsline {subsubsection}{Modelli comportamentali}{72}{section*.122}
+\contentsline {paragraph}{Diagramma di sequenza}{72}{section*.123}
+\contentsline {subsection}{\numberline {3.4.4}Implementazione}{73}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Screenshot}{73}{subsection.3.4.5}
+\contentsline {chapter}{\numberline {4}Test sul campo}{74}{chapter.4}
+\contentsline {chapter}{Bibliografia}{77}{chapter*.125}
