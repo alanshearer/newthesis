@@ -149,6 +149,12 @@ L'IDE di riferimento per lo sviluppo di applicazioni Windows Phone è Visual Stu
 Microsoft mette inoltre a disposizione altri significativi tools come Express Blend, che permette di creare interfacce utente; Silverlight (\emph{\url{http://www.microsoft.com/silverlight/}}) e XNA per la gestione della grafica 2D e 3D; Windows Phone Emulator, l'emulatore dei dispositivi Windows Phone.\\
 
 \subsubsection{Scelte}
+Nella scelta dell'ecosistema su cui sviluppare e presentare un'applicazione per la visita dei siti culturali, \textbf{Windows Phone OS} è stato preferito agli altri, poiché si è tenuto conto di vari fattori:
+\begin{itemize}
+\item \textbf{originalità}: nello store di Windows Phone, non si trovano applicazioni simili, per cui essa costituirebbe il primo tentativo di visita assistita dei siti culturali;
+\item \textbf{utilizzo dispositivi GPS}: l'utilizzo dei dispositivi GPS è molto semplice grazie alle API messe a disposizione da Microsoft;
+ \item \textbf{background personale}.
+\end{itemize}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
@@ -524,6 +530,15 @@ La localizzazione indoor ha il vantaggio di presentare un basso consumo di poten
 
 Esistono diverse soluzioni commerciali per la localizzazione indoor, come \textbf{RADAR} (\emph{\url{http://research.microsoft.com/en-us/projects/radar/}}), sviluppata da Microsoft, che è un sistema a radio frequenza; \textbf{Real Time Location System - RTLS} (\emph{\url{http://www.ekahau.com/real-time-location-system/technology}}), di Ekahau, che si basa sull'infrastruttura WLAN IEEE 802.11; \textbf{Visibility System} (\emph{\url{http://www.aeroscout.com/technology}}), di Aeroscout, basato sempre sull'infrastruttura WLAN IEEE 802.11; \textbf{Wireless Location Appliance} (\emph{\url{http://www.cisco.com/en/US/products/ps6386/index.html}}), di Cisco, basato su WLAN.
 
+\subsubsection{Scelte}
+Nell'ambito di studio, la scelta operata è sulla tecnologia \textbf{GPS}, per i seguenti motivi:
+\begin{itemize}
+\item \textbf{impossibilità di utilizzo localizzazione indoor}: date le dimensioni considerevoli del sito archeologico, si è ritenuto improbabile l'installazione di una rete WiFi che coprisse tutta l'area, al fine di localizzare tutti i dispositivi presenti;
+\item \textbf{inutilità localizzazione cellulare}: la localizzazione cellulare è soggetta a margini di errore ampi per cui, nell'ambito del caso in questione, in cui vi è la necessità di individuare con margini d'errore ridotti la posizione corretta, risulta inutile;
+\item \textbf{elevata precisione}: i margini di errore del GPS sono piuttosto bassi, come trattato nel capitolo \ref{tecnologie}.
+\end{itemize}
+
+
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
 \subsection{Codifica e serializzazione dei dati georeferenziati}
@@ -595,11 +610,7 @@ Fornisce numerose tipologie di mappe: stradali, satellitari, aeree, tridimension
 \paragraph{Bing Maps API}
 Microsoft, oltre a mettere a disposizione le Bing API agli sviluppatori, fornisce anche una SDK disponibile su più piattaforme, per realizzare applicazioni integrabili con la maggior parte dei prodotti commerciali Microsoft.
 \subsubsection{Scelte}
-
-\clearpage{\pagestyle{empty}\cleardoublepage}
-
-\subsection{Piattaforma Server}
-\subsubsection{saposajs}
+La scelta di Windows Phone OS come piattaforma ha reso quasi obbligatoria l'adozione delle mappe di Bing Maps, che sono supportate nativamente dalla Windows Phone SDK.
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
@@ -818,7 +829,7 @@ Il .NET Garbage Collector viene eseguito periodicamente, su un thread separato d
 
 
 \subsubsection{Microsoft Visual Studio}
-\textbf{Microsoft Visual Studio} (\emph{\url{http://www.microsoft.com/visualstudio/ita}}), rappresentata con uno screenshot in figura \ref{vsimage}, permette lo sviluppo di applicazioni console, siti internet, applicazioni grafiche, applicazioni e servizi web, librerie di classi, servizi Windows in tutti i linguaggi di programmazione supportati dal framework .NET, oltre che in tutti i linguaggi di markup, JavaScript e CSS.
+Microsoft Visual Studio (\emph{\url{http://www.microsoft.com/visualstudio/ita}}), rappresentata con uno screenshot in figura \ref{vsimage}, permette lo sviluppo di applicazioni console, siti internet, applicazioni grafiche, applicazioni e servizi web, librerie di classi, servizi Windows in tutti i linguaggi di programmazione supportati dal framework .NET, oltre che in tutti i linguaggi di markup, JavaScript e CSS.
 
 \begin{figure}
 \begin{center}
@@ -833,7 +844,7 @@ l'autocompletamento del token che il programmatore intende scrivere, oltre che
 alla visualizzazione della documentazione e alla gestione delle disambiguità a
 video direttamente durante la scrittura del codice.
 
-La versione utilizzata è \textbf{Visual Studio 2012 Ultimate}, lanciata nel settembre 2012.
+La versione utilizzata è \textbf{Visual Studio 2013}, lanciata nel giugno 2013.
 Essa fornisce numerose nuove features, brevemente elencate:
 \begin{itemize}
 \item \textbf{Colorazione semantica}: è stata migliorata la colorazione della sintassi, compresi i tipi definiti dall'utente, le macro, i tipi enumerativi e le funzioni;
@@ -888,7 +899,7 @@ In figura \ref{agiledevelopment} vi è una rappresentazione del processo di svil
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=0.23]{imgs/agiledevelopment.jpg}
+\includegraphics[scale=0.27]{imgs/agiledevelopment.jpg}
 \caption{Processo di sviluppo agile\label{agiledevelopment}} 
 \end{center}
 \end{figure}
