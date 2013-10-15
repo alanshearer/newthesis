@@ -85,46 +85,43 @@
 \contentsline {section}{\numberline {3.2}Iterazione 1}{61}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Analisi dei Requisiti}{61}{subsection.3.2.1}
 \contentsline {subsubsection}{Requisiti funzionali}{61}{section*.93}
-\contentsline {subsubsection}{Requisiti non funzionali}{62}{section*.95}
-\contentsline {subsection}{\numberline {3.2.2}Casi di Test}{63}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Modellazione}{65}{subsection.3.2.3}
-\contentsline {subsubsection}{Modelli strutturali}{65}{section*.96}
-\contentsline {paragraph}{Modello dei dati}{65}{section*.97}
-\contentsline {subparagraph}{Client}{65}{section*.98}
-\contentsline {paragraph}{Diagramma delle classi}{66}{section*.100}
-\contentsline {subsubsection}{Modelli comportamentali}{66}{section*.101}
-\contentsline {paragraph}{Diagramma di sequenza}{66}{section*.102}
-\contentsline {subsection}{\numberline {3.2.4}Implementazione}{66}{subsection.3.2.4}
-\contentsline {subsubsection}{Connessione al GPS}{66}{section*.103}
-\contentsline {subsection}{\numberline {3.2.5}Screenshot}{66}{subsection.3.2.5}
-\contentsline {section}{\numberline {3.3}Iterazione 2}{68}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Analisi dei requisiti}{68}{subsection.3.3.1}
-\contentsline {subsubsection}{Requisiti funzionali}{68}{section*.105}
-\contentsline {subsubsection}{Requisiti non funzionali}{68}{section*.107}
-\contentsline {subsection}{\numberline {3.3.2}Casi di Test}{69}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Modellazione}{71}{subsection.3.3.3}
-\contentsline {subsubsection}{Modelli strutturali}{71}{section*.108}
-\contentsline {paragraph}{Modello dei dati}{71}{section*.109}
-\contentsline {subparagraph}{Client}{71}{section*.110}
-\contentsline {paragraph}{Diagramma delle classi}{71}{section*.112}
-\contentsline {subsubsection}{Modelli comportamentali}{71}{section*.113}
-\contentsline {paragraph}{Diagramma di sequenza}{71}{section*.114}
-\contentsline {subsection}{\numberline {3.3.4}Implementazione}{72}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Screenshot}{72}{subsection.3.3.5}
-\contentsline {section}{\numberline {3.4}Iterazione 3}{73}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Analisi dei requisiti}{73}{subsection.3.4.1}
-\contentsline {subsubsection}{Requisiti funzionali}{73}{section*.115}
-\contentsline {subsubsection}{Requisiti non funzionali}{73}{section*.117}
-\contentsline {subsection}{\numberline {3.4.2}Casi di Test}{74}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Modellazione}{74}{subsection.3.4.3}
-\contentsline {subsubsection}{Modelli strutturali}{74}{section*.118}
-\contentsline {paragraph}{Modello dei dati}{74}{section*.119}
-\contentsline {subparagraph}{Client}{74}{section*.120}
-\contentsline {paragraph}{Diagramma delle classi}{74}{section*.122}
-\contentsline {subsubsection}{Modelli comportamentali}{74}{section*.123}
-\contentsline {paragraph}{Diagramma di sequenza}{74}{section*.124}
-\contentsline {subsection}{\numberline {3.4.4}Implementazione}{75}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Screenshot}{75}{subsection.3.4.5}
-\contentsline {chapter}{\numberline {4}Test sul campo}{76}{chapter.4}
-\contentsline {chapter}{Conclusioni e sviluppi futuri}{77}{chapter*.125}
-\contentsline {chapter}{Bibliografia}{78}{chapter*.125}
+\contentsline {subsubsection}{Requisiti non funzionali}{63}{section*.95}
+\contentsline {subsection}{\numberline {3.2.2}Casi di Test}{64}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Modellazione}{66}{subsection.3.2.3}
+\contentsline {subsubsection}{Modelli strutturali}{66}{section*.96}
+\contentsline {paragraph}{Modello dei dati}{66}{section*.97}
+\contentsline {paragraph}{Diagramma delle classi}{67}{section*.99}
+\contentsline {subsubsection}{Modelli comportamentali}{67}{section*.100}
+\contentsline {paragraph}{Diagramma di sequenza}{67}{section*.101}
+\contentsline {subsection}{\numberline {3.2.4}Implementazione}{67}{subsection.3.2.4}
+\contentsline {subsubsection}{Connessione al GPS}{67}{section*.102}
+\contentsline {subsection}{\numberline {3.2.5}Screenshot}{67}{subsection.3.2.5}
+\contentsline {section}{\numberline {3.3}Iterazione 2}{69}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Analisi dei requisiti}{69}{subsection.3.3.1}
+\contentsline {subsubsection}{Requisiti funzionali}{69}{section*.104}
+\contentsline {subsubsection}{Requisiti non funzionali}{69}{section*.106}
+\contentsline {subsection}{\numberline {3.3.2}Casi di Test}{70}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Modellazione}{72}{subsection.3.3.3}
+\contentsline {subsubsection}{Modelli strutturali}{72}{section*.107}
+\contentsline {paragraph}{Modello dei dati}{72}{section*.108}
+\contentsline {paragraph}{Diagramma delle classi}{72}{section*.110}
+\contentsline {subsubsection}{Modelli comportamentali}{74}{section*.111}
+\contentsline {paragraph}{Diagramma di sequenza}{74}{section*.112}
+\contentsline {subsection}{\numberline {3.3.4}Implementazione}{74}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Screenshot}{74}{subsection.3.3.5}
+\contentsline {section}{\numberline {3.4}Iterazione 3}{75}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Analisi dei requisiti}{75}{subsection.3.4.1}
+\contentsline {subsubsection}{Requisiti funzionali}{75}{section*.113}
+\contentsline {subsubsection}{Requisiti non funzionali}{75}{section*.115}
+\contentsline {subsection}{\numberline {3.4.2}Casi di Test}{76}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Modellazione}{76}{subsection.3.4.3}
+\contentsline {subsubsection}{Modelli strutturali}{76}{section*.116}
+\contentsline {paragraph}{Modello dei dati}{76}{section*.117}
+\contentsline {paragraph}{Diagramma delle classi}{76}{section*.119}
+\contentsline {subsubsection}{Modelli comportamentali}{76}{section*.120}
+\contentsline {paragraph}{Diagramma di sequenza}{76}{section*.121}
+\contentsline {subsection}{\numberline {3.4.4}Implementazione}{76}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Screenshot}{76}{subsection.3.4.5}
+\contentsline {chapter}{\numberline {4}Test sul campo}{78}{chapter.4}
+\contentsline {chapter}{Conclusioni e sviluppi futuri}{79}{chapter*.122}
+\contentsline {chapter}{Bibliografia}{80}{chapter*.122}
