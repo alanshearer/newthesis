@@ -229,6 +229,22 @@
 
 \makeatother
 
+\usepackage{natbib}
+
+\makeatletter  
+\let\@orig@endthebibliography\endthebibliography  
+\renewcommand\endthebibliography{%  
+\xdef\@kept@last@number{\the\c@enumiv}%  
+\@orig@endthebibliography}  
+\newenvironment{thesitography}[1]  
+{\def\bibname{Siti consultati}% Classe book o report  
+% {\def\refname{Siti consultati}% Classe article  
+\thebibliography{#1}%  
+\setcounter{enumiv}{\@kept@last@number}%  
+}  
+{\@orig@endthebibliography}  
+\makeatother 
+
 \begin{document}
 
 
@@ -278,6 +294,7 @@
 \begin{backmatter}
 
 \input{bibliografia.tex} 
+\input{sitografia.tex}
 \input{ringraziamenti.tex}
 \end{backmatter}
 \end{document}

@@ -3,7 +3,10 @@
 \chapter{Architettura e tecnologie}
 \label{ref:architettura}
 
-Verranno introdotte le architetture e ele tecnologie di utilizzo
+In questo capitolo saranno introdotte le architetture e le tecnologie utilizzate per la realizzazione dell'applicazione.
+Dopo una presentazione dell'architettura di riferimento, saranno introdotti i principali sistemi operativi mobili, utilizzati per la piattaforma client, e, successivamente, le tecnologie di utilizzo per l'applicazione.
+E' poi descritto l'ambiente server, con particolare riferimento ai Web Services ed al paradigma REST.
+Infine, sono introdotte la tecnologia .NET, che costituisce il framework di sviluppo dell'applicazione, e la metodologia Agile, che è la metodologia di sviluppo software utilizzata.
 
 \section{Architettura Client/Server}
 L'\emph{architettura client/server} indica un'architettura software che è costituita da due moduli integrati ma distinti, residenti generalmente su calcolatori diversi.\\
@@ -45,13 +48,15 @@ Si distinguono tre parti principali di tale architettura: i dati sono la parte l
 \end{figure}
 L'architettura client/server ha avuto una evoluzione nel tempo (fig. \ref{clientserverorganization}) che l'ha portata attraverso vari stadi analizzati di seguito:
 \begin{itemize}
-\item \emph{Timesharing}: con questa soluzione, sul server sono presenti tutte e tre le parti fondamentali dell'architettura: dati, logica e presentazione. Il client è rappresentato da un terminale cosiddetto “stupido” il quale permette l'interazione con il server, senza avere una sua capacità elaborativa;
+\item \emph{Time-sharing}: con questa soluzione, sul server sono presenti tutte e tre le parti fondamentali dell'architettura: dati, logica e presentazione. Il client è rappresentato da un terminale cosiddetto “stupido” il quale permette l'interazione con il server, senza avere una sua capacità elaborativa;
 \item \emph{Client presentation}: dai tre livelli iniziali, viene staccata la presentazione che viene portata sul client, mentre la parte logica e quella dati, continuano a rimanere sul server;
 \item \emph{Application distribution}: aumentando la potenza elaborativa dei client, si è pensato di spostare oltre che alla presentazione anche una parte della logica su quest'ultimo; questo tipo di operazione ha, da un lato, reso meno gravose le elaborazioni sui server, ma dall'altro ha aumentato i costi a causa dell'introduzione di nuovo software, in quanto necessita l'aggiornamento su ogni client su cui è installato. La caratteristica principale di questo stadio è che la parte di logica è distribuita in parte sul client e in parte sul server;
 \item \emph{Central database}: il passo successivo è stato quello di spostare tutta la logica sul client insieme alla presentazione, lasciando sul server solo la parte dati. Questo tipo di soluzione ha il vantaggio di avere una banca dati centralizzata, ma lo svantaggio, per aziende molto grandi, è quello di avere un grande numero di accessi localizzati in un singolo punto;
 \item \emph{Distribuited database}: per ovviare agli svantaggi della soluzione precedente si è pensato di portare sui client anche la parte dati. In questo modo si pone una soluzione al sovraccarico generato dal gran numero di utenti che si connettono ai dati, ma si crea un
 altro problema legato alla sincronizzazione delle banche dati.
 \end{itemize}
+
+L'architettura del progetto sviluppato in questa tesi è quindi di tipo Client/Server
 
 
 
@@ -66,7 +71,7 @@ In questo sezione verranno trattati i principali sistemi operativi mobile e i re
 
 
 \subsubsection{Android}
-Android (\emph{\url{http://www.android.com/}}), nato nel 2003, è il più diffuso sistema operativo per dispositivi mobili; open source; distribuito sotto licenza Apache, ovvero vi è la possibilità di modificare e distribuire liberamente il codice sorgente.\\
+Android (\cite{www:android}) (\cite{book:libro1}), nato nel 2003, è il più diffuso sistema operativo per dispositivi mobili; open source; distribuito sotto licenza Apache, ovvero vi è la possibilità di modificare e distribuire liberamente il codice sorgente.\\
 \begin{figure}
 \begin{center}
 \includegraphics[scale=0.5]{imgs/android_architecture.jpg} 
