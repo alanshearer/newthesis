@@ -48,6 +48,7 @@ Si distinguono tre parti principali di tale architettura: i dati sono la parte l
 \end{figure}
 L'architettura client/server ha avuto una evoluzione nel tempo (fig. \ref{clientserverorganization}) che l'ha portata attraverso vari stadi analizzati di seguito:
 \begin{itemize}
+
 \item \emph{Time-sharing}: con questa soluzione, sul server sono presenti tutte e tre le parti fondamentali dell'architettura: dati, logica e presentazione. Il client è rappresentato da un terminale cosiddetto “stupido” il quale permette l'interazione con il server, senza avere una sua capacità elaborativa;
 \item \emph{Client presentation}: dai tre livelli iniziali, viene staccata la presentazione che viene portata sul client, mentre la parte logica e quella dati, continuano a rimanere sul server;
 \item \emph{Application distribution}: aumentando la potenza elaborativa dei client, si è pensato di spostare oltre che alla presentazione anche una parte della logica su quest'ultimo; questo tipo di operazione ha, da un lato, reso meno gravose le elaborazioni sui server, ma dall'altro ha aumentato i costi a causa dell'introduzione di nuovo software, in quanto necessita l'aggiornamento su ogni client su cui è installato. La caratteristica principale di questo stadio è che la parte di logica è distribuita in parte sul client e in parte sul server;
@@ -57,6 +58,7 @@ altro problema legato alla sincronizzazione delle banche dati.
 \end{itemize}
 
 L'architettura del progetto sviluppato in questa tesi è quindi di tipo Client/Server, poichè ci sono vantaggi realizzativi sia in termini economici che in termini di estendibilità futura dei servizi offerti.
+
 
 
 
@@ -84,18 +86,18 @@ L'architettura Android, riportata in figura \ref{androidarchitecture}, è così 
 \item \emph{kernel}, basato sul kernel Linux(versioni 2.6 e 3.x), contiene i driver per il funzionamento del dispositivo;
 \item \emph{strato middleware contenente Librerie ed API}: scritte in C o C++, sono le librerie che forniscono le funzionalità standard al dispositivo, ovvero gestione delle funzioni del display (Surface Manager), gestione dei media (Media Framework), fonts di sistema, DBMS (SQLite), web browser engine (WebKit), e numerose altre;
 \item \emph{Android Runtime}: Contiene la Dalvik virtual machine, una macchina virtuale ottimizzata per sfruttare la poca memoria presente nei dispositivi mobili, e che consente di far girare diverse istanze della macchina virtuale contemporaneamente, nascondendo al sistema operativo sottostante la gestione della memoria e dei thread. E' presente, inoltre, un compilatore just-in-time che esegue il Dalvik dex-code, simile al bytecode Java;
-\item \emph{Framework di applicazioni che include librerie java basate su Apache Harmony (\cite{www:apacheharmony}),  costituito da una serie di componenti e API che eseguono numerosi compiti, tra i quali la gestione dell'interazione con l'utente (tramite l'Activity Manager), la condivisione delle informazioni tra i vari processi (Content Provider), gestione delle finestre (Window Manager), gestione delle funzionalità telefoniche (Telephony Manager), ottimizzazione delle risorse (Resource Manager), gestione del ciclo di vita delle applicazioni (Package Manager), gestione della localizzazione (Location Manager), gestione delle notifiche con l'utente (Notification Manager).
+\item \emph{Framework di applicazioni che include librerie java basate su Apache Harmony (\cite{www:apacheharmony})},  costituito da una serie di componenti e API che eseguono numerosi compiti, tra i quali la gestione dell'interazione con l'utente (tramite l'Activity Manager), la condivisione delle informazioni tra i vari processi (Content Provider), gestione delle finestre (Window Manager), gestione delle funzionalità telefoniche (Telephony Manager), ottimizzazione delle risorse (Resource Manager), gestione del ciclo di vita delle applicazioni (Package Manager), gestione della localizzazione (Location Manager), gestione delle notifiche con l'utente (Notification Manager).
 \end{itemize}
 
 Per quanto riguarda gli aggiornamenti, Android ha un rapido ciclo di rilascio (nuove versioni ogni sei-nove mesi).
 Gli aggiornamenti sono in genere di natura incrementale e apportano miglioramenti del software a intervalli regolari. Tra una major release e l'altra vengono messi a disposizione rilasci intermedi per risolvere problemi di sicurezza e altri bug del software.
-\\
+
 
 
 \paragraph{Sviluppo Applicazioni}
 Tutte le applicazioni Android, dovendo basarsi sul framework di librerie Java, sono scritte in Java.
 
-L'Android software development kit SDK (\cite{www:androidsdk}) include un insieme di tool di sviluppo, quali un debugger, librerie, un emulatore basato su QEMU (\emph{\url{http://wiki.qemu.org/}}), codici di esempio e tutorials.
+L'Android software development kit SDK (\cite{www:androidsdk}) include un insieme di tool di sviluppo, quali un debugger, librerie, un emulatore basato su QEMU (\cite{www:QEMU}), codici di esempio e tutorials.
 Le piattaforme di sviluppo supportate includono computer con sistema operativo Linux, MAC OS X (dalla 10.5.8) e Windows (da XP).
 L'IDE (Integrated Development Enviroment) ufficialmente supportato è ADT (Android Development Tools), basato su Eclipse (\cite{www:eclipse}) ma, in ogni caso, è possibile sviluppare applicazioni Android anche con altri IDE.
 
@@ -163,11 +165,12 @@ Nella scelta dell'ecosistema su cui sviluppare e presentare un'applicazione per 
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
+
 \subsection{Codifica e serializzazione dei dati}
 La serializzazione è un processo  per salvare un oggetto in un supporto di memorizzazione lineare o per trasmetterlo su una connessione di rete.
 Essa può essere realizzata in modalità binaria o testuale.
 La modalità binaria, seppur molto efficiente, presenta scarsa interoperabilità e flessibilità.
-La serializzazione testuale, invece, essendo basata sul paradigma REST (\cite{www:rest}), determina un'ottimizzazione nello scambio di informazioni tra ambienti eterogenei, rendendo le strutture tradotte indipendenti dall'architettura e dalle differenti rappresentazioni dei dati.
+La serializzazione testuale, invece, essendo basata sul paradigma REST (\cite{www:REST}), determina un'ottimizzazione nello scambio di informazioni tra ambienti eterogenei, rendendo le strutture tradotte indipendenti dall'architettura e dalle differenti rappresentazioni dei dati.
 I formati di serializzazione testuale più noti sono XML, JSON e YAML, che  sono trattati di seguito.
 
 \subsubsection{XML}
@@ -176,7 +179,12 @@ La storia di XML (eXtra Markup Language, \cite{www:XML}) è strettamente legata 
 XML, infatti, è nato grazie ad una semplificazione di SGML per consentire di definire in maniera semplice nuovi linguaggi di markup da utilizzare in ambito web.
 In definitiva, XML è un linguaggio marcatore basato su un meccanismo sintattico che consente di definire e controllare il significato degli elementi contenuti in un documento o in un testo.
 
-\begin{figure}
+
+
+\paragraph{Sintassi}
+XML è una tecnologia adoperata per creare linguaggi di markup che descrivono dati di qualsiasi tipo, quindi consente di descrivere dati in modo accurato creando nuovi tag.
+Un esempio di sintassi XML è l'esempio \textbf{Templi.xml} della figura \ref{xmlimage}.
+\begin{figure}[h!]
 \begin{center}
 \lstset{language=MYXML}
 \begin{lstlisting}
@@ -198,11 +206,6 @@ In definitiva, XML è un linguaggio marcatore basato su un meccanismo sintattico
 \end{figure}
 
 
-\paragraph{Sintassi}
-XML è una tecnologia adoperata per creare linguaggi di markup che descrivono dati di qualsiasi tipo, quindi consente di descrivere dati in modo accurato creando nuovi tag.
-Un esempio di sintassi XML è l'esempio \textbf{Templi.xml} della figura \ref{xmlimage}.
-
-
 Un documento XML si può quindi dividere in due sezioni: il \textit{prologo} e l'\textit{istanza}. 
 Il prologo contiene informazioni di carattere generale sul documento, mentre l'istanza contiene i dati. Il documento XML è costituito da un insieme di dati e di marcatori che ne specificano la struttura, come:
 \begin{itemize}
@@ -218,7 +221,8 @@ Le prime due righe contenute nell'esempio della figura \ref{xmlimage} costituisc
 La prima riga contiene la specifica della versione di XML utilizzata e del tipo di codifica del documento. 
 Nella seconda riga è stabilita la tipologia di documento alla quale appartiene il file, specificando il particolare schema DTD scelto.
 La dichiarazione della tipologia di documento può essere di tre tipi, come riportato nella figura \ref{xmldtdeclaration}.
-\begin{figure}
+
+\begin{figure}[h!]
 \begin{center}
 \begin{itemize}
 \item \textbf{Esterna}:
@@ -249,7 +253,7 @@ I tag di apertura e di chiusura vanno sempre specificati, tranne nel caso non vi
 \subparagraph{Attributi}
 I tag XML possono contenere informazioni interne che vengono definite \textit{attributi} del tag. Essi specificano proprietà intrinseche al tag e vanno indicati attraverso l'accoppiata nome-valore, come nell'esempio in figura \ref{xmlattribute}.
 
-\begin{figure}
+\begin{figure}[h!]
 \begin{center}
 \lstset{language=MYXML}
 \begin{lstlisting}
@@ -263,7 +267,13 @@ I tag XML possono contenere informazioni interne che vengono definite \textit{at
 Oltre alle direttive di elaborazione, in un file XML è possibile individuare i commenti, racchiusi tra le sequenze di caratteri \textbf{<!--} e \textbf{-->}. Questi possono trovarsi in qualsiasi punto del documento, ed il testo contenuto non viene elaborato dal parser.
 
 
-\begin{figure}
+
+
+\subparagraph{Correttezza sintattica e validità}
+Un documento XML è valido se è conforme al DTD associato.
+Un DTD (Document Type Definition) è uno strumento che definisce le componenti ammesse nella costruzione di un XML. Un esempio di DTD è riportato in figura \ref{dtdimage}.
+
+\begin{figure}[h!]
 \lstset{language=MYXML}
 \begin{lstlisting}
 <! ELEMENT tempio (nome, annodicostruzione)>
@@ -272,12 +282,6 @@ Oltre alle direttive di elaborazione, in un file XML è possibile individuare i 
 \end{lstlisting}
 \caption{Esempio di file DTD.\label{dtdimage}}
 \end{figure}
-
-\subparagraph{Correttezza sintattica e validità}
-Un documento XML è valido se è conforme al DTD associato.
-Un DTD (Document Type Definition) è uno strumento che definisce le componenti ammesse nella costruzione di un XML. Un esempio di DTD è riportato in figura \ref{dtdimage}.
-
-
 
 
 
@@ -322,7 +326,10 @@ La sintassi JSON è molto semplice e si basa su due strutture:
 \end{itemize}
 Queste due strutture sono utilizzabili in tutti i linguaggi di programmazione, e ciò rende ancora più evidente la natura di JSON, orientata all'interoperabilità.
 
-\begin{figure}
+
+\subparagraph{Oggetto}
+Un oggetto in JSON è contenuto tra due parentesi graffe. Tra il nome e il valore sono presenti due punti ed il nome dell'oggetto è scritto tra due doppi apici, mentre il valore è scritto tra due doppi apici nel caso non sia numerico. Un esempio è in figura\ref{jsonobjectimage}.
+\begin{figure}[h!]
 \lstset{language=JSON}
 \begin{lstlisting}
 {"nome": "Tempio di Atena"}
@@ -330,10 +337,11 @@ Queste due strutture sono utilizzabili in tutti i linguaggi di programmazione, e
 \caption{Esempio di oggetto JSON.\label{jsonobjectimage}}
 \end{figure}
 
-\subparagraph{Oggetto}
-Un oggetto in JSON è contenuto tra due parentesi graffe. Tra il nome e il valore sono presenti due punti ed il nome dell'oggetto è scritto tra due doppi apici, mentre il valore è scritto tra due doppi apici nel caso non sia numerico. Un esempio è in figura\ref{jsonobjectimage}.
 
-\begin{figure}
+
+\subparagraph{Array}
+Un array è una raccolta ordinata di valori. In JSON un array è contenuto tra due parentesi quadre e i valori sono separati da virgola, come è evidente dalla figura \ref{jsonarrayimage}.
+\begin{figure}[h!]
 \lstset{language=JSON}
 \begin{lstlisting}
 {"templi": ["Tempio di Atena", "Tempio di Nettuno"]}
@@ -341,12 +349,11 @@ Un oggetto in JSON è contenuto tra due parentesi graffe. Tra il nome e il valor
 \caption{Esempio di oggetto JSON.\label{jsonarrayimage}}
 \end{figure}
 
-\subparagraph{Array}
-Un array è una raccolta ordinata di valori. In JSON un array è contenuto tra due parentesi quadre e i valori sono separati da virgola, come è evidente dalla figura \ref{jsonarrayimage}.
-
 Le stringhe sono rappresentate come nella maggior parte dei linguaggi di programmazione e vanno sempre messe tra doppi apici, mentre i numeri possono iniziare con identificatori di segno ed essere seguiti da una parte esponenziale, così come in molti linguaggi.
 Solo le rappresentazioni esadecimali o ottali non sono permesse.
+
 \begin{figure}
+\begin{center}
 \lstset{language=JSON}
 \begin{lstlisting}
 {
@@ -363,6 +370,7 @@ Solo le rappresentazioni esadecimali o ottali non sono permesse.
 }
 \end{lstlisting}
 \caption{Esempio di oggetto JSON.\label{jsonimage}}
+\end{center}
 \end{figure}
 
 Nella figura \ref{jsonimage} è possibile visualizzare un esempio completo di file JSON, analogo a quello precedente di file XML in figura \ref{xmlimage}.
@@ -386,7 +394,13 @@ Gli obiettivi di YAML sono:
 YAML mette a disposizione due tipi di sintassi, una indentata e una in linea, simile al formato JSON.
 Inoltre in YAML ci sono degli indicatori che servono a descrivere la struttura ed il contenuto di un documento YAML.
 
-\begin{figure}
+
+
+
+
+\subparagraph{Liste}
+Le liste sono collezioni di elementi. La loro rappresentazione in YAML può essere indentata (fig. \ref{yamllistaimage}) o allineata (fig. \ref{yamllistbimage}).
+\begin{figure}[h!]
 \lstset{language=YAML}
 \begin{lstlisting}
 --- # Templi di Paestum
@@ -396,7 +410,7 @@ Inoltre in YAML ci sono degli indicatori che servono a descrivere la struttura e
 \caption{Lista nel formato indentato YAML.\label{yamllistaimage}}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 \lstset{language=YAML}
 \begin{lstlisting}
  --- # Templi di Paestum
@@ -404,8 +418,14 @@ Inoltre in YAML ci sono degli indicatori che servono a descrivere la struttura e
 \end{lstlisting}
 \caption{Lista nel formato convenzionale YAML.\label{yamllistbimage}}
 \end{figure}
+\subparagraph{Array associativi}
+Gli array sono associazioni nome/valore, e possono essere rappresentati come in figura \ref{yamlarrayimage}.
 
-\begin{figure}
+\subparagraph{Stringhe}
+Le stringhe non richiedono gli apici o i doppi apici per essere rappresentate.
+
+La rappresentazione delle stringhe può essere indentata, come nella figura \ref{yamlstringaimage}, oppure allineata, come nella figura \ref{yamlstringbimage}, dove il testo viene allineato in un singolo paragrafo.
+\begin{figure}[h!]
 \lstset{language=YAML}
 \begin{lstlisting}
 --- # Blocco indentato
@@ -417,7 +437,7 @@ Inoltre in YAML ci sono degli indicatori che servono a descrivere la struttura e
 \caption{Array in YAML.\label{yamlarrayimage}}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 \lstset{language=YAML}
 \begin{lstlisting}
  --- |
@@ -429,7 +449,7 @@ Inoltre in YAML ci sono degli indicatori che servono a descrivere la struttura e
 \caption{Stringa nel formato indentato YAML.\label{yamlstringaimage}}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 \lstset{language=YAML}
 \begin{lstlisting}
  --- >
@@ -441,22 +461,14 @@ Inoltre in YAML ci sono degli indicatori che servono a descrivere la struttura e
 \caption{Stringa nel formato convenzionale YAML.\label{yamlstringbimage}}
 \end{figure}
 
-\subparagraph{Liste}
-Le liste sono collezioni di elementi. La loro rappresentazione in YAML può essere indentata (fig. \ref{yamllistaimage}) o allineata (fig. \ref{yamllistbimage}).
-
-\subparagraph{Array associativi}
-Gli array sono associazioni nome/valore, e possono essere rappresentati come in figura \ref{yamlarrayimage}.
-
-\subparagraph{Stringhe}
-Le stringhe non richiedono gli apici o i doppi apici per essere rappresentate.
-
-La rappresentazione delle stringhe può essere indentata, come nella figura \ref{yamlstringaimage}, oppure allineata, come nella figura \ref{yamlstringbimage}, dove il testo viene allineato in un singolo paragrafo.
-
 \subsubsection{Scelta}
 Nell'ambito del progetto di tesi, nonostante i formati JSON e YAML presentino ridondanze minori rispetto a XML, come già specificato, quest'ultimo risulta comunque il più adatto alla descrizione di strutture dati e presenta uno spettro di utilizzo più vasto.
 Inoltre, come si vedrà in seguito, l'utilizzo del formato GeoRSS, derivato da XML, per la descrizione delle caratteristiche georeferenziate dei punti di interesse, inducono comunque alla scelta del formato XML.
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
+
+
+
 
 \subsection{Tecniche di geolocalizzazione}
 La geolocalizzazione è l'identificazione della posizione geografica di un dato oggetto nel mondo reale.
@@ -481,7 +493,7 @@ Vi sono inolte diversi metodi per valutare la qualità di un sistema di localizz
 
 \subsubsection{Localizzazione satellitare}
 La localizzazione satellitare si basa su infrastrutture indipendenti dedicate, ovvero un certo numero di satelliti utilizzati solo a questo scopo e di tipo terminal-based.
-I vantaggi del posizionamento satellitare sono la copertura globale e l'alto livello di accuratezza, ma è soggetto anche ad importanti inconvenienti, come un eccessivo consumo dovuto ai dispositivi che utilizzano il segnale GPS e ai disturbi naturali che possono ostacolarne la ricezione.
+I vantaggi del posizionamento satellitare sono la copertura globale e l'alto livello di accuratezza, ma ci sono anche importanti inconvenienti, come l'alto consumo dei dispositivi che utilizzano il segnale GPS e i disturbi naturali che possono ostacolarne la ricezione.
 
 \paragraph{GPS}
 Il sistema GPS (Global Positioning System, \cite{www:GPS}), avviato dagli USA negli anni '70 e completato nel 1993, è stato realizzato per motivi essenzialmente militari, al fine di consentire il percorso dei mezzi militari, sia sulla terraferma che in mare in modo da localizzarne la posizione in ogni momento e consentire eventuali operazioni di supporto e salvataggio.
@@ -534,25 +546,28 @@ E' basata su tecnologie radio, infrarossi o ad ultrasuoni, con un raggio di comu
 La realizzazione di un sistema di localizzazione indoor può avvenire mediante la realizzazione di infrastrutture dedicate o l'utilizzo di infrastrutture preesistenti, come le reti WLAN.
 La localizzazione indoor ha il vantaggio di presentare un basso consumo di potenza dei dispositivi utilizzati per la ricezione e l'elevata accuratezza dovuta al corto raggio delle tecnologie usate.
 
-Esistono diverse soluzioni commerciali per la localizzazione indoor, come \textbf{RADAR} (\emph{\url{http://research.microsoft.com/en-us/projects/radar/}}), sviluppata da Microsoft, che è un sistema a radio frequenza; \textbf{Real Time Location System - RTLS} (\emph{\url{http://www.ekahau.com/real-time-location-system/technology}}), di Ekahau, che si basa sull'infrastruttura WLAN IEEE 802.11; \textbf{Visibility System} (\emph{\url{http://www.aeroscout.com/technology}}), di Aeroscout, basato sempre sull'infrastruttura WLAN IEEE 802.11; \textbf{Wireless Location Appliance} (\emph{\url{http://www.cisco.com/en/US/products/ps6386/index.html}}), di Cisco, basato su WLAN.
+Esistono diverse soluzioni commerciali per la localizzazione indoor, come \textbf{RADAR} (\cite{www:RADAR}), sviluppata da Microsoft, che è un sistema a radio frequenza; \textbf{Real Time Location System - RTLS} (\cite{www:RTLS}), di Ekahau, che si basa sull'infrastruttura WLAN IEEE 802.11; \textbf{Visibility System} (\cite{www:VisibilitySystem}), di Aeroscout, basato sempre sull'infrastruttura WLAN IEEE 802.11; \textbf{Wireless Location Appliance} (\cite{www:WirelessLocationAppliance}), di Cisco, basato su WLAN.
 
-\subsubsection{Scelte}
+\subsubsection{Scelta adottata}
 Nell'ambito di studio, la scelta operata è sulla tecnologia \textbf{GPS}, per i seguenti motivi:
 \begin{itemize}
+\item \textbf{disponibilità dispositivi GPS}: tutti gli smartphone con sistema operativo Windows Phone, anche quelli appartenenti a fasce di prezzo più basse, presentano un dispositivo di ricezione del segnale GPS;
 \item \textbf{impossibilità di utilizzo localizzazione indoor}: date le dimensioni considerevoli del sito archeologico, si è ritenuto improbabile l'installazione di una rete WiFi che coprisse tutta l'area, al fine di localizzare tutti i dispositivi presenti;
 \item \textbf{inutilità localizzazione cellulare}: la localizzazione cellulare è soggetta a margini di errore ampi per cui, nell'ambito del caso in questione, in cui vi è la necessità di individuare con margini d'errore ridotti la posizione corretta, risulta inutile;
-\item \textbf{elevata precisione}: i margini di errore del GPS sono piuttosto bassi, come trattato nel capitolo \ref{tecnologie}.
+\item \textbf{elevata precisione}: i margini di errore del GPS sono piuttosto bassi, e quindi compatibili con la localizzazione e discriminazione della posizione dei monumenti.
 \end{itemize}
 
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
+
+
 \subsection{Codifica e serializzazione dei dati georeferenziati}
 \subsubsection{GeoRSS}
 GeoRSS è uno standard emergente per la codifica delle informazioni come parte di un feed Web, infatti il nome \emph{GeoRSS} deriva proprio da \emph{RSS}, il più conosciuto feed Web.
-Il GeoRSS, il contenuto riguardante la posizione consiste di punti geografici, linee e poligoni e delle relative descrizioni, come mostrato in fig. \ref{georssimage}. Tali feed sono progettati per essere utilizzati da software geografici come i generatori di mappe.
+Il GeoRSS, il contenuto riguardante la posizione consiste di punti geografici, linee e poligoni e delle relative descrizioni, come mostrato in figura \ref{georssimage}. Tali feed sono progettati per essere utilizzati da software geografici come i generatori di mappe.
 
-\begin{figure}
+\begin{figure}[h!]
 \begin{center}
 \lstset{language=MYXML}
 \begin{lstlisting}
@@ -562,28 +577,28 @@ Il GeoRSS, il contenuto riguardante la posizione consiste di punti geografici, l
  <rss version="2.0" 
       xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" 
       xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <channel>
-     <title>USGS M5+ Earthquakes</title>
-     <description>Real-time, worldwide earthquake list for the past 7 days</description>
-     <link>http://earthquake.usgs.gov/eqcenter/</link>
-     <dc:publisher>U.S. Geological Survey</dc:publisher>
-     <pubDate>Thu, 27 Dec 2007 23:56:15 PST</pubDate>
-     <item>
-       <pubDate>Fri, 28 Dec 2007 05:24:17 GMT</pubDate>
-       <title>M 5.3, northern Sumatra, Indonesia</title>
-       <description>December 28, 2007 05:24:17 GMT</description>
-       <link>http://earthquake.usgs.gov/eqcenter/recenteqsww/Quakes/us2007llai.php</link>
-       <geo:lat>5.5319</geo:lat>
-       <geo:long>95.8972</geo:long>
-     </item>
-   </channel>
+ 	<templi>
+ 		<title>Elenco dei templi</title>
+    	<description>Questo è un elenco dei templi presenti negli scavi di Paestum</description>
+		<tempio>
+			<nome>Tempio di Atena</nome>
+			<annodicostruzione>500 AC</annodicostruzione>
+			<indirizzo>
+				<citta>Paestum</citta>
+				<provincia>Salerno</provincia>
+			<indirizzo>
+			<geo:lat>5.5319</geo:lat>
+			<geo:long>95.8972</geo:long>
+		</tempio>
+ 	</templi>
  </rss>
 \end{lstlisting}
-\caption{Esempio di documento GeoRSS\label{georssimage}}
+\caption{Esempio di documento GeoRSS.\label{georssimage}}
 \end{center}
 \end{figure}
-Le due codifiche principali di GeoRSS sono GeoRSS-Simple e GeoRSS Geography Markup Language. Il primo è un formato leggerissimo che supporta geometrie semplici (punti, linee, poligoni) e può essere utilizzato per gli scopi tipici di geolocalizzazione. GeoRSS GML è un formato dell'Open Geospatial Consortium (OGC) GML Application Profile, e supporta un vastissimo range di caratteristiche rispetto a GeoRSS Simple.
+Le due codifiche principali di GeoRSS sono GeoRSS-Simple e GeoRSS Geography Markup Language. Il primo è un formato leggero che supporta geometrie semplici (punti, linee, poligoni) e può essere utilizzato per gli scopi tipici di geolocalizzazione. GeoRSS GML è un formato dell'Open Geospatial Consortium (OGC) GML Application Profile, e supporta un vastissimo range di caratteristiche rispetto a GeoRSS Simple.
 E' presente anche un formato di serializzazione GeoRSS definito dalla W3C, ma è obsoleto e parzialmente deprecato, pur essendo ancora il più utilizzato.
+Per il lavoro oggetto di questa tesi, il formato GeoRSS risulta particolarmente adatto per lo scambio di dati georeferenziati attraverso un Web Service.
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
@@ -604,14 +619,14 @@ I vantaggi derivanti dall'utilizzo di mappe web sono:
 
 I servizi di web mapping più noti sono \textbf{Google Maps} e \textbf{Bing Maps}.
 \subsubsection{Google Maps}
-Google Maps (\emph{\url{https://maps.google.it}}) è un servizio di web mapping nato nel 2005 e fornito da Google, che include numerosi altri servizi basati sulle mappe (mappe stradali, pianificazione di percorsi e localizzazione di imprese).
+Google Maps (\cite{www:googlemaps}) è un servizio di web mapping nato nel 2005 e fornito da Google, che include numerosi altri servizi basati sulle mappe (mappe stradali, pianificazione di percorsi e localizzazione di imprese).
 Le mappe non sono aggiornate in tempo reale, ma spesso dopo mesi o anni.
 \paragraph{Google Maps API}
 Google ha messo a disposizione le proprie API per consentire agli sviluppatori di integrare Google Maps all'interno dei loro siti web.
 Il servizio offerto è gratuito, anche se Google si riserva, nei termini di licenza, di introdurre future forme di pagamento.
 
 \subsubsection{Bing Maps}
-Bing Maps (\emph{\url{http://it.bing.com/maps/}}) è un servizio di web mapping nato nel 2009 e distribuito da Microsoft nella \textit{Bing suite}.
+Bing Maps (\cite{www:bingmaps}) è un servizio di web mapping nato nel 2009 e distribuito da Microsoft nella \textit{Bing suite}.
 Fornisce numerose tipologie di mappe: stradali, satellitari, aeree, tridimensionali, oltre che, naturalmente, servizi di traffico e di ricerca delle imprese.
 \paragraph{Bing Maps API}
 Microsoft, oltre a mettere a disposizione le Bing API agli sviluppatori, fornisce anche una SDK disponibile su più piattaforme, per realizzare applicazioni integrabili con la maggior parte dei prodotti commerciali Microsoft.
@@ -621,14 +636,16 @@ La scelta di Windows Phone OS come piattaforma ha reso quasi obbligatoria l'adoz
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
 \subsection{Web Service e protocolli di scambio delle informazioni}
-Un \textit{Web Service} è, secondo la definizione data dal \textit{W3C}, un sistema software progettato per supportare l'interoperabilità tra diversi elaboratori su di una medesima rete ovvero in un contesto distribuito. L'interoperabilità è ottenuta associando all'applicazione un'interfaccia software (descritta in formato automaticamente elaborabile, ad esempio il Web Services Description Language), che espone all'esterno i servizi associati e utilizzando la quale altri sistemi possono interagire con l'applicazione stessa, attivando le operazioni descritte nell'interfaccia tramite appositi messaggi di richiesta.
+Un \textit{Web Service} è, secondo la definizione data dal consorzio \textit{W3C} (\cite{www:w3c}), un sistema software progettato per supportare l'interoperabilità tra diversi elaboratori su di una medesima rete ovvero in un contesto distribuito. L'interoperabilità è ottenuta associando all'applicazione un'interfaccia software (descritta in formato automaticamente elaborabile, ad esempio il Web Services Description Language), che espone all'esterno i servizi associati e utilizzando la quale altri sistemi possono interagire con l'applicazione stessa, attivando le operazioni descritte nell'interfaccia tramite appositi messaggi di richiesta.
 Tali messaggi sono formattati secondo gli standard XML ed incapsulati e trasportati tramite i protocolli web (di solito HTTP), da cui il nome web service. Un esempio di trasporto è in figura \ref{webservice}.
-\begin{figure}
+
+\begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=1]{imgs/webservice.png} 
-\caption{Scambio messaggi in un Web Service\label{webservice}}
+\caption{Scambio messaggi in un Web Service.\label{webservice}}
 \end{center}
 \end{figure}
+
 I \textit{Web Service} hanno ridefinito nel tempo il modo in cui viene utilizzato il Web, che è visto non più come strumento di pubblicazione e consultazione di pagine statiche, ma anche e soprattutto come strumento per elaborare dati, interagire, integrare le applicazioni e creare business.
 Questa nuova generazione di applicazioni internet consente ai privati di accedere a servizi studiati appositamente per le loro esigenze, ed alle aziende di comunicare e gestire i rapporti con clienti, partner e fornitori in modo semplice e immediato.
 L'accesso ai Web Service è possibile da qualunque dispositivo in grado di interagire con la rete, ovvero PC, smartphone, palmari o notebook.\\
@@ -642,91 +659,91 @@ I protocolli per i web service utilizzano tre architetture diverse:
 \item \textbf{REST}.
 \end{itemize}
 \subsubsection{RPC oriented}
-L'architettura RPC oriented è basata sul concetto ri Remote Procedure Call dei middleware tradizionali.
+L'architettura RPC oriented è basata sul concetto di Remote Procedure Call dei middleware tradizionali.
 Quindi, il client invia al server una richiesta, contenente il nome della procedura remota da invocare e i parametri, usando l'operazione POST del protocollo HTTP; Il server invia il risultato al client come risposta HTTP.
 \paragraph{XML-RPC}
 Il primo protocollo specificamente sviluppato per i Web Service è stato \textit{XML-RPC}, in cui la richiesta e la risposta del messaggio sono formulate in linguaggio XML.
 XML-RPC sfrutta la disponibilità di parser XML su tutte le principali piattaforme e la facilità con cui si possono generare documenti XML.
-Le principali carenze di XML-RPC sono l'assenza di meccanismi per la gestione di tipi di dato non supportati; il mancato supporto nativo di funzionalità avanzate come autenticazione e gestione delle transazioni; mancanza di definizione formale delle interfacce delle procedure remote, per cui eventuali errori o incongruenze sono scoperti solo a tempo di esecuzione.
-Per ovviare a tali limiti è stato introdotto \textbf{SOAP}
+Le principali carenze di XML-RPC sono: l'assenza di meccanismi per la gestione di tipi di dato non supportati; il mancato supporto nativo di funzionalità avanzate come autenticazione e gestione delle transazioni; mancanza di definizione formale delle interfacce delle procedure remote, per cui eventuali errori o incongruenze sono scoperti solo a tempo di esecuzione.
+Per ovviare a tali limiti è stato introdotto SOAP.
 \paragraph{SOAP}
-Acronimo di \textit{Simple Object Access Protocol}, SOAP (\emph{\url{www.w3.org/TR/soap/}}) è basato su XML ed è accattato come standard dal consorzio W3C.
+Acronimo di \textit{Simple Object Access Protocol}, SOAP (\cite{www:SOAP}) è basato su XML ed è accattato come standard dal consorzio W3C.
 SOAP è supportato dai principali ambienti di sviluppo e ha la caratteristica di separare il formato dei messaggi dal modo in cui sono veicolati attraverso un protocollo già esistente. 
 SOAP può utilizzare protocolli diversi da HTTP, come SMTP.
 I vantaggi dell'utilizzo di SOAP, rispetto ad XML-RPC sono prevalentemente nella versatilità, dal momento che SOAP consente di estendere l'insieme dei tipi da usare come parametri e valori di ritorno e consente di estendere il protocollo stesso al fine di aggiungere funzionalità come la sicurezza o la gestione delle transizioni senza perdere l'interoperabilità.
-Per la definizione formale dell'interfaccia, SOAP ricorre a \textbf{WSDL}.
+Per la definizione formale dell'interfaccia, SOAP ricorre a WSDL.
 \paragraph{WSDL}
 WSDL, ovvero \textit{Web Service Description Language} è un linguaggio per definire le interfacce dei Web Service basati su SOAP.
 Anch'esso è uno standard W3C ed è naturalmente basato su XML.
-Un documento WSDL contiene una specifica "machine-readable" di:
+Un documento WSDL contiene una specifica machine-readable di:
 \begin{itemize}
-\item punti di accesso ai web service
-\item protocolli utilizzati
-\item operazioni disponibili, con i rispettivi parametri di ritorno
-\item tipi non predefiniti usati dalle operazioni
+\item punti di accesso ai web service;
+\item protocolli utilizzati;
+\item operazioni disponibili, con i rispettivi parametri di ritorno;
+\item tipi non predefiniti usati dalle operazioni.
 \end{itemize}
 Anche se in teoria un documento WSDL dovrebbe essere in un formato leggibile e modificabile da un essere umano, in pratica il formato è piuttosto complesso e si rende necessaria la generazione del documento tramite appositi tool e librerie, offerti dai principali ambienti di sviluppo.
 Tipicamente il WSDL è disponibile online sul sito che ospita il web service ed è utilizzato a tempo di esecuzione sia per verificare che non ci siano modifiche dell'interfaccia server, sia per creare le classi che rappresentano la comunicazione col client.
-Un esempio di WSDL è riportato in figura \ref{wsdlimage}.
-\begin{figure}[h!]
-\begin{center}
-\lstset{language=MYXML}
-\begin{lstlisting}
-<?xml version="1.0"?> 
-<wsdl:description xmlns:wsdl="http://www.w3.org/ns/wsdl"
-  xmlns:wsoap= "http://www.w3.org/ns/wsdl/soap"
-  xmlns:hy="http://www.herongyang.com/Service/"
-  targetNamespace="http://www.herongyang.com/Service/">
-
-  <wsdl:documentation>
-    Hello_WSDL_20_SOAP.wsdl
-    Copyright (c) 2009 by Dr. Herong Yang, herongyang.com
-    All rights reserved
-  </wsdl:documentation>
-
-  <wsdl:types>
-    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-      targetNamespace="http://www.herongyang.com/Service/">
-      <xsd:element name="Hello" type="xsd:string"/>    
-      <xsd:element name="HelloResponse" type="xsd:string"/>    
-    </xsd:schema>    
-  </wsdl:types>
-
-  <wsdl:interface name="helloInterface" >
-    <wsdl:operation name="Hello" 
-      pattern="http://www.w3.org/ns/wsdl/in-out" 
-      style="http://www.w3.org/ns/wsdl/style/iri">
-      <wsdl:input messageLabel="In" 
-        element="hy:Hello" />
-      <wsdl:output messageLabel="Out" 
-        element="hy:HelloResponse" />
-    </wsdl:operation>
-  </wsdl:interface>
-
-  <wsdl:binding name="helloBinding" 
-    interface="hy:helloInterface"
-    type="http://www.w3.org/ns/wsdl/soap"
-    wsoap:protocol="http://www.w3.org/2003/05/soap/bindings/HTTP/">
-    <wsdl:operation ref="hy:Hello" 
-      wsoap:mep="http://www.w3.org/2003/05/soap/mep/soap-response"/>
-  </wsdl:binding>
-
-  <wsdl:service name="helloService" 
-    interface="hy:helloInterface">
-    <wsdl:endpoint name="helloEndpoint" 
-      binding="hy:helloBinding"
-address="http://www.herongyang.com/Service/Hello_SOAP_12.php"/>
-  </wsdl:service>
-
-</wsdl:description>
-\end{lstlisting}
-\caption{Esempio di documento WSDL\label{wsdlimage}}
-\end{center}
-\end{figure}
-La combinazione SOAP+WSDL consente di realizzare web service con uno sforzo di programmazione contenuto, sia lato client che lato server e, grazie all'uso del servizio \textbf{UDDI}, garantisce ed aumenta l'interoperabilità.
+%Un esempio di WSDL è riportato in figura \ref{wsdlimage}.
+%\begin{figure}[h!]
+%\begin{center}
+%\lstset{language=MYXML}
+%\begin{lstlisting}
+%<?xml version="1.0"?> 
+%<wsdl:description xmlns:wsdl="http://www.w3.org/ns/wsdl"
+%  xmlns:wsoap= "http://www.w3.org/ns/wsdl/soap"
+%  xmlns:hy="http://www.herongyang.com/Service/"
+%  targetNamespace="http://www.herongyang.com/Service/">
+%
+%  <wsdl:documentation>
+%    Hello_WSDL_20_SOAP.wsdl
+%    Copyright (c) 2009 by Dr. Herong Yang, herongyang.com
+%    All rights reserved
+%  </wsdl:documentation>
+%
+%  <wsdl:types>
+%    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+%      targetNamespace="http://www.herongyang.com/Service/">
+%      <xsd:element name="Hello" type="xsd:string"/>    
+%      <xsd:element name="HelloResponse" type="xsd:string"/>    
+%    </xsd:schema>    
+%  </wsdl:types>
+%
+%  <wsdl:interface name="helloInterface" >
+%    <wsdl:operation name="Hello" 
+%      pattern="http://www.w3.org/ns/wsdl/in-out" 
+%      style="http://www.w3.org/ns/wsdl/style/iri">
+%      <wsdl:input messageLabel="In" 
+%        element="hy:Hello" />
+%      <wsdl:output messageLabel="Out" 
+%        element="hy:HelloResponse" />
+%    </wsdl:operation>
+%  </wsdl:interface>
+%
+%  <wsdl:binding name="helloBinding" 
+%    interface="hy:helloInterface"
+%    type="http://www.w3.org/ns/wsdl/soap"
+%    wsoap:protocol="http://www.w3.org/2003/05/soap/bindings/HTTP/">
+%    <wsdl:operation ref="hy:Hello" 
+%      wsoap:mep="http://www.w3.org/2003/05/soap/mep/soap-response"/>
+%  </wsdl:binding>
+%
+%  <wsdl:service name="helloService" 
+%    interface="hy:helloInterface">
+%    <wsdl:endpoint name="helloEndpoint" 
+%      binding="hy:helloBinding"
+%address="http://www.herongyang.com/Service/Hello_SOAP_12.php"/>
+%  </wsdl:service>
+%
+%</wsdl:description>
+%\end{lstlisting}
+%\caption{Esempio di documento WSDL\label{wsdlimage}}
+%\end{center}
+%\end{figure}
+La combinazione SOAP+WSDL consente di realizzare web service con uno sforzo di programmazione contenuto, sia lato client che lato server e, grazie all'uso del servizio UDDI, garantisce ed aumenta l'interoperabilità.
 \paragraph{UDDI}
 UDDI (\textit{Universal Description Discovery and Integration}) è un web service basato su SOAP+WSDL che realizza un repository di descrizioni WSDL con funzioni di pubblicazione e ricerca di web service in base ad una serie di metadati.
-Lo standard UDDI originariamente ipotizzava lo sviluppo di un \textit{Universal Business Registry} pubblivo che consentisse una ricerca globale dei web service, ma attualmente l'idea dell'UBR è stata abbandonata ed il servizio UDDI è utilizzato soprattutto in abito intranet come repository centralizzato di documenti WSDL.
+Lo standard UDDI originariamente ipotizzava lo sviluppo di un \textit{Universal Business Registry} pubblico che consentisse una ricerca globale dei web service, ma attualmente l'idea dell'UBR è stata abbandonata ed il servizio UDDI è utilizzato soprattutto in ambito intranet come repository centralizzato di documenti WSDL.
 \subsubsection{Message oriented}
 In un'architettura di servizi Message oriented le diverse applicazioni si scambiano messaggi unidirezionali che hanno le seguenti caratteristiche:
 \begin{itemize}
@@ -736,30 +753,31 @@ In un'architettura di servizi Message oriented le diverse applicazioni si scambi
 \item è sfumata la distinzione tra client e server: l'architettura è peer-to-peer.
 \end{itemize}
 
-I vantaggi dell'utilizzo di un'architettura Message oriented sono il disaccoppiamento anche temporale tra client e server, infatti, se il server non è momentaneamente disponibile, il messaggio può essere mantenuto in una coda; la maggiore flessibilità nella distribuzione (smistamento intelligente dei messaggi tra più server); flessibilità nell'ordine delle operazioni (priorità diverse per i messaggi).
+I vantaggi dell'utilizzo di un'architettura Message oriented sono: il disaccoppiamento anche temporale tra client e server, infatti, se il server non è momentaneamente disponibile, il messaggio può essere mantenuto in una coda; la maggiore flessibilità nella distribuzione (smistamento intelligente dei messaggi tra più server); la flessibilità nell'ordine delle operazioni (priorità diverse per i messaggi).
 
 \subsubsection{REST}
-Representational state transfer (REST)\footnote{Il paradigma REST è stato introdotto nel 2000 nella tesi di dottorato di Roy Fielding, reperibile all'indirizzo \emph{\url{http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm}}} è un tipo di architettura software per i sistemi di ipertesto distribuiti come il World Wide Web.
+REST (Representational state transfer, \cite{www:REST}) è un tipo di architettura software per i sistemi di ipertesto distribuiti come il World Wide Web.
 Esso si riferisce ad un insieme di principi di architetture di rete, i quali delineano come le risorse sono definite e indirizzate. Il termine è spesso usato nel senso di descrivere ogni semplice interfaccia che trasmette dati su HTTP senza un livello opzionale come SOAP o la gestione della sessione tramite i cookie.
 
 Le applicazioni basate sui principi REST, spesso definite "RESTful", usano richieste HTTP per inviare dati (creare o aggiornare), leggere dati (eseguire query) e cancellare dati.
 
 Nel dettaglio, lo stile architetturale di REST, rappresentato in figura \ref{restimage}, consiste di un lato client e un lato server: i client inviano richieste ai server; i server elaborano tali richieste e restituiscono ai client i risultati delle elaborazioni.
-Richieste e risposte si basano sul trasferimento di rappresentazioni di \textbf{risorse}.
 
-L'esistenza delle risorse è un concetto importante in REST, in quanto esse sono fonti di informazioni a cui si può accedere tramite un identificatore globale (un URI). Per utilizzare le risorse, le componenti di una rete (client e server) comunicano attraverso una interfaccia standard (ad es. HTTP) e si scambiano rappresentazioni di queste risorse (il documento che trasmette le informazioni).
-\\
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=0.7]{imgs/rest_architecture.png} 
-\caption{Modello di architettura REST\label{restimage}}
+\caption{Modello di architettura REST.\label{restimage}}
 \end{center}
 \end{figure}
-\\
+
+Richieste e risposte si basano sul trasferimento di rappresentazioni di \textbf{risorse}.
+
+L'esistenza delle risorse è un concetto importante in REST, in quanto esse sono fonti di informazioni a cui si può accedere tramite un identificatore globale (un URI). Per utilizzare le risorse, le componenti di una rete (client e server) comunicano attraverso una interfaccia standard (ad es. HTTP) e si scambiano rappresentazioni di queste risorse (il documento che trasmette le informazioni).
+
 Un numero qualsiasi di connettori (client, server, cache, tunnel ecc.) può mediare la richiesta, ma ogni connettore interviene senza conoscere la “storia passata” delle altre richieste(stateless). Di conseguenza una applicazione può interagire con una risorsa conoscendo due cose: l'identificatore della risorsa e l'azione richiesta.
 L'applicazione deve conoscere il formato dell'informazione (rappresentazione) restituita, tipicamente un documento HTML, XML o JSON, ma potrebbe essere anche un'immagine o qualsiasi altro contenuto.
 
-\subsubsection{Scelte}
+%\subsubsection{Scelte}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
@@ -771,20 +789,18 @@ I programmi scritti per il il .NET Framework sono eseguiti in un ambiente softwa
 La libreria delle classi e il Common Language Runtime costituiscono insieme il .NET Framework.
 La Base Class Library del .NET Framework fornisce interfacce utente, accesso ai dati, connettività al database, crittografia, sviluppo di applicazioni web, algoritmi numerici e comunicazioni di rete.
 I programmatori producono software combinando codice sorgente con .NET Framework e altre librerie.
-Microsoft fornisce, inoltre, un ambiente di sviluppo integrato per il software .NET chiamato \emph{Visual Studio}.
-
-Nell'agosto 2012, è stato rilasciato il \emph{.NET Framework 4.5}.
+Microsoft fornisce, inoltre, un ambiente di sviluppo integrato per il software .NET chiamato \emph{Visual Studio}. Nell'agosto 2012, è stato rilasciato il \emph{.NET Framework 4.5}, che verrà utilizzato nella realizzazione del progetto di questa tesi.
 
 \subsubsection{Design}
 Le caratteristiche di design del .NET Framework sono:
 \begin{itemize}
 \item \emph{Interoperabilità}: .Net Framework fornisce strumenti per accedere a funzionalità implementate in programmi più o meno recenti che sono eseguiti al di fuori dell'ambiente .NET, al fine di favorire l'interazione tra applicazioni;
-\item \emph{Common Language Runtime}: serve come motore per eseguire il framework .NET. Tutti i programmi .NET sono eseguiti sotto la supervisione del CLR, garantendo proprietà e comportamenti definiti riguardo sicurezza, memoria e gestione delle eccezioni;
-\item \emph{Indipendenza dal linguaggio}: E' introdotto il \emph{Common Type System} o CTS, che specifica tutti i possibili tipi di dati e costrutti di programmmazione supportati dal CLR e come essi possano o meno interagire con gli altri attraverso le specifiche del \item \emph{Common Language Infrastructure};
+\item \emph{Common Language Runtime (CLR)}: serve come motore per eseguire il framework .NET. Tutti i programmi .NET sono eseguiti sotto la supervisione del CLR, garantendo proprietà e comportamenti definiti riguardo sicurezza, memoria e gestione delle eccezioni;
+\item \emph{Indipendenza dal linguaggio}: E' introdotto il \emph{Common Type System} o CTS, che specifica tutti i possibili tipi di dati e costrutti di programmmazione supportati dal CLR e come essi possano o meno interagire con gli altri attraverso le specifiche del \emph{Common Language Infrastructure}, trattato di seguito;
 \item \emph{Base Class Library}: fornisce classi che incapsulano un gran numero di funzioni comuni, come creazione di interfacce utente, accesso ai file, rendering grafico, manipolazione documenti XML, connettività al database, crittografia, sviluppo di applicazioni web, algoritmi numerici e comunicazioni di rete. E' disponibile per tutti i linguaggi che utilizzano il .NET Framework;
 \item \emph{Rilascio semplificato}: sono presenti tool che facilitano l'installazione del software sviluppato e assicurano che quest'ultimo non interferisca con software preinstallato e che sia conforme ai requisiti di sicurezza;
 \item \emph{Sicurezza}: è fornito un modello di sicurezza comune per tutte le applicazioni, oltre a meccanismi di protezione da vari tipi di vulnerabilità;
-\item \emph{Portabilità}: il framework .NET è \emph{platform-agnostic} e sono disponibili implementazioni multipiattaforma per altri sistemi operativi. Il Common Language Infrastructure, ilinguaggi C\# e C++ sono tutti standard ECMA e ISO. Questo rende possibile la creazione di implementazioni compatibili col framework da terze parti.
+\item \emph{Portabilità}: il framework .NET è \emph{platform-agnostic} e sono disponibili implementazioni multipiattaforma per altri sistemi operativi. Il Common Language Infrastructure, i linguaggi C\# e C++ sono tutti standard ECMA e ISO. Questo rende possibile la creazione di implementazioni compatibili col framework da terze parti.
 \end{itemize}
 
 
@@ -801,14 +817,14 @@ che di seguito sono brevemente introdotti.
 CLI fornisce una piattaforma neutra per lo sviluppo e l'esecuzione delle applicazioni. Tale piattaforma include funzioni per la gestione delle eccezioni, la \emph{garbage collection}, la sicurezza e l'interoperabilità.
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.4]{imgs/commonlanguageinfrastructure.png} 
+\includegraphics[scale=0.55]{imgs/commonlanguageinfrastructure.png} 
 \caption{Panoramica della Common Language Infrastructure\label{commonlanguageinfrastructure}}
 \end{center}
 \end{figure}
 Siccome gli aspetti basilari del .NET Framework sono stati implementati nell'ambito di CLI, questa funzionalità non è legata ad un singolo linguaggio ma è disponibile a tutti i linguaggi supportati dal framework.
 Il codice CLI è contenuto in file assembly, conservati in formato \emph{Portable Executable} PE, comune alla piattaforma windows per tutti i file DLL e EXE.
 L'assembly consiste in uno o più file, uno dei quali contiene il manifest, che rappresenta il metadato dell'assembly.
-Il nome completo di un assembly contiene nome, numero di versione, \emph{culture} e chiave pubblica, quindi se due assembly hanno lo stesso nome completo, essi sono considerati uguali.
+Il nome completo di un assembly contiene nome, numero di versione, \emph{culture}(localizzazione) e chiave pubblica, quindi se due assembly hanno lo stesso nome completo, essi sono considerati uguali.
 
 
 
@@ -826,7 +842,7 @@ Le librerie sono divise in due macrocategorie: la Base Class Library e la Framew
 La Base Class Library include un piccolo insieme dell'intera libreria ma contiene le API di base del Common Language Runtime.
 La Framework Class Library contiene la Base Class Library e si riferisce all'intera classe di librerie .NET, includendo, tra le altre, Windows Forms, ADO.NET, ASP.NET, Language Integrated Query (LINQ), Windows Presentation Foundation, Windows Communication Foundation.
 \paragraph{Gestione della memoria}
-Il Framework .NET libera lo sviluppatore dalla necessità di gestire l'allocazione e la deallocazione della memoria, dal momento che è presente un sistema che controlla quando la memoria può essere liberata in sicurezza. Le instanze degli oggetti .NET sono allocate nello heap, un pool di memoria gestito dal CLR. Quando ci sono riferimenti a quell'oggetto, esso è considerato in uso, ma, quando i riferimenti non ci sono più, l'oggetto non è più raggiungibile e quindi viene cancellato.
+Il Framework .NET libera lo sviluppatore dalla necessità di gestire l'allocazione e la deallocazione della memoria, dal momento che è presente un sistema che controlla quando la memoria può essere liberata in sicurezza. Le instanze degli oggetti .NET sono allocate nello heap, un pool di memoria gestito dal Common Language Runtime. Quando ci sono riferimenti a quell'oggetto, esso è considerato in uso, ma, quando i riferimenti non ci sono più, l'oggetto non è più raggiungibile e quindi viene cancellato.
 Il .NET Garbage Collector viene eseguito periodicamente, su un thread separato da quello dell'applicazione, solamente quando una definita quantità di memoria è stata utilizzata o c'è un alto utilizzo di memoria di sistema.
 
 %The .NET Garbage Collector (GC) is a non-deterministic, compacting, mark-and-sweep garbage collector. The GC runs only when a certain amount of memory has been used or there is enough pressure for memory on the system. Since it is not guaranteed when the conditions to reclaim memory are reached, the GC runs are non-deterministic. Each .NET application has a set of roots, which are pointers to objects on the managed heap (managed objects). These include references to static objects and objects defined as local variables or method parameters currently in scope, as well as objects referred to by CPU registers.[10] When the GC runs, it pauses the application, and for each object referred to in the root, it recursively enumerates all the objects reachable from the root objects and marks them as reachable. It uses CLI metadata and reflection to discover the objects encapsulated by an object, and then recursively walk them. It then enumerates all the objects on the heap (which were initially allocated contiguously) using reflection. All objects not marked as reachable are garbage.[10] This is the mark phase.[11] Since the memory held by garbage is not of any consequence, it is considered free space. However, this leaves chunks of free space between objects which were initially contiguous. The objects are then compacted together to make used memory contiguous again.[10][11] Any reference to an object invalidated by moving the object is updated by the GC to reflect the new location.[11] The application is resumed after the garbage collection is over.
@@ -845,12 +861,12 @@ Microsoft Visual Studio (\emph{\url{http://www.microsoft.com/visualstudio/ita}})
 \end{center}
 
 \end{figure}
-Visual Studio fornisce all’utilizzatore un potente strumento, \textbf{IntelliSense}, che permette
+Visual Studio fornisce all'utilizzatore un potente strumento, \textbf{IntelliSense}, che permette
 l'autocompletamento del token che il programmatore intende scrivere, oltre che
 alla visualizzazione della documentazione e alla gestione delle disambiguità a
 video direttamente durante la scrittura del codice.
 
-La versione utilizzata è \textbf{Visual Studio 2013}, lanciata nel giugno 2013.
+La versione utilizzata per il presente progetto è \textbf{Visual Studio 2013}, lanciata nel giugno 2013.
 Essa fornisce numerose nuove features, brevemente elencate:
 \begin{itemize}
 \item \textbf{Colorazione semantica}: è stata migliorata la colorazione della sintassi, compresi i tipi definiti dall'utente, le macro, i tipi enumerativi e le funzioni;
@@ -878,16 +894,16 @@ Visual Studio offre, tra i vari servizi, \textbf{Team Foundation Service}, uno s
 Con il termine \textit{metodologia agile} si intende un insieme di metodi di sviluppo software basati sullo sviluppo iterativo ed incrementale, in cui i requisiti e le soluzioni evolvono attraverso una collaborazione tra team capaci di organizzarsi autonomamente e con esperienze e conoscenze diverse.
 Le metodologie agili sono contrapposte alle metodologie \textit{pesanti} e \textit{iterative} poiché promuovono una pianificazione adattabile, uno sviluppo e una consegna del software evolutivi, un approccio iterativo, ed incoraggiano ad una risposta al cambiamento rapida e flessibile.
 
-Le metodologie agili sono state introdotte ufficialmente nel 2001 dal \textit{Manifesto Agile}(\url{http://agilemanifesto.org/}), un documento dell'\textit{Agile Alliance}, l'associazione che ha permesso la diffusione su ampia scala di tali metodologie.
+Le metodologie agili sono state introdotte ufficialmente nel 2001 dal \textit{Manifesto Agile}(\cite{www:agilemanifesto}), un documento dell'\textit{Agile Alliance}, l'associazione che ha permesso la diffusione su ampia scala di tali metodologie.
 Il Manifesto Agile riporta quanto segue:
 \begin{quotation}
 \begin{emph}
 We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:
 \begin{itemize}
-\item[ ] Individuals and interactions over processes and tools
-\item[ ] Working software over comprehensive documentation
-\item[ ] Customer collaboration over contract negotiation
-\item[ ] Responding to change over following a plan
+\item[•] Individuals and interactions over processes and tools
+\item[•] Working software over comprehensive documentation
+\item[•] Customer collaboration over contract negotiation
+\item[•] Responding to change over following a plan
 \end{itemize}
 That is, while there is value in the items on the right, we value the items on the left more.
 \end{emph}
@@ -898,8 +914,9 @@ L'uso di queste metodologia, inoltre, serve ad abbattere i costi di sviluppo del
 \subsubsection{Processi di sviluppo agile}
 Così come per i processi di sviluppo tradizionali, anche durante lo sviluppo di software mediante metodologie agili, ci sono delle fasi predefinite: analisi dei requisiti, progettazione, sviluppo e testing. La differenza è che ad ogni iterazione lo sviluppatore ridefinisce e rielabora queste fasi.
 I requisiti sono, ad ogni iterazione, approfonditi e migliorati, così come è perfezionato il design. Inoltre è dato molta importanza alla rifattorizzazione, ovvero si modifica la struttura interna di porzioni di codice senza modificarne il comportamento esterno, così da migliorarne la leggibilità ed avere sempre codice di qualità.
-Il testing, nell'Agile, riveste un ruolo fondamentale, poiché sono previsti sia gli \textit{Acceptance Test}, ovvero test \textbf{black box} che rappresentano dei risultati attesi dal sistema.
-Inoltre vi è il Test Driven Development (TDD), ovvero un modello di sviluppo preceduto dalla stesura di test automatici.
+Il testing, nell'Agile, riveste un ruolo fondamentale, poiché sono previsti sia gli \textit{Acceptance Test}, ovvero test black box che rappresentano dei risultati attesi dal sistema.
+
+%Inoltre vi è il Test Driven Development (TDD), ovvero un modello di sviluppo preceduto dalla stesura di test automatici.
 
 In figura \ref{agiledevelopment} vi è una rappresentazione del processo di sviluppo agile.
 
