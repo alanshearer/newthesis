@@ -106,16 +106,19 @@ Sono state individuate cinque entità fondamentali:
 \end{itemize}
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.50]{imgs/model/crcmodel.png}
+\includegraphics[scale=0.55]{imgs/model/crcmodel.png}
 \caption{Modello CRC dell'applicazione\label{crcmodel}}
 \end{center}
 \end{figure}
 Per modellare il dominio vengono qui utilizzate le \textit{Class Responsibility Collaborator (CRC) Cards}, come illustrato in figura \ref{crcmodel}.
 
 \subsection{Modello dell'interfaccia utente}
-L'interfaccia utente è la porzione di software che interagisce direttamente con l'utente.
-In base ai requisiti non funzionali che caratterizzano l'interfaccia utente, si cerca di realizzare interfacce che tengano conto dell'usabilità.
-Vengono riportati di seguito alcuni sketches che costituiscono le schermate dell'applicazione (fig. \ref{sketch}).
+Con interfaccia utente si intende ciò che si frappone tra la macchina e l'utente, ciò che fa dialogare l'uomo con la macchina.
+L'interfaccia utente non è necessariamente legata ad un sistema informatico, ma rappresenta ciò che permette ad un utente di poter gestire  semplicemente le funzionalità di un sistema.
+L'interfaccia si occupa di comunicare con un determinato componente che, successivamente, si prenderà carico di effettuare l'operazione richiesta.\\
+Il progetto dell'interfaccia utente rappresenta la mediazione tra due modelli: il modello concettuale dell'utente ed il modello del programmatore.
+Il modello concettuale dell'utente è formato da un insieme di relazioni tra un insieme di elementi. Tali relazioni sono basate sia sull'esperienza quotidiana dell'utente, sia sulla familiarità con il sistema e la somiglianza con altre applicazioni.\\
+Vengono riportati di seguito alcuni sketches che costituiscono il modello dell'interfaccia utente dell'applicazione (fig. \ref{sketch}).
 \begin{figure}[h!]
 \subfloat[Home]{\label{mockuphome}\includegraphics[scale=0.29]{imgs/mockup/home.png}}
 \hspace{35mm}
@@ -156,8 +159,9 @@ Vengono riportati di seguito alcuni sketches che costituiscono le schermate dell
 
 \subsection{Pianificazione degli incrementi}
 Tramite il planning poker\footnote{Il planning poker è una tecnica basata sul consenso per stimare lo sforzo nel completare una user story. E' largamente utilizzata in nelle metodologie agili.}, è stato possibile dare una stima della complessità delle user stories.
+In definitiva abbiamo la tabella in figura \ref{userstoriestable}, con stima e priorità delle user stories.
 
-\begin{figure}[h!]
+\begin{figure}[h]
 \begin{center}
 \begin{tabular}[c]{|c|p{7cm}|c|c|}
 \hline
@@ -185,9 +189,11 @@ N. & User story & Peso & Priorità\\
 \end{figure}
 \clearpage
 
-In definitiva abbiamo la tabella in figura \ref{userstoriestable}, con stima e priorità delle user stories.
+
 Considerando una velocità di 15 punti per iterazione e tenendo conto delle priorità, è stato possibile pianificare 3 iterazioni, ciascuna della durata di due settimane, come illustrato in figura \ref{pianificazioneiterazioni}.
 Quindi, il progetto verrà sviluppato in sei settimane.
+
+\renewcommand{\arraystretch}{1.5}
 \begin{figure}[h!]
 \begin{center}
 
@@ -202,6 +208,7 @@ Iterazione & User story\\ \hline
 
 \end{center}
 \end{figure}
+
 
 \clearpage
 
@@ -338,17 +345,16 @@ Sono quindi sviluppati i seguenti test di accettazione:
 \subsection{Modellazione}
 \subsubsection{Modelli strutturali}
 \paragraph{Modello dei dati}
-\subparagraph{Client}
-Nell'iterazione 1, il client gestisce tre tipologie di dati:
+Nell'iterazione 1, sono considerate tre entità:
 \begin{itemize}
-\item \textbf{Punto di interesse}
-\item \textbf{Tipologia}
-\item \textbf{Posizione}
+\item \textbf{Punto di interesse} (Nome)
+\item \textbf{Tipologia} (NomeTipologia, Icona)
+\item \textbf{Posizione} (Latitudine, Longitudine)
 \end{itemize}
-Per cui abbiamo un modello dei dati che può essere sintetizzato come in fig. \ref{datamodel1iterazione}.
+Per cui abbiamo un modello dei dati che è rappresentato dalla fig. \ref{datamodelprimaterazione}.
 \begin{figure}
-\includegraphics[scale=0.55]{imgs/model/DataModel1.png} 
-\caption{Modello dei dati prima iterazione\label{datamodel1iterazione}}
+\includegraphics[scale=0.55]{imgs/model/DataModelPrimaIterazione.png} 
+\caption{Modello dei dati della prima iterazione\label{datamodelprimaterazione}}
 \end{figure}
 
 \paragraph{Diagramma delle classi}
@@ -520,17 +526,18 @@ Cliccare sull'icona rappresentante il punto di interesse scelto.
 \subsection{Modellazione}
 \subsubsection{Modelli strutturali}
 \paragraph{Modello dei dati}
-\subparagraph{Client}
-Nell'iterazione 1, il client gestisce tre tipologie di dati:
+Nell'iterazione 2, sono considerate cinque entità:
 \begin{itemize}
-\item \textbf{Punto di interesse}
-\item \textbf{Tipologia}
-\item \textbf{Posizione}
+\item \textbf{Punto di interesse} (Nome)
+\item \textbf{Tipologia} (NomeTipologia, Icona)
+\item \textbf{Posizione} (Latitudine, Longitudine)
+\item \textbf{Feedback} (IdUtente, Voto, Data)
+\item \textbf{Descrizione} (Url)
 \end{itemize}
-Per cui abbiamo un modello dei dati che può essere sintetizzato come in fig. \ref{datamodel1iterazione}.
+Per cui abbiamo un modello dei dati che è rappresentato dalla fig. \ref{datamodelsecondaiterazione}.
 \begin{figure}
-\includegraphics[scale=0.55]{imgs/model/DataModel1.png} 
-\caption{Modello dei dati prima iterazione\label{datamodel1iterazione}}
+\includegraphics[scale=0.55]{imgs/model/DataModelSecondaIterazione.png} 
+\caption{Modello dei dati della seconda iterazione\label{datamodelsecondaiterazione}}
 \end{figure}
 
 \paragraph{Diagramma delle classi}
@@ -586,17 +593,19 @@ Oltre ai requisiti non funzionali già descritti nelle precedenti iterazioni, pe
 \subsection{Modellazione}
 \subsubsection{Modelli strutturali}
 \paragraph{Modello dei dati}
-\subparagraph{Client}
-Nell'iterazione 1, il client gestisce tre tipologie di dati:
+Nell'iterazione 3, sono considerate sei entità:
 \begin{itemize}
-\item \textbf{Punto di interesse}
-\item \textbf{Tipologia}
-\item \textbf{Posizione}
+\item \textbf{Punto di interesse} (Nome)
+\item \textbf{Tipologia} (NomeTipologia, Icona)
+\item \textbf{Posizione} (Latitudine, Longitudine)
+\item \textbf{Feedback} (IdUtente, Voto, Data)
+\item \textbf{Descrizione} (Url)
+\item \textbf{Itinerario} (NomeItinerario)
 \end{itemize}
-Per cui abbiamo un modello dei dati che può essere sintetizzato come in fig. \ref{datamodel1iterazione}.
+Per cui abbiamo un modello dei dati che è rappresentato dalla fig. \ref{datamodelterzaiterazione}.
 \begin{figure}
-\includegraphics[scale=0.55]{imgs/model/DataModel1.png} 
-\caption{Modello dei dati prima iterazione\label{datamodel1iterazione}}
+\includegraphics[scale=0.55]{imgs/model/DataModelTerzaIterazione.png} 
+\caption{Modello dei dati della terza iterazione\label{datamodelterzaiterazione}}
 \end{figure}
 
 \paragraph{Diagramma delle classi}
