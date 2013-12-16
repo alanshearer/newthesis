@@ -5,7 +5,7 @@
 
 In questo capitolo verrà discussa l'effettiva realizzazione del progetto, ovvero analisi dei requisiti, progettazione, sviluppo e testing, secondo le metodologie agili.
 Ogni progetto inizia con la stesura di un \textit{Project Charter} (Documento di inizio progetto), che, non essendo di interesse in questo contesto, viene tralasciato.
-Si è proceduto quindi con la definizione delle iterazioni, partendo, naturalmente, dall'\textit{iterazione 0}
+Si è proceduto quindi con la definizione delle iterazioni, partendo dall'\textit{iterazione 0}.
 
 \section{Iterazione 0}
 
@@ -17,7 +17,7 @@ Di seguito sono descritti i requisiti funzionali e non funzionali.
 
 \subsubsection{Requisiti funzionali}
 I requisiti funzionali descrivono le funzionalità del sistema software, in termini di servizi che il sistema software deve fornire, di come il sistema software reagisce a specifici tipi di input e di come si comporta in situazioni particolari.
-Qui, i requisiti funzionali vengono descritti sotto forma di \textit{user stories}, \textit{epic} (user stories più grandi) e \textit{temi}.
+Qui, i requisiti funzionali vengono descritti sotto forma di \textit{user stories}, \textit{epic}s e \textit{temi}.
 
 Durante l'analisi è stato individuato un unico tema comune, ovvero:
 \begin{itemize}
@@ -45,7 +45,7 @@ Ed, in definitiva, da questi tre epic, possiamo ricavare otto \textit{user stori
 \end{itemize}
 
 
-Per quanto riguarda il servizio, esso deve fornire un file in formato GeoRSS contenente i punti di interesse con le informazioni fondamentali (nome, coordinate spaziali, feedback).
+Per quanto riguarda il servizio esposto, esso deve fornire un file in formato GeoRSS contenente i punti di interesse con le informazioni fondamentali (nome, coordinate spaziali, feedback).
 
 \subsubsection{Requisiti non funzionali}
 I requisiti non funzionali descrivono le proprietà del sistema software in relazione a determinati servizi o funzioni e possono anche essere relativi al processo:
@@ -68,7 +68,7 @@ Nello studio dei requisiti della nostra applicazione, si possono definire i requ
 
 \begin{figure}[h!]
 \begin{center}
-\begin{tabular}[c]{|c|p{9cm}|}
+\begin{tabular}[c]{|c|p{10cm}|}
 \hline
 N. & Requisito\\ \hline
 1 & L'interfaccia deve essere costituita da una mappa e da una barra di pulsanti\\ \hline
@@ -119,6 +119,7 @@ L'interfaccia si occupa di comunicare con un determinato componente che, success
 Il progetto dell'interfaccia utente rappresenta la mediazione tra due modelli: il modello concettuale dell'utente ed il modello del programmatore.
 Il modello concettuale dell'utente è formato da un insieme di relazioni tra un insieme di elementi. Tali relazioni sono basate sia sull'esperienza quotidiana dell'utente, sia sulla familiarità con il sistema e la somiglianza con altre applicazioni.\\
 Vengono riportati di seguito alcuni sketches che costituiscono il modello dell'interfaccia utente dell'applicazione (fig. \ref{sketch}).
+Questi sketches sono stati realizzati e discussi con i clienti prima della loro effettiva realizzazione.
 \begin{figure}[h!]
 \subfloat[Home]{\label{mockuphome}\includegraphics[scale=0.29]{imgs/mockup/home.png}}
 \hspace{35mm}
@@ -158,12 +159,12 @@ Vengono riportati di seguito alcuni sketches che costituiscono il modello dell'i
 \clearpage
 
 \subsection{Pianificazione degli incrementi}
-Tramite il planning poker\footnote{Il planning poker è una tecnica basata sul consenso per stimare lo sforzo nel completare una user story. E' largamente utilizzata in nelle metodologie agili.}, è stato possibile dare una stima della complessità delle user stories.
-In definitiva abbiamo la tabella in figura \ref{userstoriestable}, con stima e priorità delle user stories.
+Il Planning Poker è una tecnica basata sul consenso, largamente utilizzata nelle metodologie agili, per stimare lo sforzo nel completare una user story.
+Nella tabella in figura \ref{userstoriestable}, abbiamo stima e priorità delle user stories.
 
 \begin{figure}[h]
 \begin{center}
-\begin{tabular}[c]{|c|p{7cm}|c|c|}
+\begin{tabular}[c]{|c|p{10cm}|c|c|}
 \hline
 N. & User story & Peso & Priorità\\
 \hline
@@ -197,7 +198,7 @@ Quindi, il progetto verrà sviluppato in sei settimane.
 \begin{figure}[h!]
 \begin{center}
 
-\begin{tabular}[c]{|c|p{7cm}|c|c|}
+\begin{tabular}[c]{|c|p{10cm}|c|c|}
 \hline
 Iterazione & User story\\ \hline
 \textbf{Prima iterazione} & 1,2,3 \\ \hline
@@ -229,7 +230,7 @@ Nell'analisi dei requisiti, le \textit{user stories} vengono suddivise in task; 
 In questa iterazione, come già specificato prima, sono sviluppate le user stories 1,2 e 3 (fig. \ref{userstoriestableprimaiterazione}). \\
 \begin{figure}[h!]
 \begin{center}
-\begin{tabular}[c]{|c|p{7cm}|c|c|}
+\begin{tabular}[c]{|c|p{10cm}|c|c|}
 \hline
 N. & User story & Peso & Priorità\\
 \hline
@@ -248,18 +249,18 @@ N. & User story & Peso & Priorità\\
 Considerando le tre user stories, possiamo definire i seguenti task che caratterizzeranno la prima iterazione:\\
 \textbf{Lato client}
 \begin{itemize}
-\item \textbf{creazione form con mappa e pulsanti di utility};
-\item \textbf{visualizzazione posizione sulla mappa};
-\item \textbf{visualizzazione punti di interesse sulla mappa};
-\item \textbf{interfacciamento col dispositivo GPS};
-\item \textbf{connessione al un servizio esterno};
-\item \textbf{gestione dei layer della mappa}.
+\item creazione form con mappa e pulsanti di utility;
+\item visualizzazione posizione sulla mappa;
+\item visualizzazione punti di interesse sulla mappa;
+\item interfacciamento col dispositivo GPS;
+\item connessione al un servizio esterno;
+\item gestione dei layer della mappa.
 \end{itemize}
 
 \textbf{Lato server}
 \begin{itemize}
-\item \textbf{mapping della base di dati};
-\item \textbf{esportazione nel formato GeoRss}.
+\item mapping della base di dati;
+\item esportazione nel formato GeoRss.
 \end{itemize}
 
 \subsubsection{Requisiti non funzionali}
@@ -361,44 +362,6 @@ Per cui abbiamo un modello dei dati che è rappresentato dalla fig. \ref{datamod
 
 \subsubsection{Modelli comportamentali}
 \paragraph{Diagramma di sequenza}
-\subsection{Implementazione}
-Di seguito sono riportate le porzioni di codice importanti ai fini dell'implementazione del software.
-\subsubsection{Connessione al GPS}
-\begin{figure}
-\begin{center}
-\lstset{language=CSharp}
-\begin{lstlisting}
-async Task<GeoCoordinate> GetPosition()
-        {
-            if ((bool)IsolatedStorageSettings.ApplicationSettings["LocationConsent"] != true)
-            {
-                MessageBox.Show("Attivare i servizi di posizionamento");
-            }
-
-            Geolocator geolocator = new Geolocator();
-            geolocator.DesiredAccuracyInMeters = 50;
-
-            try
-            {
-                Geoposition geoposition = await geolocator.GetGeopositionAsync(
-                    maximumAge: TimeSpan.FromMinutes(5),
-                    timeout: TimeSpan.FromSeconds(10)
-                    );
-
-                GeoCoordinate coordinateToBack = new GeoCoordinate();
-                coordinateToBack.Latitude = geoposition.Coordinate.Latitude;
-                coordinateToBack.Longitude = geoposition.Coordinate.Longitude;
-                return coordinateToBack;
-            }
-            catch (ArgumentException AE)
-            {
-                MessageBox.Show(AE.StackTrace);
-            }
-        }
-\end{lstlisting}
-\caption{Prova c\#\label{c}}
-\end{center}
-\end{figure}
 
 
 \subsection{Screenshot}
@@ -417,7 +380,7 @@ async Task<GeoCoordinate> GetPosition()
 Nell'iterazione 2 sono sviluppate le user stories 4,5,6 e 7 (fig. \ref{userstoriestablesecondaiterazione}). 
 \begin{figure}
 \begin{center}
-\begin{tabular}[c]{|c|p{7cm}|c|c|}
+\begin{tabular}[c]{|c|p{10cm}|c|c|}
 \hline
 N. & User story & Peso & Priorità\\
 \hline
@@ -437,18 +400,18 @@ N. & User story & Peso & Priorità\\
 Considerando queste quattro user stories, possiamo definire i seguenti task che caratterizzano la seconda iterazione:\\
 \textbf{Lato client}
 \begin{itemize}
-\item \textbf{realizzazione form per visualizzazione di informazioni sul punto di interesse};
-\item \textbf{realizzazione servizio per la gestione della posizione sulla mappa};
-\item \textbf{connessione al servizio di lettura feedback};
-\item \textbf{menu contestuale con visualizzazione feedback};
-\item \textbf{connessione al servizio di scrittura feedback};
-\item \textbf{realizzazione form per inserimento feedback}.
+\item realizzazione form per visualizzazione di informazioni sul punto di interesse;
+\item realizzazione servizio per la gestione della posizione sulla mappa;
+\item connessione al servizio di lettura feedback;
+\item menu contestuale con visualizzazione feedback;
+\item connessione al servizio di scrittura feedback;
+\item realizzazione form per inserimento feedback.
 \end{itemize}
 
 \textbf{Lato server}
 \begin{itemize}
-\item \textbf{creazione servizio per la lettura dei feedback};
-\item \textbf{creazione servizio per la scrittura dei feedback}.
+\item creazione servizio per la lettura dei feedback;
+\item creazione servizio per la scrittura dei feedback.
 \end{itemize}
 
 
@@ -544,7 +507,6 @@ Per cui abbiamo un modello dei dati che è rappresentato dalla fig. \ref{datamod
 
 \subsubsection{Modelli comportamentali}
 \paragraph{Diagramma di sequenza}
-\subsection{Implementazione}
 
 \subsection{Screenshot}
 
@@ -558,7 +520,7 @@ Per cui abbiamo un modello dei dati che è rappresentato dalla fig. \ref{datamod
 Nell'iterazione 3 è sviluppata la user story 8 (fig. \ref{userstoriestableterzaiterazione}). 
 \begin{figure}[h!]
 \begin{center}
-\begin{tabular}[c]{|c|p{6cm}|c|c|}
+\begin{tabular}[c]{|c|p{10cm}|c|c|}
 \hline
 N. & User story & Peso & Priorità\\
 \hline
@@ -572,14 +534,14 @@ N. & User story & Peso & Priorità\\
 Considerando tale user story, possiamo definire i seguenti task che caratterizzano la terza iterazione:\\
 \textbf{Lato client}
 \begin{itemize}
-\item \textbf{realizzazione form per visualizzazione dell'itinerario};
-\item \textbf{connessione al servizio per la gestione della posizione}.
+\item realizzazione form per visualizzazione dell'itinerario;
+\item connessione al servizio per la gestione della posizione.
 \end{itemize}
 
 \textbf{Lato server}
 \begin{itemize}
-\item \textbf{realizzazione servizio per la gestione della posizione};
-\item \textbf{realizzazione servizio per la creazione del feedback}.
+\item realizzazione servizio per la gestione della posizione;
+\item realizzazione servizio per la creazione del feedback.
 \end{itemize}
 
 \subsubsection{Requisiti non funzionali}
@@ -612,7 +574,6 @@ Per cui abbiamo un modello dei dati che è rappresentato dalla fig. \ref{datamod
 
 \subsubsection{Modelli comportamentali}
 \paragraph{Diagramma di sequenza}
-\subsection{Implementazione}
 \subsection{Screenshot}
 
 \clearpage

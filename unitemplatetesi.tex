@@ -122,36 +122,59 @@
     backgroundcolor=\color{background},
 }
 
-\lstdefinestyle{sharpc}{language=[Sharp]C, frame=lr, rulecolor=\color{blue!80!black}}
+%\lstdefinestyle{sharpc}{language=[Sharp]C, frame=lr, rulecolor=\color{blue!80!black}}
+
+\usepackage{color}
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
 
 \lstdefinelanguage{CSharp}
 {
- morecomment = [l]{//}, 
- morecomment = [l]{///},
- morecomment = [s]{/*}{*/},
- morestring=[b]", 
- sensitive = true,
- morekeywords = {abstract,  event,  new,  struct,
-   as,  explicit,  null,  switch,
-   base,  extern,  object,  this,
-   bool,  false,  operator,  throw,
-   break,  finally,  out,  true,
-   byte,  fixed,  override,  try,
-   case,  float,  params,  typeof,
-   catch,  for,  private,  uint,
-   char,  foreach,  protected,  ulong,
-   checked,  goto,  public,  unchecked,
-   class,  if,  readonly,  unsafe,
-   const,  implicit,  ref,  ushort,
-   continue,  in,  return,  using,
-   decimal,  int,  sbyte,  virtual,
-   default,  interface,  sealed,  volatile,
-   delegate,  internal,  short,  void,
-   do,  is,  sizeof,  while,
-   double,  lock,  stackalloc,   
-   else,  long,  static,   
-   enum,  namespace,  string}
+  basicstyle=\LSTfont,
+  numberstyle=\scriptsize,
+  stepnumber=1,
+  numbersep=8pt,
+  language=[Sharp]C,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  escapeinside={(*@}{@*)},
+  commentstyle=\color{greencomments},
+  keywordstyle=\color{bluekeywords},
+  stringstyle=\color{redstrings},
 }
+
+%\lstdefinelanguage{CSharp}
+%{
+% morecomment = [l]{//}, 
+% morecomment = [l]{///},
+% morecomment = [s]{/*}{*/},
+% morestring=[b]", 
+% sensitive = true,
+% morekeywords = {abstract,  event,  new,  struct,
+%   as,  explicit,  null,  switch,
+%   base,  extern,  object,  this,
+%   bool,  false,  operator,  throw,
+%   break,  finally,  out,  true,
+%   byte,  fixed,  override,  try,
+%   case,  float,  params,  typeof,
+%   catch,  for,  private,  uint,
+%   char,  foreach,  protected,  ulong,
+%   checked,  goto,  public,  unchecked,
+%   class,  if,  readonly,  unsafe,
+%   const,  implicit,  ref,  ushort,
+%   continue,  in,  return,  using,
+%   decimal,  int,  sbyte,  virtual,
+%   default,  interface,  sealed,  volatile,
+%   delegate,  internal,  short,  void,
+%   do,  is,  sizeof,  while,
+%   double,  lock,  stackalloc,   
+%   else,  long,  static,   
+%   enum,  namespace,  string}
+%}
 
 % === Integrazione delle figure ===========================
 % Il package graphicx permette di inserire figure all'interno dei documetni LaTeX.
@@ -248,15 +271,15 @@
 
 
 \begin{frontmatter}
-%
-%\includepdf[pages=-]{unitemplate/frontespizio}
-%
-%\AddToShipoutPicture{\BackgroundPicture{unitemplate/logo.png}{0}}
-%
-%\tableofcontents
-%
-%\listoffigures
-%
+
+\includepdf[pages=-]{unitemplate/frontespizio}
+
+\AddToShipoutPicture{\BackgroundPicture{unitemplate/logo.png}{0}}
+
+\tableofcontents
+
+\listoffigures
+
 \end{frontmatter}
 
 
@@ -266,10 +289,10 @@
 
 
 
-%\input{introduzione.tex}
+\input{introduzione.tex}
 \input{Obiettivi.tex}
 \input{ArchitetturaTecnologie.tex}
-%\input{Realizzazione.tex}
+\input{Realizzazione.tex}
 %\input{Test.tex}
 %\input{ConclusioniSviluppi.tex}
 
@@ -286,7 +309,8 @@
 %\input{capitolo6.tex}
 
 %\input{conclusioni.tex} \addcontentsline{toc}{chapter}{Conclusioni}
-
+\appendix
+\input{Appendice.tex}
 
 \end{mainmatter}
 
