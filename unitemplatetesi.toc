@@ -73,51 +73,7 @@
 \contentsline {subsubsection}{TFS - Team Foundation Service}{46}{section*.81}
 \contentsline {subsection}{\numberline {2.2.2}Metodologia agile}{47}{subsection.2.2.2}
 \contentsline {subsubsection}{Processi di sviluppo agile}{48}{section*.82}
-\contentsline {chapter}{\numberline {3}Realizzazione}{51}{chapter.3}
-\contentsline {section}{\numberline {3.1}Iterazione 0}{51}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Analisi dei requisiti}{51}{subsection.3.1.1}
-\contentsline {subsubsection}{Requisiti funzionali}{52}{section*.84}
-\contentsline {subsubsection}{Requisiti non funzionali}{53}{section*.85}
-\contentsline {subsection}{\numberline {3.1.2}Modello di dominio}{55}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Modello dell'interfaccia utente}{56}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Pianificazione degli incrementi}{59}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Iterazione 1}{61}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Analisi dei Requisiti}{61}{subsection.3.2.1}
-\contentsline {subsubsection}{Requisiti funzionali}{61}{section*.93}
-\contentsline {subsubsection}{Requisiti non funzionali}{62}{section*.95}
-\contentsline {subsection}{\numberline {3.2.2}Casi di Test}{63}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Modellazione}{65}{subsection.3.2.3}
-\contentsline {subsubsection}{Modelli strutturali}{65}{section*.96}
-\contentsline {paragraph}{Modello dei dati}{65}{section*.97}
-\contentsline {paragraph}{Diagramma delle classi}{66}{section*.99}
-\contentsline {subsubsection}{Modelli comportamentali}{66}{section*.100}
-\contentsline {paragraph}{Diagramma di sequenza}{66}{section*.101}
-\contentsline {subsection}{\numberline {3.2.4}Screenshot}{66}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Iterazione 2}{67}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Analisi dei requisiti}{67}{subsection.3.3.1}
-\contentsline {subsubsection}{Requisiti funzionali}{67}{section*.102}
-\contentsline {subsubsection}{Requisiti non funzionali}{67}{section*.104}
-\contentsline {subsection}{\numberline {3.3.2}Casi di Test}{68}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Modellazione}{70}{subsection.3.3.3}
-\contentsline {subsubsection}{Modelli strutturali}{70}{section*.105}
-\contentsline {paragraph}{Modello dei dati}{70}{section*.106}
-\contentsline {paragraph}{Diagramma delle classi}{70}{section*.108}
-\contentsline {subsubsection}{Modelli comportamentali}{72}{section*.109}
-\contentsline {paragraph}{Diagramma di sequenza}{72}{section*.110}
-\contentsline {subsection}{\numberline {3.3.4}Screenshot}{72}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Iterazione 3}{73}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Analisi dei requisiti}{73}{subsection.3.4.1}
-\contentsline {subsubsection}{Requisiti funzionali}{73}{section*.111}
-\contentsline {subsubsection}{Requisiti non funzionali}{73}{section*.113}
-\contentsline {subsection}{\numberline {3.4.2}Casi di Test}{74}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Modellazione}{74}{subsection.3.4.3}
-\contentsline {subsubsection}{Modelli strutturali}{74}{section*.114}
-\contentsline {paragraph}{Modello dei dati}{74}{section*.115}
-\contentsline {paragraph}{Diagramma delle classi}{74}{section*.117}
-\contentsline {subsubsection}{Modelli comportamentali}{74}{section*.118}
-\contentsline {paragraph}{Diagramma di sequenza}{74}{section*.119}
-\contentsline {subsection}{\numberline {3.4.4}Screenshot}{74}{subsection.3.4.4}
-\contentsline {chapter}{\numberline {A}Appendice}{76}{appendix.A}
-\contentsline {subsubsection}{Connessione al GPS}{76}{section*.120}
-\contentsline {chapter}{Bibliografia}{78}{figure.caption.121}
-\contentsline {chapter}{Sitografia}{79}{appendix*.122}
+\contentsline {chapter}{\numberline {A}Appendice}{51}{appendix.A}
+\contentsline {subsubsection}{Connessione al GPS}{51}{section*.84}
+\contentsline {chapter}{Bibliografia}{53}{figure.caption.85}
+\contentsline {chapter}{Sitografia}{54}{appendix*.86}
