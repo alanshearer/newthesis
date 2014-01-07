@@ -1,0 +1,51 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Appendice}
+\label{ref:appendice}
+
+
+Nella presente appendice saranno esposte le porzioni di codice di particolare interesse ai fini della realizzazione dell'applicazione.
+\subsubsection{Connessione al GPS}
+Nella figura\ref{GPSConnection} è mostrato come il client è interfacciato al dispositivo GPS.
+\begin{figure}
+\begin{center}
+\lstset{language=CSharp}
+\begin{lstlisting}
+async Task<GeoCoordinate> GetPosition()
+        {
+            if ((bool)IsolatedStorageSettings.ApplicationSettings["LocationConsent"] != true)
+            {
+                MessageBox.Show("Attivare i servizi di posizionamento");
+            }
+
+            Geolocator geolocator = new Geolocator();
+            geolocator.DesiredAccuracyInMeters = 50;
+
+            try
+            {
+                Geoposition geoposition = await geolocator.GetGeopositionAsync(
+                    maximumAge: TimeSpan.FromMinutes(5),
+                    timeout: TimeSpan.FromSeconds(10)
+                    );
+
+                GeoCoordinate coordinateToBack = new GeoCoordinate();
+                coordinateToBack.Latitude = geoposition.Coordinate.Latitude;
+                coordinateToBack.Longitude = geoposition.Coordinate.Longitude;
+                return coordinateToBack;
+            }
+            catch (ArgumentException AE)
+            {
+                MessageBox.Show(AE.StackTrace);
+            }
+        }
+\end{lstlisting}
+\caption{Gestione della connessione al dispositivo GPS\label{GPSConnection}}
+\end{center}
+\end{figure}
+
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+%%%%\clearpage{\pagestyle{empty}\cleardoublepage}
