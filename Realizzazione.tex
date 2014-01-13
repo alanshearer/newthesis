@@ -10,7 +10,7 @@ Si è proceduto quindi con la definizione delle iterazioni, partendo dall'\texti
 \section{Iterazione 0}
 
 Nell'\emph{iterazione 0}, come prassi nelle metodologie agili, vengono realizzate l'analisi dei requisiti, la modellazione delle interfacce utente, la modellazione di dominio e la pianificazione degli incrementi.
-L'\emph{iterazione 0} è la base su cui partire per lo sviluppo delle iterazioni successive, perciò ricopre un ruolo fondamentale nello sviluppo Agile.
+L'\emph{iterazione 0} è la base su cui partire per lo sviluppo delle iterazioni successive, perciò ricopre un ruolo fondamentale nello sviluppo Agile \cite{book:lalonde}.
 
 \subsection{Analisi dei requisiti}
 Di seguito sono descritti i requisiti funzionali e non funzionali.
@@ -31,7 +31,7 @@ Da questo tema possiamo ricavare tre \textit{epic}:
 \item \textit{Gestisci l'itinerario del sito}.
 \end{itemize}.
 
-Ed, in definitiva, da questi tre epic, possiamo ricavare otto \textit{user stories} che caratterizzano i requisiti dell'applicazione. Tali user stories vengono di seguito riportate, secondo il formato \emph{"essendo un\dots vorrei poter\dots così da\dots"}, comunemente utilizzato:
+Ed, in definitiva, da questi tre epic, possiamo ricavare otto \textit{user stories} che caratterizzano i requisiti dell'applicazione \cite{book:blankenship}. Tali user stories vengono di seguito riportate, secondo il formato \emph{"essendo un\dots vorrei poter\dots così da\dots"}, comunemente utilizzato:
 
 \begin{itemize}
 \item \textit{essendo un utente vorrei poter visualizzare la mia posizione sulla mappa così da orientarmi al meglio all'interno del sito};
@@ -344,28 +344,18 @@ Sono quindi sviluppati i seguenti test di accettazione:
 
 
 \subsection{Modellazione}
-\subsubsection{Modelli strutturali}
-\paragraph{Modello dei dati}
+\subsubsection{Modello dei dati}
 Nell'iterazione 1, sono considerate tre entità:
 \begin{itemize}
 \item \textbf{Punto di interesse} (Nome)
 \item \textbf{Tipologia} (NomeTipologia, Icona)
 \item \textbf{Posizione} (Latitudine, Longitudine)
 \end{itemize}
-Per cui abbiamo un modello dei dati che è rappresentato dalla fig. \ref{datamodelprimaterazione}.
+Il modello dei dati è rappresentato in fig. \ref{datamodelprimaterazione}.
 \begin{figure}
 \includegraphics[scale=0.55]{imgs/model/DataModelPrimaIterazione.png} 
 \caption{Modello dei dati della prima iterazione\label{datamodelprimaterazione}}
 \end{figure}
-
-\paragraph{Diagramma delle classi}
-
-\subsubsection{Modelli comportamentali}
-\paragraph{Diagramma di sequenza}
-
-
-\subsection{Screenshot}
-
 
 
 
@@ -487,8 +477,7 @@ Cliccare sull'icona rappresentante il punto di interesse scelto.
 
 
 \subsection{Modellazione}
-\subsubsection{Modelli strutturali}
-\paragraph{Modello dei dati}
+\subsubsection{Modello dei dati}
 Nell'iterazione 2, sono considerate cinque entità:
 \begin{itemize}
 \item \textbf{Punto di interesse} (Nome)
@@ -497,18 +486,12 @@ Nell'iterazione 2, sono considerate cinque entità:
 \item \textbf{Feedback} (IdUtente, Voto, Data)
 \item \textbf{Descrizione} (Url)
 \end{itemize}
-Per cui abbiamo un modello dei dati che è rappresentato dalla fig. \ref{datamodelsecondaiterazione}.
+Il modello dei dati è rappresentato in fig. \ref{datamodelsecondaiterazione}.
 \begin{figure}
 \includegraphics[scale=0.55]{imgs/model/DataModelSecondaIterazione.png} 
 \caption{Modello dei dati della seconda iterazione\label{datamodelsecondaiterazione}}
 \end{figure}
 
-\paragraph{Diagramma delle classi}
-
-\subsubsection{Modelli comportamentali}
-\paragraph{Diagramma di sequenza}
-
-\subsection{Screenshot}
 
 
 \clearpage
@@ -552,9 +535,24 @@ Oltre ai requisiti non funzionali già descritti nelle precedenti iterazioni, pe
 \end{itemize}
 
 \subsection{Casi di Test}
+Dopo l'analisi dei requisiti funzionali e non funzionali, sono stati sviluppati i seguenti casi di test:
+\begin{enumerate}
+\item Verificare l'aggiornamento della posizione dell'utente nell'itinerario
+\begin{enumerate}
+\item Assicurarsi che sulla mappa siano visibili i punti di interesse.\\
+ Assicurarsi che sulla mappa sia visibile l'itinerario.\\
+Assicurarsi della presenza del segnale GPS.\\
+Assicurarsi della presenza di una connessione dati attiva.\\
+Spostarsi fisicamente da o verso un punto di interesse.\\
+\begin{enumerate}
+\item Verificare la visualizzazione sul display dell'informazione relativa al cambiamento di posizione.
+\item Verificare la possibilità di ritornare alla schermata precedente.
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
 \subsection{Modellazione}
-\subsubsection{Modelli strutturali}
-\paragraph{Modello dei dati}
+\subsubsection{Modello dei dati}
 Nell'iterazione 3, sono considerate sei entità:
 \begin{itemize}
 \item \textbf{Punto di interesse} (Nome)
@@ -564,17 +562,11 @@ Nell'iterazione 3, sono considerate sei entità:
 \item \textbf{Descrizione} (Url)
 \item \textbf{Itinerario} (NomeItinerario)
 \end{itemize}
-Per cui abbiamo un modello dei dati che è rappresentato dalla fig. \ref{datamodelterzaiterazione}.
+Il modello dei dati è rappresentato in fig. \ref{datamodelterzaiterazione}.
 \begin{figure}
 \includegraphics[scale=0.55]{imgs/model/DataModelTerzaIterazione.png} 
 \caption{Modello dei dati della terza iterazione\label{datamodelterzaiterazione}}
 \end{figure}
-
-\paragraph{Diagramma delle classi}
-
-\subsubsection{Modelli comportamentali}
-\paragraph{Diagramma di sequenza}
-\subsection{Screenshot}
 
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

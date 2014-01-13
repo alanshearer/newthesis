@@ -22,10 +22,10 @@
 \contentsline {figure}{\numberline {2.1.18}{\ignorespaces Rappresentazione dei satelliti GPS in orbita intorno alla terra.\relax }}{27}{figure.caption.48}
 \contentsline {figure}{\numberline {2.1.19}{\ignorespaces Esempio di documento GeoRSS.\relax }}{31}{figure.caption.57}
 \contentsline {figure}{\numberline {2.1.20}{\ignorespaces Scambio messaggi in un Web Service.\relax }}{35}{figure.caption.63}
-\contentsline {figure}{\numberline {2.1.21}{\ignorespaces Modello di architettura REST.\relax }}{40}{figure.caption.71}
+\contentsline {figure}{\numberline {2.1.21}{\ignorespaces Modello di architettura REST.\relax }}{39}{figure.caption.71}
 \contentsline {figure}{\numberline {2.2.1}{\ignorespaces Stack del .NET Framework.\relax }}{42}{figure.caption.72}
 \contentsline {figure}{\numberline {2.2.2}{\ignorespaces Panoramica della Common Language Infrastructure\relax }}{44}{figure.caption.76}
-\contentsline {figure}{\numberline {2.2.3}{\ignorespaces Schermata di Visual Studio 2012 Ultimate\relax }}{46}{figure.caption.81}
+\contentsline {figure}{\numberline {2.2.3}{\ignorespaces Schermata di Visual Studio 2012 Ultimate\relax }}{45}{figure.caption.81}
 \contentsline {figure}{\numberline {2.2.4}{\ignorespaces Processo di sviluppo agile\relax }}{50}{figure.caption.84}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1.1}{\ignorespaces Requisiti non funzionali dell'applicazione client\relax }}{55}{figure.caption.87}
@@ -36,16 +36,21 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Visualizzazione posizione}}}{58}{subfigure.4.2}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Visualizzazione punti di interesse}}}{58}{subfigure.4.3}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Visualizzazione menu}}}{58}{subfigure.4.4}
-\contentsline {figure}{\numberline {3.1.4}{\ignorespaces Sketch dell'applicazione, 2\relax }}{59}{figure.caption.91}
+\contentsline {figure}{\numberline {3.1.3}{\ignorespaces Sketch dell'applicazione, 2\relax }}{59}{figure.caption.91}
 \contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Visualizzazione dettaglio}}}{59}{subfigure.4.5}
 \contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Invio feedback}}}{59}{subfigure.4.6}
 \contentsline {subfigure}{\numberline {(g)}{\ignorespaces {Itinerario}}}{59}{subfigure.4.7}
-\contentsline {figure}{\numberline {3.1.5}{\ignorespaces Tabella di stima delle user stories\relax }}{60}{figure.caption.92}
-\contentsline {figure}{\numberline {3.1.6}{\ignorespaces Pianificazione delle iterazioni\relax }}{61}{figure.caption.93}
+\contentsline {figure}{\numberline {3.1.4}{\ignorespaces Tabella di stima delle user stories\relax }}{60}{figure.caption.92}
+\contentsline {figure}{\numberline {3.1.5}{\ignorespaces Pianificazione delle iterazioni\relax }}{61}{figure.caption.93}
 \contentsline {figure}{\numberline {3.2.1}{\ignorespaces Tabella di stima delle user stories della prima iterazione\relax }}{62}{figure.caption.95}
-\contentsline {figure}{\numberline {3.2.2}{\ignorespaces Modello dei dati della prima iterazione\relax }}{67}{figure.caption.99}
-\contentsline {figure}{\numberline {3.3.1}{\ignorespaces Tabella di stima delle user stories della seconda iterazione\relax }}{69}{figure.caption.104}
-\contentsline {figure}{\numberline {3.3.2}{\ignorespaces Modello dei dati della seconda iterazione\relax }}{72}{figure.caption.108}
-\contentsline {figure}{\numberline {3.4.1}{\ignorespaces Tabella di stima delle user stories della terza iterazione\relax }}{74}{figure.caption.113}
-\contentsline {figure}{\numberline {3.4.2}{\ignorespaces Modello dei dati della terza iterazione\relax }}{76}{figure.caption.117}
+\contentsline {figure}{\numberline {3.2.2}{\ignorespaces Modello dei dati della prima iterazione\relax }}{67}{figure.caption.98}
+\contentsline {figure}{\numberline {3.3.1}{\ignorespaces Tabella di stima delle user stories della seconda iterazione\relax }}{69}{figure.caption.100}
+\contentsline {figure}{\numberline {3.3.2}{\ignorespaces Modello dei dati della seconda iterazione\relax }}{72}{figure.caption.103}
+\contentsline {figure}{\numberline {3.4.1}{\ignorespaces Tabella di stima delle user stories della terza iterazione\relax }}{73}{figure.caption.105}
+\contentsline {figure}{\numberline {3.4.2}{\ignorespaces Modello dei dati della terza iterazione\relax }}{75}{figure.caption.108}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.0.1}{\ignorespaces Screenshot dell'applicazione con visualizzazione dei punti di interesse.\relax }}{77}{figure.caption.109}
+\contentsline {figure}{\numberline {4.0.2}{\ignorespaces Screenshot dell'applicazione con visualizzazione del menu contestuale.\relax }}{77}{figure.caption.110}
+\contentsline {figure}{\numberline {4.0.3}{\ignorespaces Screenshot dell'applicazione per l'inserimento del feedback.\relax }}{78}{figure.caption.111}
+\contentsline {figure}{\numberline {4.0.4}{\ignorespaces Screenshot dell'applicazione con visualizzazione delle informazioni del tempio di Era.\relax }}{78}{figure.caption.112}
+\contentsline {figure}{\numberline {4.0.5}{\ignorespaces Screenshot dell'applicazione con visualizzazione delle informazioni del tempio di Nettuno.\relax }}{79}{figure.caption.113}

@@ -69,11 +69,11 @@ Diversamente dai sistemi operativi per desktop e laptop, essi devono affrontare 
 Nell'accezione moderna, il sistema operativo mobile non è solo un prodotto software, ma una vera e propria piattaforma, che mette a disposizione degli sviluppatori delle API su cui sviluppare applicazioni.
 
 Un \emph{ecosistema mobile} è costituito dal sistema operativo, inteso come piattaforma, dagli sviluppatori, che incrementano il numero e migliorano la qualità delle applicazioni disponibili, e dagli utilizzatori, che acquistano sia la piattaforma che le applicazioni nello store.
-In questo sezione verranno trattati i principali sistemi operativi mobile e i relativi framework per lo sviluppo delle applicazioni.
+In questo sezione verranno trattati i principali sistemi operativi mobili e i relativi framework per lo sviluppo delle applicazioni.
 
 
 \subsubsection{Android}
-Android (\cite{www:android}), nato nel 2003, è il più diffuso sistema operativo per dispositivi mobili; open source, è distribuito sotto licenza Apache, ovvero vi è la possibilità di modificare e distribuire liberamente il codice sorgente.\\
+Android \cite{www:android}, nato nel 2003, è il più diffuso sistema operativo per dispositivi mobili; open source, è distribuito sotto licenza Apache, ovvero vi è la possibilità di modificare e distribuire liberamente il codice sorgente.\\
 \begin{figure}
 \begin{center}
 \includegraphics[scale=0.5]{imgs/android_architecture.jpg} 
@@ -97,12 +97,12 @@ Gli aggiornamenti sono in genere di natura incrementale e apportano migliorament
 \paragraph{Sviluppo Applicazioni}
 Tutte le applicazioni Android, dovendo basarsi sul framework di librerie Java, sono scritte in Java.
 
-L'Android software development kit SDK (\cite{www:androidsdk}) include un insieme di tool di sviluppo, quali un debugger, librerie, un emulatore basato su QEMU (\cite{www:QEMU}), codici di esempio e tutorials.
+L'Android software development kit SDK \cite{www:androidsdk} include un insieme di tool di sviluppo, quali un debugger, librerie, un emulatore basato su QEMU \cite{www:QEMU}, codici di esempio e tutorials.
 Le piattaforme di sviluppo supportate includono computer con sistema operativo Linux, MAC OS X (dalla 10.5.8) e Windows (da XP).
-L'IDE (Integrated Development Enviroment) ufficialmente supportato è ADT (Android Development Tools), basato su Eclipse (\cite{www:eclipse}) ma, in ogni caso, è possibile sviluppare applicazioni Android anche con altri IDE.
+L'IDE (Integrated Development Enviroment) ufficialmente supportato è ADT (Android Development Tools), basato su Eclipse \cite{www:eclipse} ma, in ogni caso, è possibile sviluppare applicazioni Android anche con altri IDE.
 
 \subsubsection{iOS}
-iOS (\cite{www:ios}) è un sistema operativo di Apple, derivato da Unix BSD ed ha un microkernel XNU Mach basato su Darwin OS.
+iOS \cite{www:ios} è un sistema operativo di Apple, derivato da Unix BSD ed ha un microkernel XNU Mach basato su Darwin OS.
 Nato nel 2007, è rilasciato sotto licenza APSL (Apple Public Source License), che consente agli utenti di migliorare il software ma non di rilasciarlo a terzi.\\
 
 \begin{figure}[h!]
@@ -123,13 +123,13 @@ Sono presenti, inoltre, framework per l'esecuzione di DSP, calcoli di algebra li
 
 Apple rilascia aggiornamenti di iOS circa una volta l'anno. Tali aggiornamenti costituiscono revisioni complete del sistema operativo.
 \paragraph{Sviluppo Applicazioni}
-Le applicazioni per iOS possono essere sviluppate tramite l'iOS SDK (\cite{www:iossdk}),  disponibile solo su sistema operativo MAC OS X. Esse sono scritte in Objective-C, anche se esiste il supporto per C e C++.
+Le applicazioni per iOS possono essere sviluppate tramite l'iOS SDK \cite{www:iossdk},  disponibile solo su sistema operativo MAC OS X. Esse sono scritte in Objective-C, anche se esiste il supporto per C e C++.
 
 L'IDE di riferimento per lo sviluppo di applicazioni per iOS è XCode, che include un editor di sorgenti, uno strumento per disegnare le interfacce utente, il compilatore LLVM  e un emulatore, oltre ad altri numerosi tool per il debug, il testing e la gestione degli errori.
 
 
 \subsubsection{Windows Phone OS}
-Windows Phone OS (\cite{www:windowsphone}) è un sistema operativo Microsoft, nato nel 2010, orientato ai dispositivi mobile. Nonostante sia il successore di Windows Mobile, sistema operativo nato nel 1996 per i palmari, è completamente differente da quest'ultimo.
+Windows Phone OS \cite{www:windowsphone} è un sistema operativo Microsoft, nato nel 2010, orientato ai dispositivi mobile. Nonostante sia il successore di Windows Mobile, sistema operativo nato nel 1996 per i palmari, è completamente differente da quest'ultimo.
 
 E' distribuito con licenza Microsoft EULA, per cui è soggetto a limitazioni d'uso, di garanzia e di responsabilità.
 
@@ -140,7 +140,7 @@ E' distribuito con licenza Microsoft EULA, per cui è soggetto a limitazioni d'u
 \end{center}
 \end{figure}
 
-Windows Phone OS ha un'architettura a quattro livelli, come rappresentato in figura \ref{wparchitecture}:
+Windows Phone OS ha un'architettura a quattro livelli \cite{book:lalonde}, come rappresentato in figura \ref{wparchitecture}:
 \begin{itemize}
 \item \emph{Common Base Class Library}: è una libreria standard che include un vasto numero di funzionalità comuni, come ad esempio la lettura e scrittura su un file, il rendering grafico, l'interazione con i database, la manipolazione di documenti XML e il supporto per il multithreading;
 \item \emph{Silverlight Presentation and Media}: fornisce librerie per la navigazione, la grafica, la gestione dei media;
@@ -150,17 +150,17 @@ Windows Phone OS ha un'architettura a quattro livelli, come rappresentato in fig
 
 \paragraph{Sviluppo Applicazioni}
 Le applicazioni per Windows Phone possono essere scritte in C++, C\#, C, Visual Basic e HTML5, grazie al vasto supporto del framework .NET.
-La più recente versione della Windows Phone SDK (\cite{www:windowsphonesdk}) è disponibile solo per sistemi operativi Windows 8 a 64bit.
+La più recente versione della Windows Phone SDK \cite{www:windowsphonesdk} è disponibile solo per sistemi operativi Windows 8 a 64bit.
 
 L'IDE di riferimento per lo sviluppo di applicazioni Windows Phone è Visual Studio per Windows Phone, che include un editor di sorgenti, di testing, di debug, di gestione delle risorse e del ciclo di vita dell'applicazione.
-Microsoft mette inoltre a disposizione altri significativi tools come Express Blend, che permette di creare interfacce utente; Silverlight (\cite{www:mssilverlight}) e XNA per la gestione della grafica 2D e 3D; Windows Phone Emulator, l'emulatore dei dispositivi Windows Phone.\\
+Microsoft mette inoltre a disposizione altri significativi tools come Express Blend, che permette di creare interfacce utente; Silverlight \cite{www:mssilverlight} e XNA per la gestione della grafica 2D e 3D; Windows Phone Emulator, l'emulatore dei dispositivi Windows Phone.\\
 
 \subsubsection{Scelta adottata}
 Nella scelta dell'ecosistema su cui sviluppare e presentare un'applicazione per la visita dei siti culturali, \textbf{Windows Phone OS} è stato preferito agli altri, poiché si è tenuto conto di vari fattori:
 \begin{itemize}
 \item \textbf{originalità}: nello store di Windows Phone, non si trovano applicazioni simili, per cui essa costituirebbe il primo tentativo di visita assistita dei siti culturali;
 %\item \textbf{utilizzo dispositivi GPS}: l'utilizzo dei dispositivi GPS è molto semplice grazie alle API messe a disposizione da Microsoft;
-\item \textbf{possibilità di utilizzare un ambiente integrato per lo sviluppo, con ampio supporto alla metodologia agile, avendo a disposizione un'ampia expertise aziendale}.
+\item \textbf{expertise}: possibilità di utilizzare un ambiente integrato per lo sviluppo, con ampio supporto alla metodologia agile, avendo a disposizione un'ampia expertise aziendale.
 \end{itemize}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
@@ -170,7 +170,7 @@ Nella scelta dell'ecosistema su cui sviluppare e presentare un'applicazione per 
 La serializzazione è un processo  per salvare un oggetto in un supporto di memorizzazione lineare o per trasmetterlo su una connessione di rete.
 Essa può essere realizzata in modalità binaria o testuale.
 La modalità binaria, seppur molto efficiente, presenta scarsa interoperabilità e flessibilità.
-La serializzazione testuale, invece, essendo basata sul paradigma REST (\cite{www:REST}), determina un'ottimizzazione nello scambio di informazioni tra ambienti eterogenei, rendendo le strutture tradotte indipendenti dall'architettura e dalle differenti rappresentazioni dei dati.
+La serializzazione testuale, invece, essendo basata sul paradigma REST \cite{www:REST}, determina un'ottimizzazione nello scambio di informazioni tra ambienti eterogenei, rendendo le strutture tradotte indipendenti dall'architettura e dalle differenti rappresentazioni dei dati.
 I formati di serializzazione testuale più noti sono XML, JSON e YAML, che  sono trattati di seguito.
 
 \subsubsection{XML}
@@ -298,7 +298,7 @@ Se un documento è sintatticamente valido, può essere analizzato da un \textit{
 
 
 \subsubsection{JSON}
-JSON (JavaScript Object Notation, \cite{www:json}) è un formato di serializzazione nato appositamente per lo scambio dei dati.
+JSON (JavaScript Object Notation, \cite{www:JSON}) è un formato di serializzazione nato appositamente per lo scambio dei dati.
 Un documento JSON è di facile interpretazione anche senza il processo di parsing, data la leggibilità della sua struttura.
 
 JSON è completamente indipendente dal linguaggio di programmazione utilizzato, in quanto utilizza convenzioni conosciute dai programmatori di linguaggi della famiglia del C. 
@@ -463,7 +463,7 @@ La rappresentazione delle stringhe può essere indentata, come nella figura \ref
 
 \subsubsection{Scelta}
 Nell'ambito del progetto di tesi, nonostante i formati JSON e YAML presentino ridondanze minori rispetto a XML, come già specificato, quest'ultimo risulta comunque il più adatto alla descrizione di strutture dati e presenta uno spettro di utilizzo più vasto.
-Inoltre, come si vedrà in seguito, l'utilizzo del formato GeoRSS, derivato da XML, per la descrizione delle caratteristiche georeferenziate dei punti di interesse, inducono comunque alla scelta del formato XML.
+Inoltre, come si vedrà in seguito, l'utilizzo del formato GeoRSS, derivato da XML, per la descrizione delle caratteristiche georeferenziate dei punti di interesse, induce comunque alla scelta del formato XML.
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
@@ -536,7 +536,7 @@ La determinazione  più accurata della  posizione si verifica quando il satellit
 La localizzazione cellulare è utilizzata nelle reti cellulari, come GSM o UMTS, per ricavare la posizione di un utente.
 Questo sistema di localizzazione è utilizzato per ricavare la presenza di un utente all'interno di una cella, per cui è soggetto a margini di errore abbastanza ampi.
 Per questo motivo, i gestori hanno predisposto nuovi strumenti per equipaggiare le proprie reti con dispositivi e protocolli finalizzati alla realizzazione del posizionamento in modo più accurato ed efficiente.
-A tal proposito, diversi metodi sono stati specificati dai gruppi di standardizzazione, come 3GPP (\cite{www:3GPP}). La maggior parte di questi metodi è network-based, per cui anche i dispositivi più datati possono usufruirne.
+A tal proposito, diversi metodi sono stati specificati dai gruppi di standardizzazione, come 3GPP \cite{www:3GPP}. La maggior parte di questi metodi è network-based, per cui anche i dispositivi più datati possono usufruirne.
 Il vantaggio di questi sistemi di localizzazione cellulare è che possono essere utilizzati anche in ambienti chiusi, diversamente dai sistemi satellitari.
 Il posizionamento cellulare può essere molto costoso per quanto riguarda l'overhead dovuto alla segnalazione, soprattutto se è richiesto un alto grado  di accuratezza e, inoltre, la capacità impiegata per la localizzazione è indisponibile per i servizi voce e dati.
 
@@ -546,7 +546,7 @@ E' basata su tecnologie radio, infrarossi o ad ultrasuoni, con un raggio di comu
 La realizzazione di un sistema di localizzazione indoor può avvenire mediante la realizzazione di infrastrutture dedicate o l'utilizzo di infrastrutture preesistenti, come le reti WLAN.
 La localizzazione indoor ha il vantaggio di presentare un basso consumo di potenza dei dispositivi utilizzati per la ricezione e l'elevata accuratezza dovuta al corto raggio delle tecnologie usate.
 
-Esistono diverse soluzioni commerciali per la localizzazione indoor, come \textbf{RADAR} (\cite{www:RADAR}), sviluppata da Microsoft, che è un sistema a radio frequenza; \textbf{Real Time Location System - RTLS} (\cite{www:RTLS}), di Ekahau, che si basa sull'infrastruttura WLAN IEEE 802.11; \textbf{Visibility System} (\cite{www:VisibilitySystem}), di Aeroscout, basato sempre sull'infrastruttura WLAN IEEE 802.11; \textbf{Wireless Location Appliance} (\cite{www:WirelessLocationAppliance}), di Cisco, basato su WLAN.
+Esistono diverse soluzioni commerciali per la localizzazione indoor, come \textbf{RADAR} \cite{www:RADAR}, sviluppata da Microsoft, che è un sistema a radio frequenza; \textbf{Real Time Location System - RTLS} \cite{www:RTLS}, di Ekahau, che si basa sull'infrastruttura WLAN IEEE 802.11; \textbf{Visibility System} \cite{www:VisibilitySystem}, di Aeroscout, basato sempre sull'infrastruttura WLAN IEEE 802.11; \textbf{Wireless Location Appliance} \cite{www:WirelessLocationAppliance}, di Cisco, basato su WLAN.
 
 \subsubsection{Scelta adottata}
 Nell'ambito di studio, la scelta operata è sulla tecnologia \textbf{GPS}, per i seguenti motivi:
@@ -603,10 +603,10 @@ Per il lavoro oggetto di questa tesi, il formato GeoRSS risulta particolarmente 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
 \subsection{Rappresentazione dei dati georeferenziati}
-Il Web Mapping è un processo di progettazione, implementazione, generazione e produzione di mappe sul web.
-Un caso particolare di mappe web sono le mappe mobili, visualizzate su periferiche mobili, come telefonini, smartphone, tablet e GPS.
+Il Web Mapping è un processo di progettazione, implementazione, generazione e produzione di mappe sul Web.
+Un caso particolare di mappe Web sono le mappe mobili, visualizzate su periferiche mobili, come telefonini, smartphone, tablet e GPS.
 
-I vantaggi derivanti dall'utilizzo di mappe web sono:
+I vantaggi derivanti dall'utilizzo di mappe Web sono:
 \begin{itemize}
 \item facilità di generazione di mappe aggiornate;
 \item economicità dell'infrastruttura software ed hardware;
@@ -617,16 +617,16 @@ I vantaggi derivanti dall'utilizzo di mappe web sono:
 \item facilità di integrazione con altri oggetti multimediali.
 \end{itemize}
 
-I servizi di web mapping più noti sono \textbf{Google Maps} e \textbf{Bing Maps}.
+I servizi di Web mapping più noti sono \textbf{Google Maps} e \textbf{Bing Maps}.
 \subsubsection{Google Maps}
-Google Maps (\cite{www:googlemaps}) è un servizio di web mapping nato nel 2005 e fornito da Google, che include numerosi altri servizi basati sulle mappe (mappe stradali, pianificazione di percorsi e localizzazione di imprese).
+Google Maps \cite{www:googlemaps} è un servizio di Web mapping nato nel 2005 e fornito da Google, che include numerosi altri servizi basati sulle mappe (mappe stradali, pianificazione di percorsi e localizzazione di imprese).
 Le mappe non sono aggiornate in tempo reale, ma spesso dopo mesi o anni.
 \paragraph{Google Maps API}
-Google ha messo a disposizione le proprie API per consentire agli sviluppatori di integrare Google Maps all'interno dei loro siti web.
+Google ha messo a disposizione le proprie API per consentire agli sviluppatori di integrare Google Maps all'interno dei loro siti Web.
 Il servizio offerto è gratuito, anche se Google si riserva, nei termini di licenza, di introdurre future forme di pagamento.
 
 \subsubsection{Bing Maps}
-Bing Maps (\cite{www:bingmaps}) è un servizio di web mapping nato nel 2009 e distribuito da Microsoft nella \textit{Bing suite}.
+Bing Maps \cite{www:bingmaps} è un servizio di Web mapping nato nel 2009 e distribuito da Microsoft nella \textit{Bing suite}.
 Fornisce numerose tipologie di mappe: stradali, satellitari, aeree, tridimensionali, oltre che, naturalmente, servizi di traffico e di ricerca delle imprese.
 \paragraph{Bing Maps API}
 Microsoft, oltre a mettere a disposizione le Bing API agli sviluppatori, fornisce anche una SDK disponibile su più piattaforme, per realizzare applicazioni integrabili con la maggior parte dei prodotti commerciali Microsoft.
@@ -636,8 +636,8 @@ La scelta di Windows Phone OS come piattaforma ha reso quasi obbligatoria l'adoz
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
 \subsection{Web Service e protocolli di scambio delle informazioni}
-Un \textit{Web Service} è, secondo la definizione data dal consorzio \textit{W3C} (\cite{www:w3c}), un sistema software progettato per supportare l'interoperabilità tra diversi elaboratori su di una medesima rete ovvero in un contesto distribuito. L'interoperabilità è ottenuta associando all'applicazione un'interfaccia software (descritta in formato automaticamente elaborabile, ad esempio il Web Services Description Language), che espone all'esterno i servizi associati e utilizzando la quale altri sistemi possono interagire con l'applicazione stessa, attivando le operazioni descritte nell'interfaccia tramite appositi messaggi di richiesta.
-Tali messaggi sono formattati secondo gli standard XML ed incapsulati e trasportati tramite i protocolli web (di solito HTTP), da cui il nome web service. Un esempio di trasporto è in figura \ref{webservice}.
+Un \textit{Web Service} è, secondo la definizione data dal consorzio \textit{W3C} \cite{www:w3c}, un sistema software progettato per supportare l'interoperabilità tra diversi elaboratori su di una medesima rete ovvero in un contesto distribuito. L'interoperabilità è ottenuta associando all'applicazione un'interfaccia software (descritta in formato automaticamente elaborabile, ad esempio il Web Services Description Language), che espone all'esterno i servizi associati e utilizzando la quale altri sistemi possono interagire con l'applicazione stessa, attivando le operazioni descritte nell'interfaccia tramite appositi messaggi di richiesta.
+Tali messaggi sono formattati secondo gli standard XML ed incapsulati e trasportati tramite i protocolli Web (di solito HTTP), da cui il nome Web service. Un esempio di trasporto è in figura \ref{webservice}.
 
 \begin{figure}[h!]
 \begin{center}
@@ -652,7 +652,7 @@ L'accesso ai Web Service è possibile da qualunque dispositivo in grado di inter
 Un Web Service può essere scritto in qualsiasi linguaggio di programmazione e, come tutte le applicazioni web, ha la caratteristica fondamentale di trasmettere informazioni in formato testuale attraverso protocolli di tipo request-reply (HTTP).
 Solitamente, un Web Service comunica con i browser tramite pagine HTML, incapsulate all'interno di una risposta HTTP; diversamente, nella comunicazione tra Web Service o tra Web Service e applicazioni le informazioni sono scambiate in maniera strutturata (cioè capaci di autodescriversi in modo da essere comprensibili sia ad un agente software che ad un umano).
 I formati di descrizione sono naturalmente i formati di serializzazione dei dati trattati precedentemente, ovvero XML, JSON e YAML, la cui caratteristica principale è quella di essere testi semplici da cui estrarre informazioni tramite il parsing.\\
-I protocolli per i web service utilizzano tre architetture diverse:
+I protocolli per i Web service utilizzano tre architetture diverse:
 \begin{itemize}
 \item \textbf{RPC oriented};
 \item \textbf{Message oriented};
@@ -667,7 +667,7 @@ XML-RPC sfrutta la disponibilità di parser XML su tutte le principali piattafor
 Le principali carenze di XML-RPC sono: l'assenza di meccanismi per la gestione di tipi di dato non supportati; il mancato supporto nativo di funzionalità avanzate come autenticazione e gestione delle transazioni; mancanza di definizione formale delle interfacce delle procedure remote, per cui eventuali errori o incongruenze sono scoperti solo a tempo di esecuzione.
 Per ovviare a tali limiti è stato introdotto SOAP.
 \paragraph{SOAP}
-Acronimo di \textit{Simple Object Access Protocol}, SOAP (\cite{www:SOAP}) è basato su XML ed è accattato come standard dal consorzio W3C.
+Acronimo di \textit{Simple Object Access Protocol}, SOAP \cite{www:SOAP} è basato su XML ed è accattato come standard dal consorzio W3C.
 SOAP è supportato dai principali ambienti di sviluppo e ha la caratteristica di separare il formato dei messaggi dal modo in cui sono veicolati attraverso un protocollo già esistente. 
 SOAP può utilizzare protocolli diversi da HTTP, come SMTP.
 I vantaggi dell'utilizzo di SOAP, rispetto ad XML-RPC sono prevalentemente nella versatilità, dal momento che SOAP consente di estendere l'insieme dei tipi da usare come parametri e valori di ritorno e consente di estendere il protocollo stesso al fine di aggiungere funzionalità come la sicurezza o la gestione delle transizioni senza perdere l'interoperabilità.
@@ -740,10 +740,10 @@ Tipicamente il WSDL è disponibile online sul sito che ospita il web service ed 
 %\caption{Esempio di documento WSDL\label{wsdlimage}}
 %\end{center}
 %\end{figure}
-La combinazione SOAP+WSDL consente di realizzare web service con uno sforzo di programmazione contenuto, sia lato client che lato server e, grazie all'uso del servizio UDDI, garantisce ed aumenta l'interoperabilità.
+La combinazione SOAP+WSDL consente di realizzare Web service con uno sforzo di programmazione contenuto, sia lato client che lato server e, grazie all'uso del servizio UDDI, garantisce ed aumenta l'interoperabilità.
 \paragraph{UDDI}
-UDDI (\textit{Universal Description Discovery and Integration}) è un web service basato su SOAP+WSDL che realizza un repository di descrizioni WSDL con funzioni di pubblicazione e ricerca di web service in base ad una serie di metadati.
-Lo standard UDDI originariamente ipotizzava lo sviluppo di un \textit{Universal Business Registry} pubblico che consentisse una ricerca globale dei web service, ma attualmente l'idea dell'UBR è stata abbandonata ed il servizio UDDI è utilizzato soprattutto in ambito intranet come repository centralizzato di documenti WSDL.
+UDDI (\textit{Universal Description Discovery and Integration}) è un Web service basato su SOAP+WSDL che realizza un repository di descrizioni WSDL con funzioni di pubblicazione e ricerca di Web service in base ad una serie di metadati.
+Lo standard UDDI originariamente ipotizzava lo sviluppo di un \textit{Universal Business Registry} pubblico che consentisse una ricerca globale dei Web service, ma attualmente l'idea dell'UBR è stata abbandonata ed il servizio UDDI è utilizzato soprattutto in ambito intranet come repository centralizzato di documenti WSDL.
 \subsubsection{Message oriented}
 In un'architettura di servizi Message oriented le diverse applicazioni si scambiano messaggi unidirezionali che hanno le seguenti caratteristiche:
 \begin{itemize}
@@ -787,11 +787,11 @@ Il \textbf{.NET Framework}(figura \ref{netframeworkstack}) è un software framew
 Include una vasta libreria e fornisce interoperabilità di linguaggio attraverso diversi linguaggi di programmazione.
 I programmi scritti per il il .NET Framework sono eseguiti in un ambiente software, conosciuto come \emph{Common Language Runtime}, una macchina virtuale che fornisce servizi come sicurezza, gestione della memoria e delle eccezioni.
 La libreria delle classi e il Common Language Runtime costituiscono insieme il .NET Framework.
-La Base Class Library del .NET Framework fornisce interfacce utente, accesso ai dati, connettività al database, crittografia, sviluppo di applicazioni web, algoritmi numerici e comunicazioni di rete.
+La Base Class Library del .NET Framework fornisce interfacce utente, accesso ai dati, connettività al database, crittografia, sviluppo di applicazioni Web, algoritmi numerici e comunicazioni di rete.
 I programmatori producono software combinando codice sorgente con .NET Framework e altre librerie.
 Microsoft fornisce, inoltre, un ambiente di sviluppo integrato per il software .NET chiamato \emph{Visual Studio}. Nell'agosto 2012, è stato rilasciato il \emph{.NET Framework 4.5}, che verrà utilizzato nella realizzazione del progetto di questa tesi.
 
-\begin{figure}
+\begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=0.25]{imgs/netframeworkstack.png} 
 \caption{Stack del .NET Framework.\label{netframeworkstack}}
@@ -801,10 +801,10 @@ Microsoft fornisce, inoltre, un ambiente di sviluppo integrato per il software .
 \subsubsection{Design}
 Le caratteristiche di design del .NET Framework sono:
 \begin{itemize}
-\item \emph{Interoperabilità}: .Net Framework fornisce strumenti per accedere a funzionalità implementate in programmi più o meno recenti che sono eseguiti al di fuori dell'ambiente .NET, al fine di favorire l'interazione tra applicazioni;
+\item \emph{Interoperabilità}: .NET Framework fornisce strumenti per accedere a funzionalità implementate in programmi più o meno recenti che sono eseguiti al di fuori dell'ambiente .NET, al fine di favorire l'interazione tra applicazioni;
 \item \emph{Common Language Runtime (CLR)}: serve come motore per eseguire il framework .NET. Tutti i programmi .NET sono eseguiti sotto la supervisione del CLR, garantendo proprietà e comportamenti definiti riguardo sicurezza, memoria e gestione delle eccezioni;
 \item \emph{Indipendenza dal linguaggio}: E' introdotto il \emph{Common Type System} o CTS, che specifica tutti i possibili tipi di dati e costrutti di programmmazione supportati dal CLR e come essi possano o meno interagire con gli altri attraverso le specifiche del \emph{Common Language Infrastructure}, trattato di seguito;
-\item \emph{Base Class Library}: fornisce classi che incapsulano un gran numero di funzioni comuni, come creazione di interfacce utente, accesso ai file, rendering grafico, manipolazione documenti XML, connettività al database, crittografia, sviluppo di applicazioni web, algoritmi numerici e comunicazioni di rete. E' disponibile per tutti i linguaggi che utilizzano il .NET Framework;
+\item \emph{Base Class Library}: fornisce classi che incapsulano un gran numero di funzioni comuni, come creazione di interfacce utente, accesso ai file, rendering grafico, manipolazione documenti XML, connettività al database, crittografia, sviluppo di applicazioni Web, algoritmi numerici e comunicazioni di rete. E' disponibile per tutti i linguaggi che utilizzano il .NET Framework;
 \item \emph{Rilascio semplificato}: sono presenti tool che facilitano l'installazione del software sviluppato e assicurano che quest'ultimo non interferisca con software preinstallato e che sia conforme ai requisiti di sicurezza;
 \item \emph{Sicurezza}: è fornito un modello di sicurezza comune per tutte le applicazioni, oltre a meccanismi di protezione da vari tipi di vulnerabilità;
 \item \emph{Portabilità}: il framework .NET è \emph{platform-agnostic} e sono disponibili implementazioni multipiattaforma per altri sistemi operativi. Il Common Language Infrastructure, i linguaggi C\# e C++ sono tutti standard ECMA e ISO. Questo rende possibile la creazione di implementazioni compatibili col framework da terze parti.
@@ -858,7 +858,7 @@ Il .NET Garbage Collector viene eseguito periodicamente, su un thread separato d
 
 
 \subsubsection{Microsoft Visual Studio}
-Microsoft Visual Studio (\emph{\url{http://www.microsoft.com/visualstudio/ita}}), rappresentata con uno screenshot in figura \ref{vsimage}, permette lo sviluppo di applicazioni console, siti internet, applicazioni grafiche, applicazioni e servizi web, librerie di classi, servizi Windows in tutti i linguaggi di programmazione supportati dal framework .NET, oltre che in tutti i linguaggi di markup, JavaScript e CSS.
+Microsoft Visual Studio \cite{www:visualstudio}, rappresentato nello screenshot in figura \ref{vsimage}, permette lo sviluppo di applicazioni console, siti internet, applicazioni grafiche, applicazioni e servizi Web, librerie di classi, servizi Windows in tutti i linguaggi di programmazione supportati dal framework .NET, oltre che in tutti i linguaggi di markup, JavaScript e CSS.
 
 \begin{figure}
 \begin{center}
@@ -898,10 +898,10 @@ Visual Studio offre, tra i vari servizi, \textbf{Team Foundation Service}, uno s
 \clearpage{\pagestyle{empty}\cleardoublepage}
 
 \subsection{Metodologia agile}
-Con il termine \textit{metodologia agile} si intende un insieme di metodi di sviluppo software basati sullo sviluppo iterativo ed incrementale, in cui i requisiti e le soluzioni evolvono attraverso una collaborazione tra team capaci di organizzarsi autonomamente e con esperienze e conoscenze diverse.
+Con il termine \textit{metodologia agile} si intende un insieme di metodi di sviluppo software basati sullo sviluppo iterativo ed incrementale \cite{book:pressman}, in cui i requisiti e le soluzioni evolvono attraverso una collaborazione tra team capaci di organizzarsi autonomamente e con esperienze e conoscenze diverse.
 Le metodologie agili sono contrapposte alle metodologie \textit{pesanti} e \textit{iterative} poiché promuovono una pianificazione adattabile, uno sviluppo e una consegna del software evolutivi, un approccio iterativo, ed incoraggiano ad una risposta al cambiamento rapida e flessibile.
 
-Le metodologie agili sono state introdotte ufficialmente nel 2001 dal \textit{Manifesto Agile}(\cite{www:agilemanifesto}), un documento dell'\textit{Agile Alliance}, l'associazione che ha permesso la diffusione su ampia scala di tali metodologie.
+Le metodologie agili sono state introdotte ufficialmente nel 2001 dal \textit{Manifesto Agile}\cite{www:agilemanifesto}, un documento dell'\textit{Agile Alliance}, l'associazione che ha permesso la diffusione su ampia scala di tali metodologie.
 Il Manifesto Agile riporta quanto segue:
 \begin{quotation}
 \begin{emph}
