@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath,latexsym}
+\usepackage[latin1]{inputenc}
+
+% Page length commands go here in the preamble
+\setlength{\oddsidemargin}{-0.25in} % Left margin of 1 in + 0 in = 1 in
+\setlength{\textwidth}{7in}   % Right margin of 8.5 in - 1 in - 6.5 in = 1 in
+\setlength{\topmargin}{-.75in}  % Top margin of 2 in -0.75 in = 1 in
+\setlength{\textheight}{9.2in}  % Lower margin of 11 in - 9 in - 1 in = 1 in
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+
+\renewcommand{\baselinestretch}{1.5} % 1.5 denotes double spacing. Changing it will change the spacing
+
+\setlength{\parindent}{0in} 
+\begin{document}
+\title{Discussione slide della tesi}
+\author{Enrico Bencivenga}
+\date{\today}
+\maketitle
+
+\section{Slide - 1}
+Salve, sono Enrico Bencivenga, matricola 534/442 e la mia tesi è intitolata "Un'applicazione mobile per la navigazione assistita di siti culturali".
+
+\section{Slide - 2}
+La tesi è scritta a conclusione del tirocinio esterno da me svolto presso l'azienda Ancitel S.p.A., che è la principale società dell'ANCI, l'associazione nazionale dei comuni italiani.
+L'attività svolta ha riguardato DATABENC, un consorzio tra università, imprese e centri di ricerca.
+DATABENC ha l'obiettivo di valorizzare i beni culturali, il patrimonio ed il turismo.
+\section{Slide - 3}
+La finalità è stata lo sviluppo di un'applicazione mobile per ricevere informazioni georeferenziate sui beni culturali, ovvero ricevere informazioni sui punti di interesse culturale e conoscerne la posizione su una mappa.
+La stessa applicazione ha inoltre previsto altre tipologie di servizi, come ad esempio l'inserimento di un feedback sullo stato di conservazione del bene culturale.
+Per rendere reale e di pubblica utilità lo sviluppo, è stata scelta come sito di prova l'area archeologica degli scavi di Paestum, risalente al 600 a.C.
+\section{Slide - 4}
+L'architettura scelta è di tipo client/server. Tale architettura è economica ed estendibile e permette, tramite la realizzazione di un servizio REST, che client eterogenei possano connettersi a quest'ultimo e reperire informazioni.
+\section{Slide - 5}
+La piattaforma Client scelta è Windows Phone 8, per due motivazioni:
+\begin{itemize}
+\item originalità: lo store di Windows Phone 8 è in espansione, e non ci sono attualmente applicazioni che abbiano finalità simili.
+\item ambiente di sviluppo integrato, poichè è disponibile la Windows Phone SDK che supporta il programmatore in tutte le fasi, dalla progettazione alla realizzazione, fino al rilascio dell'applicazione
+\end{itemize}
+\section{Slide - 6}
+Le tecnologie adottate per lo sviluppo del client sono:
+\begin{itemize}
+\item XML, per la codifica e la serializzazione dei dati. XML non è certamente un formato poco ridondante in quanto a dimensioni del flusso di byte ma consente estendibilità e flessibilità
+\item Protocollo GPS, per la geolocalizzazione dell'utente. La scelta del protocollo GPS è dovuta a due fattori. Il primo è che le tecnologie alternative, ovvero la localizzazione indoor e la localizzazione cellulare presentano una serie di incongruenze con il sito. La localizzazione indoor, in particolare la WPS, presenta complessità realizzative, poichè richiederebbe l'installazione di numerosi router su un'area piuttosto vasta; la localizzazione cellulare presenterebbe margini di errore piuttosto ampi (750m) rendendo impossibile l'orientamento nel sito.
+Il secondo fattore è il margine di errore piuttosto basso dei dispositivi GPS, che è di poco superiore al metro.
+\item il formato GeoRSS, derivato da XML, è utilizzato per la serializzazione e la codifica di dati georeferenziati. GeoRSS unisce alla flessibilità e all'estendibilità di XML la possibilità di rappresentare le coordinate geografiche in un formato standardizzato.
+\item le mappe di Bing, che sono utilizzate per rappresentare tali dati georeferenziati. L'utilizzo di Bing è consigliato poiché vengono offerte API ufficiali per Windows Phone.
+\end{itemize}
+
+\section{Slide - 7}
+La metodologia di sviluppo utilizzata è la metodologia agile.
+In questa metodologia di sviluppo, a differenza delle metodologie tradizionali, le fasi di analisi dei requisiti, progettazione, sviluppo e testing vengono ridefinite e rielaborate. Il vantaggio è di avere, dopo un tempo relativamente breve, una versione del software testata e funzionante.
+Nela nostra applicazione sono state definite 8 user stories, ovvero degli scenari di utilizzo dal punto di vista dell'utente.
+Tramite il planning poker, una tecnica comunemente utilizzata nelle metodologie agili, alle 8 user stories è stata associata una complessità. Tenendo conto della somma delle complessità delle 8 user stories - 45 - e di una velocity stimata di 15 story points a iterazione, sono state pianificate 3 iterazioni, ciascuna della durata di due settimane.
+
+\section{Slide - 8}
+Lo sviluppo è avvenuto tramite la Windows Phone SDK, che è basata sul framework .NET, di cui è presente un'immagine dello stack tecnologico. Il framework .NET offre numerose librerie di supporto per la gestione delle periferiche e della connettività. 
+Il tool di sviluppo è stato, naturalmente, Microsoft Visual Studio, nella versione 2013 ultimate e ho potuto avere il supporto di TFS, team foundation service, che è uno strumento di gestione collaborativa del codice che offre anche supporto per il versioning.
+Un'altra tecnologia utilizzata per lo sviluppo è il Cloud di Microsoft Azure, su cui attualmente è ospitato il servizio REST a cui si connette l'applicazione client.
+
+\section{Slide - 9}
+Dopo lo sviluppo dell'app, ho eseguito un test sul campo, ovvero mi sono recato a Paestum per verificare il corretto funzionamento.
+Questi sono alcuni screenshot:
+\begin{itemize}
+\item la figura in basso a sinistra rappresenta la visualizzazione di diversi beni culturali sulla mappa
+\item la figura in alto a sinistra rappresenta la schermata ottenuta in avvicinamento al tempio di Nettuno
+\item la figura in alto a destra rappresenta la schermata di menu ottenuta cliccando su una delle icone della prima immagine
+\item la figura in basso a destra rappresenta la schermata ottenuta in avvicinamento al tempio di Cerere
+\end{itemize}
+
+\section{Slide - 10}
+In conclusione, è stata sviluppata un applicazione client che può fungere da template, ovvero può essere utilizzata su qualsiasi sito che abbia le stesse caratteristiche dell'area degli scavi di Paestum, ovvero un sito all'aperto.
+E' stato inoltre sviluppato un valido supporto alla georeferenziazione, poichè l'applicazione consente di verificare, validare ed elaborare i dati georeferenziati.
+
+Eventuali sviluppi futuri possono essere:
+\begin{itemize}
+\item il miglioramento del servizio di gestione dei dati e dei feedback, che ora è in fase prototipale; 
+\item l'estendibilità dell'applicazione ad altri luoghi di interesse archeologico e culturale
+\item lo sviluppo dell'applicazione client su altre piattaforme.
+
+
+L'applicazione è attualmente in stato di verifica di qualità e sarà, probabilmente, presto disponibile sul Windows Store.
+
+Grazie per l'attenzione.
+
+
+\end{itemize}
+
+
+\end{document}
