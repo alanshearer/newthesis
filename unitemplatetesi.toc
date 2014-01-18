@@ -38,7 +38,7 @@
 \contentsline {subsection}{\numberline {2.1.3}Tecniche di geolocalizzazione}{26}{subsection.2.1.3}
 \contentsline {subsubsection}{Localizzazione satellitare}{27}{section*.46}
 \contentsline {paragraph}{GPS}{27}{section*.47}
-\contentsline {subparagraph}{Principi di funzionamento}{27}{section*.49}
+\contentsline {subparagraph}{Principi di funzionamento}{28}{section*.49}
 \contentsline {subparagraph}{Satelliti}{28}{section*.50}
 \contentsline {subparagraph}{Ricevitore}{28}{section*.51}
 \contentsline {subparagraph}{Precisione}{28}{section*.52}
